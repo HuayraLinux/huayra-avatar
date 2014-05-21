@@ -1,0 +1,19 @@
+{
+  "name": "karucha",
+  "version": "0.0.1",
+  "description": "Un programa sencillo para hacer avatares en huayra",
+  "main": "src/js/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hugoruscitti/karucha.git"
+  },
+  "author": "Hugo Ruscitti",
+  "license": "GPLV3",
+  "bugs": {
+    "url": "https://github.com/hugoruscitti/karucha/issues"
+  },
+  "homepage": "https://github.com/hugoruscitti/karucha"
+}
