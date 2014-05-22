@@ -1,4 +1,12 @@
 {
     "name": "karucha",
-    "main": "index.html"
+    "main": "index.html",
+    "window": {
+        "title": "karucha",
+        "toolbar": false,
+        "width": 900,
+        "height": 550,
+        "min_width": 900,
+        "min_height": 550
+    }
 }
