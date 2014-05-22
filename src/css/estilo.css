@@ -12,10 +12,24 @@ div.galeria {
 	right: 10px;
 	left: 420px;
 	top: 55px;
+	bottom: 10px;
+	overflow: hidden;
 }
 
 dl.tabs {
 	background-color: rgb(247, 247, 247);
+	width: 1200px;
+	border: 1px solid red;
+	height: 60px;
+}
+
+.tabs-content {
+    overflow: scroll;
+    border: 1px solid rgb(37, 172, 85);
+    position: absolute;
+    bottom: 0px;
+    top: 60px;
+		margin-bottom: 0px !important;
 }
 
 .objeto {
