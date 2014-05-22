@@ -1,17 +1,39 @@
 var fs = require('fs');
 var app = angular.module('app', ['mm.foundation']);
 
+$(document).ready(function() {
+});
 
 app.controller('MainCtrl', function($scope) {
 	$scope.data = {};
 });
+
+
+app.factory("Canvas", function() {
+	var Canvas = {}
+	
+	Canvas.canvas = new fabric.Canvas('canvas');
+	
+	Canvas.agregar_imagen = function(ruta) {
+		fabric.Image.fromURL(ruta, function(img) {
+  		Canvas.canvas.add(img);
+		});
+	}
+	
+	return Canvas;
+	
+});
 		
-app.controller('GaleriaCtrl', function($scope) {
+app.controller('GaleriaCtrl', function($scope, Canvas) {
 	var path = 'partes/';
 	
 	$scope.data = {};
 	$scope.data.directorios = [];
 	
+	
+	$scope.selecciona_objeto = function(obj) {
+		Canvas.agregar_imagen(obj.src);
+	}
 	
 	function actualizar_galeria(ruta_directorio, objeto_directorio) {
 		var titulo = objeto_directorio.titulo;

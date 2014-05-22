@@ -11,6 +11,7 @@
     <script src='libs/fastclick.js'></script>
     <script src='libs/jquery.placeholder.js'></script>
     <script src='libs/modernizr.js'></script>
+    <script src='libs/fabric.js'></script>
 		
     <script src='libs/foundation.js'></script>
     <script src='libs/foundation/foundation.abide.js'></script>
@@ -61,7 +62,7 @@
 		
 		<div>
   		<div class="avatar">	
-  			
+				<canvas id='canvas' width=400 height=600></canvas>
   		</div>
 			
   		<div ng-controller='GaleriaCtrl' class="galeria">
@@ -70,7 +71,7 @@
     			<tab ng-repeat="dir in data.directorios" heading="{{dir.titulo}}" active="dir.active">
 						
 						<ul class="clearing-thumbs" data-clearing="" style="">
-							<li ng-repeat='obj in dir.objetos'><a class="th objeto"><img ng-src="{{obj.src}}"></a></li>
+							<li ng-repeat='obj in dir.objetos'><a ng-click='selecciona_objeto(obj)' href='#' class="th objeto"><img ng-src="{{obj.src}}"></a></li>
 						</ul>
 						
     			</tab>
