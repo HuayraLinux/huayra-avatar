@@ -14,11 +14,55 @@ app.factory("Canvas", function() {
 	
 	Canvas.canvas = new fabric.Canvas('canvas');
 	
+	Canvas.definir_imagen_de_fondo = function(ruta) {
+		var c = Canvas.canvas;
+		c.setBackgroundImage(ruta, c.renderAll.bind(c));
+	}
+	
 	Canvas.agregar_imagen = function(ruta) {
 		fabric.Image.fromURL(ruta, function(img) {
+			
+			img.set({
+        left: fabric.util.getRandomInt(0, 600),
+        top: fabric.util.getRandomInt(0, 500),
+      });	
+			
+			img.perPixelTargetFind = true;
+			img.targetFindTolerance = 4;
+			
+			// Tinte de color !
+			var filter = new fabric.Image.filters.Tint({
+  			color: '#3513B0',
+				//color: 'rgba(53, 21, 176, 0.5)'
+  			opacity: 0.5
+			});
+			
+			img.filters.push(filter);
+			img.applyFilters(Canvas.canvas.renderAll.bind(Canvas.canvas));
+			
+			
+			
+			
+			
   		Canvas.canvas.add(img);
+			//Canvas.canvas.centerObject(img);
+			console.log(Canvas.canvas.toSVG());
+			
+			console.log(Canvas.canvas.toDataURL({format: 'png'}));
+			
+			
+			
 		});
 	}
+	
+	
+	var text = new fabric.Text('Hello world', {
+  left: 100,
+  top: 100,
+  fill: '#f55',
+  angle: 15
+});
+Canvas.canvas.add(text);
 	
 	return Canvas;
 	
