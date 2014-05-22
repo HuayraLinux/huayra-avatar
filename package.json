@@ -15,5 +15,7 @@
   "bugs": {
     "url": "https://github.com/hugoruscitti/karucha/issues"
   },
-  "homepage": "https://github.com/hugoruscitti/karucha"
+  "homepage": "https://github.com/hugoruscitti/karucha",
+  "dependencies": {
+  }
 }
