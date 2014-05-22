@@ -1,0 +1,28 @@
+div.avatar {
+	border: 1px solid red;
+	width: 400px;
+	position: absolute;
+	top: 55px;
+	left: 10px;
+}
+
+div.galeria {
+	border: 1px solid green;
+	position: absolute;
+	right: 10px;
+	left: 420px;
+	top: 55px;
+}
+
+dl.tabs {
+	background-color: rgb(247, 247, 247);
+}
+
+.objeto {
+	width: 120px;
+  min-height: 120px;
+  max-height: auto;
+  float: left;
+  margin: 3px;
+	padding: 3px;
+}

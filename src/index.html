@@ -1,5 +1,95 @@
-<html>
-	<body>
-	test	
+<html ng-app='app'>
+	
+	<head>
+		
+    <link rel="stylesheet" href="libs/foundation.css"/>
+    <link rel="stylesheet" href="libs/normalize.css"/>
+    <link rel="stylesheet" href="css/estilo.css"/>
+
+    <script src='libs/jquery.js'></script>
+    <script src='libs/angular.js'></script>
+    <script src='libs/fastclick.js'></script>
+    <script src='libs/jquery.placeholder.js'></script>
+    <script src='libs/modernizr.js'></script>
+		
+    <script src='libs/foundation.js'></script>
+    <script src='libs/foundation/foundation.abide.js'></script>
+    <script src='libs/foundation/foundation.accordion.js'></script>
+    <script src='libs/foundation/foundation.alert.js'></script>
+    <script src='libs/foundation/foundation.clearing.js'></script>
+    <script src='libs/foundation/foundation.dropdown.js'></script>
+    <script src='libs/foundation/foundation.equalizer.js'></script>
+    <script src='libs/foundation/foundation.interchange.js'></script>
+    <script src='libs/foundation/foundation.joyride.js'></script>
+    <script src='libs/foundation/foundation.js'></script>
+    <script src='libs/foundation/foundation.magellan.js'></script>
+    <script src='libs/foundation/foundation.offcanvas.js'></script>
+    <script src='libs/foundation/foundation.orbit.js'></script>
+    <script src='libs/foundation/foundation.reveal.js'></script>
+    <script src='libs/foundation/foundation.slider.js'></script>
+    <script src='libs/foundation/foundation.tab.js'></script>
+    <script src='libs/foundation/foundation.tooltip.js'></script>
+    <script src='libs/foundation/foundation.topbar.js'></script>
+    <script src='libs/mm-foundation-tpls.js'></script>
+		
+		
+    <script src='js/app.js'></script>
+		
+		<script>
+			$(document).foundation();
+		</script>
+	</head>
+	
+	<body ng-controller='MainCtrl'>
+		<nav class="top-bar" data-topbar>
+			<ul class="title-area">
+				<li class="name">
+					<h1><a href="#">Karucha</a></h1>
+				</li>
+				 <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+				<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+			</ul>
+
+			<section class="top-bar-section">
+
+				<!-- Left Nav Section -->
+				<ul class="left">
+					<li><a href="#">Archivo</a></li>
+				</ul>
+			</section>
+		</nav>
+		
+		<div>
+  		<div class="avatar">	
+  			
+  		</div>
+			
+  		<div ng-controller='GaleriaCtrl' class="galeria">
+				
+				<tabset>
+    			<tab ng-repeat="dir in data.directorios" heading="{{dir.titulo}}" active="dir.active">
+						
+						<ul class="clearing-thumbs" data-clearing="" style="">
+							<li ng-repeat='obj in dir.objetos'><a class="th objeto"><img ng-src="{{obj.src}}"></a></li>
+						</ul>
+						
+    			</tab>
+  			</tabset>
+
+  		</div>
+		</div>
+		
+		
 	</body>
+	
+	<script>
+		var path = './';
+		var fs = require('fs');
+
+		fs.watch(path, function() {
+			if (location)
+				location.reload();
+		});
+	</script>
+	
 </html>
