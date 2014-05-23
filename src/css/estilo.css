@@ -1,13 +1,20 @@
 div.avatar {
-	border: 1px solid red;
 	width: 400px;
 	position: absolute;
 	top: 55px;
 	left: 10px;
 }
 
+canvas {
+	border: 1px solid gray;
+}
+
+div.botones {
+	padding: 5px;
+	padding-left: 0;
+}
+
 div.galeria {
-	border: 1px solid green;
 	position: absolute;
 	right: 10px;
 	left: 420px;
@@ -17,15 +24,12 @@ div.galeria {
 }
 
 dl.tabs {
-	background-color: rgb(247, 247, 247);
 	width: 1200px;
-	border: 1px solid red;
 	height: 60px;
 }
 
 .tabs-content {
     overflow: scroll;
-    border: 1px solid rgb(37, 172, 85);
     position: absolute;
     bottom: 0px;
     top: 60px;

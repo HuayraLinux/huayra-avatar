@@ -5,9 +5,6 @@ $(document).ready(function() {
 			$(document).foundation();
 });
 
-
-
-
 app.controller('MainCtrl', function($scope) {
 	$scope.data = {};
 
@@ -54,9 +51,6 @@ app.factory("Canvas", function() {
 			//img.applyFilters(Canvas.canvas.renderAll.bind(Canvas.canvas));
 
 
-
-
-
   		Canvas.canvas.add(img);
 			//Canvas.canvas.centerObject(img);
 			console.log(Canvas.canvas.toSVG());
@@ -65,17 +59,7 @@ app.factory("Canvas", function() {
 		});
 	}
 
-
-	var text = new fabric.Text('Hello world', {
-  left: 100,
-  top: 100,
-  fill: '#f55',
-  angle: 15
-});
-Canvas.canvas.add(text);
-
 	return Canvas;
-
 });
 
 app.controller('GaleriaCtrl', function($scope, Canvas) {
