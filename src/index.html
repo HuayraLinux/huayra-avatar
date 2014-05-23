@@ -67,13 +67,14 @@
 		</nav>
 
 		<div>
-  		<div class="avatar">
+  		<div ng-controller='AvatarCtrl' class="avatar">
 				<canvas id='canvas' width=400 height=400></canvas>
 
 
 				<div class='botones'>
-					<button class='button tiny'><i class="fi-download"></i> Guardar</button>
-					<button class='button tiny'><i class="fi-x"></i> Borrar elemento</button>
+					<button ng-click="guargar_png()" class='button tiny'><i class="fi-download"></i> Guardar PNG</button>
+					<button ng-click="guardar_svg()" class='button tiny'><i class="fi-download"></i> Guardar SVG</button>
+					<button ng-click="borrar_elemento_seleccionado()" class='button tiny alert'><i class="fi-x"></i> Borrar elemento</button>
 				</div>
   		</div>
 
@@ -90,6 +91,12 @@
   			</tabset>
 
   		</div>
+		</div>
+
+
+		<div class='invisible'>
+			<input id="guardar_svg" type="file" nwsaveas="avatar.svg"/>
+			<input id="guardar_png" type="file" nwsaveas="avatar.png"/>
 		</div>
 
 

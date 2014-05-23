@@ -44,3 +44,8 @@ dl.tabs {
   margin: 3px;
 	padding: 3px;
 }
+
+
+.invisible {
+	display: none;
+}

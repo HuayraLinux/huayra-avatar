@@ -62,6 +62,34 @@ app.factory("Canvas", function() {
 	return Canvas;
 });
 
+app.controller('AvatarCtrl', function($scope, Canvas) {
+
+		function abrir_dialogo(name, funcion) {
+
+    	var chooser = document.querySelector(name);
+
+    	chooser.addEventListener("change", function(evt) {
+				funcion.call(this, this.value);
+    	}, false);
+
+    	chooser.click();
+		}
+
+	$scope.guargar_png = function() {
+  	abrir_dialogo('#guardar_png', function(nombre) {
+			alert("Tengo que guardar el archivo " + nombre);
+		});
+	}
+
+	$scope.guardar_svg = function() {
+  	abrir_dialogo('#guardar_svg');
+	}
+
+	$scope.borrar_elemento_seleccionado = function() {
+	}
+
+});
+
 app.controller('GaleriaCtrl', function($scope, Canvas) {
 	var path = 'partes/';
 
