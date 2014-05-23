@@ -5,8 +5,20 @@ $(document).ready(function() {
 			$(document).foundation();
 });
 
+
+
+
 app.controller('MainCtrl', function($scope) {
 	$scope.data = {};
+
+	$scope.actualizar = function() {
+		location.reload(true);
+	}
+
+	$scope.abrir_modo_desarrollador = function() {
+		require('nw.gui').Window.get().showDevTools();
+	}
+
 });
 
 
@@ -24,22 +36,22 @@ app.factory("Canvas", function() {
 		fabric.Image.fromURL(ruta, function(img) {
 
 			img.set({
-        left: fabric.util.getRandomInt(0, 600),
-        top: fabric.util.getRandomInt(0, 500),
+        left: 100,
+        top: 100
       });
 
 			img.perPixelTargetFind = true;
-			img.targetFindTolerance = 4;
+			img.targetFindTolerance = 10;
 
 			// Tinte de color !
-			var filter = new fabric.Image.filters.Tint({
-  			color: '#3513B0',
+			//var filter = new fabric.Image.filters.Tint({
+  		//	color: '#3513B0',
 				//color: 'rgba(53, 21, 176, 0.5)'
-  			opacity: 0.5
-			});
+  		//	opacity: 0.5
+			//});
 
-			img.filters.push(filter);
-			img.applyFilters(Canvas.canvas.renderAll.bind(Canvas.canvas));
+			//img.filters.push(filter);
+			//img.applyFilters(Canvas.canvas.renderAll.bind(Canvas.canvas));
 
 
 
@@ -48,10 +60,7 @@ app.factory("Canvas", function() {
   		Canvas.canvas.add(img);
 			//Canvas.canvas.centerObject(img);
 			console.log(Canvas.canvas.toSVG());
-
 			console.log(Canvas.canvas.toDataURL({format: 'png'}));
-
-
 
 		});
 	}
