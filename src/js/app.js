@@ -24,9 +24,27 @@ app.factory("Canvas", function() {
 
 	Canvas.canvas = new fabric.Canvas('canvas');
 
+	function informar_error(error) {
+		if (error)
+			alert(error);
+	}
+
 	Canvas.definir_imagen_de_fondo = function(ruta) {
 		var c = Canvas.canvas;
 		c.setBackgroundImage(ruta, c.renderAll.bind(c));
+	}
+
+	Canvas.guardar_como_archivo_svg = function(ruta) {
+			var data = Canvas.canvas.toSVG();
+
+			fs.writeFile(ruta, data, 'utf-8', informar_error);
+	}
+
+	Canvas.guardar_como_archivo_png = function(ruta) {
+		var data = Canvas.canvas.toDataURL({format: 'png'});
+		var base64Data = data.replace(/^data:image\/png;base64,/, "");
+
+		fs.writeFile(ruta, base64Data, 'base64', informar_error);
 	}
 
 	Canvas.agregar_imagen = function(ruta) {
@@ -53,8 +71,6 @@ app.factory("Canvas", function() {
 
   		Canvas.canvas.add(img);
 			//Canvas.canvas.centerObject(img);
-			console.log(Canvas.canvas.toSVG());
-			console.log(Canvas.canvas.toDataURL({format: 'png'}));
 
 		});
 	}
@@ -64,28 +80,33 @@ app.factory("Canvas", function() {
 
 app.controller('AvatarCtrl', function($scope, Canvas) {
 
-		function abrir_dialogo(name, funcion) {
+	function abrir_dialogo(name, funcion) {
+    var chooser = document.querySelector(name);
 
-    	var chooser = document.querySelector(name);
+		function on_click(evt) {
+			funcion.call(this, this.value);
+			chooser.removeEventListener("change", on_click)
+    }
 
-    	chooser.addEventListener("change", function(evt) {
-				funcion.call(this, this.value);
-    	}, false);
+    chooser.addEventListener("change", on_click, false);
 
-    	chooser.click();
-		}
+    chooser.click();
+	}
 
 	$scope.guargar_png = function() {
-  	abrir_dialogo('#guardar_png', function(nombre) {
-			alert("Tengo que guardar el archivo " + nombre);
+  	abrir_dialogo('#guardar_png', function(ruta) {
+			Canvas.guardar_como_archivo_png(ruta);
 		});
 	}
 
 	$scope.guardar_svg = function() {
-  	abrir_dialogo('#guardar_svg');
+  	abrir_dialogo('#guardar_svg', function(ruta) {
+			Canvas.guardar_como_archivo_svg(ruta);
+		});
 	}
 
 	$scope.borrar_elemento_seleccionado = function() {
+		// ...
 	}
 
 });
