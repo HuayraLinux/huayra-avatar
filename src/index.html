@@ -2,6 +2,7 @@
 
 	<head>
 
+		<meta charset='utf-8'>
     <link rel="stylesheet" href="libs/foundation.css"/>
     <link rel="stylesheet" href="libs/foundation-icons.css"/>
     <link rel="stylesheet" href="libs/normalize.css"/>
@@ -79,9 +80,13 @@
   		</div>
 
   		<div ng-controller='GaleriaCtrl' class="galeria">
-
 				<tabset>
     			<tab ng-repeat="dir in data.directorios" heading="{{dir.titulo}}" active="dir.active">
+
+				<div class='panel panel-danger'>
+					Che, el directorio <code>partes/{{dir.titulo}}</code> no tiene archivo <code>preferencias.json</code>, cuando
+					pongas un elemento de acá en el visor va a aparecer en el centro.
+				</div>
 
 						<ul class="clearing-thumbs" data-clearing="" style="">
 							<li ng-repeat='obj in dir.objetos'><a ng-click='selecciona_objeto(obj, dir)' href='#' class="th objeto"><img ng-src="{{obj.src}}"></a></li>
@@ -99,5 +104,5 @@
 		</div>
 
 	</body>
-	
+
 </html>
