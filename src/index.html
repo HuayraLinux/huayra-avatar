@@ -71,7 +71,6 @@
   		<div ng-controller='AvatarCtrl' class="avatar">
 				<canvas id='canvas' width=400 height=400></canvas>
 
-
 				<div class='botones'>
 					<button ng-click="guargar_png()" class='button tiny'><i class="fi-download"></i> Guardar PNG</button>
 					<button ng-click="guardar_svg()" class='button tiny'><i class="fi-download"></i> Guardar SVG</button>
@@ -89,7 +88,7 @@
 
 
 						<ul class="clearing-thumbs" data-clearing="" style="">
-							<li ng-repeat='obj in dir.objetos'><a ng-click='selecciona_objeto(obj, dir)' href='#' class="th objeto"><img ng-src="{{obj.src}}"></a></li>
+							<li ng-repeat='obj in dir.objetos'><a ng-click='selecciona_objeto(obj, dir)' href='#' class="th objeto"><img class='resize_fit_center' ng-src="{{obj.src}}"></a></li>
 						</ul>
 
     			</tab>

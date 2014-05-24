@@ -46,13 +46,21 @@ dl.tabs {
 
 .objeto {
 	width: 120px;
-  min-height: 120px;
-  max-height: auto;
-  float: left;
-  margin: 3px;
+	height: 120px;
+	float: left;
+	overflow: hidden;
 	padding: 3px;
+	margin: 5px;
+	margin-bottom: 10px;
+	line-height: 115px;
+	text-align: center;
 }
 
+.resize_fit_center {
+    max-width: 100% !important;
+    max-height: 100% !important;
+    vertical-align: middle;
+}
 
 .invisible {
 	display: none;
