@@ -83,10 +83,10 @@
 				<tabset>
     			<tab ng-repeat="dir in data.directorios" heading="{{dir.titulo}}" active="dir.active">
 
-				<div class='panel panel-danger'>
-					Che, el directorio <code>partes/{{dir.titulo}}</code> no tiene archivo <code>preferencias.json</code>, cuando
-					pongas un elemento de acá en el visor va a aparecer en el centro.
-				</div>
+					<div ng-show='! dir.tiene_preferencias' data-alert class="alert-box secondary">
+						m... el directorio <code>partes/{{dir.titulo}}</code> no tiene un archivo <code>preferencias.json</code> dentro, mejor creá uno.
+					</div>
+
 
 						<ul class="clearing-thumbs" data-clearing="" style="">
 							<li ng-repeat='obj in dir.objetos'><a ng-click='selecciona_objeto(obj, dir)' href='#' class="th objeto"><img ng-src="{{obj.src}}"></a></li>

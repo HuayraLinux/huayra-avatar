@@ -210,6 +210,7 @@ app.controller('GaleriaCtrl', function($scope, Canvas) {
 				if (/^preferencias.json$/.test(ruta)) {
 					var preferencias = require("./" + ruta_directorio + "/" + ruta);
 					$scope.data.directorios[indice].preferencias = preferencias;
+					$scope.data.directorios[indice].tiene_preferencias = true;
 				}
 
 			}
@@ -236,7 +237,7 @@ app.controller('GaleriaCtrl', function($scope, Canvas) {
 			// Por cada directorio en  "./partes" ...
 			for (var i=0; i<data.length; i++) {
 				var titulo = data[i];
-				var objeto_directorio = {titulo: titulo, preferencias: {}, active: false, objetos: []}
+				var objeto_directorio = {titulo: titulo, tiene_preferencias: false, preferencias: {}, active: false, objetos: []}
 
 				if (/^\./.test(titulo)) // ignora los directorios y archivos ocultos.
 					continue;

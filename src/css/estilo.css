@@ -57,3 +57,7 @@ dl.tabs {
 .invisible {
 	display: none;
 }
+
+.tabs-content > .content {
+	padding-right: 10px;
+}
