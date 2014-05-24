@@ -1,9 +1,9 @@
 * {
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: -moz-none;
-    -o-user-select: none;
-    user-select: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: -moz-none;
+	-o-user-select: none;
+	user-select: none;
 }
 
 div.avatar {
@@ -37,11 +37,11 @@ dl.tabs {
 }
 
 .tabs-content {
-    overflow: scroll;
-    position: absolute;
-    bottom: 0px;
-    top: 60px;
-		margin-bottom: 0px !important;
+	overflow: scroll;
+	position: absolute;
+	bottom: 0px;
+	top: 60px;
+	margin-bottom: 0px !important;
 }
 
 .objeto {
@@ -57,9 +57,9 @@ dl.tabs {
 }
 
 .resize_fit_center {
-    max-width: 100% !important;
-    max-height: 100% !important;
-    vertical-align: middle;
+	max-width: 100% !important;
+	max-height: 100% !important;
+	vertical-align: middle;
 }
 
 .invisible {
