@@ -1,8 +1,11 @@
 {
     "name": "karucha",
     "main": "index.html",
+    "config": {
+      "livereload": true
+    },
     "window": {
-        "title": "karucha",
+        "title": "Karucha",
         "toolbar": false,
         "width": 900,
         "height": 550,

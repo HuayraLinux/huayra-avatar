@@ -84,7 +84,7 @@
     			<tab ng-repeat="dir in data.directorios" heading="{{dir.titulo}}" active="dir.active">
 
 						<ul class="clearing-thumbs" data-clearing="" style="">
-							<li ng-repeat='obj in dir.objetos'><a ng-click='selecciona_objeto(obj)' href='#' class="th objeto"><img ng-src="{{obj.src}}"></a></li>
+							<li ng-repeat='obj in dir.objetos'><a ng-click='selecciona_objeto(obj, dir)' href='#' class="th objeto"><img ng-src="{{obj.src}}"></a></li>
 						</ul>
 
     			</tab>
@@ -102,14 +102,5 @@
 
 	</body>
 
-	<script>
-		var path = './';
-		var fs = require('fs');
-
-		fs.watch(path, function() {
-			if (location)
-				location.reload();
-		});
-	</script>
 
 </html>
