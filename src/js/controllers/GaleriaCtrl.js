@@ -53,8 +53,6 @@ app.controller('GaleriaCtrl', function($scope, Canvas) {
           $scope.data.directorios[indice].objetos.push(item);
         }
 
-        console.log(ruta);
-
         if (/^preferencias.json$/.test(ruta)) {
           var preferencias = require("./" + ruta_directorio + "/" + ruta);
           $scope.data.directorios[indice].preferencias = preferencias;
