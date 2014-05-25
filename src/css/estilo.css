@@ -28,7 +28,7 @@ div.galeria {
 	left: 420px;
 	top: 70px;
 	bottom: 10px;
-	overflow: hidden;
+	overflow: scroll;
 }
 
 dl.tabs {
@@ -78,4 +78,8 @@ dl.tabs {
 ul, ol {
 	list-style-type: none;
 	padding: 0;
+}
+
+.tab-pane {
+	margin-top: 10px;
 }
