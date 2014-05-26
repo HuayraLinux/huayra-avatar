@@ -1,5 +1,34 @@
 var app = angular.module('app');
 
+var sel_Rect = undefined;
+
+
+
+/*
+ * Previene el bug clásico que no nos permitía seleccionar objetos
+ * que se solapaban.
+ */
+fabric.util.object.extend(fabric.Canvas.prototype, {
+  _searchPossibleTargets: function(e) {
+
+    var target,
+    pointer = this.getPointer(e);
+
+    var i = this._objects.length;
+
+    while(i--) {
+      if (this._checkTarget(e, this._objects[i], pointer)){
+        this.relatedTarget = this._objects[i];
+        target = this._objects[i];
+        break;
+      }
+    }
+
+    return target;
+  }
+});
+
+
 app.factory("Canvas", function() {
   var Canvas = {}
 
@@ -29,6 +58,11 @@ app.factory("Canvas", function() {
     fs.writeFile(ruta, base64Data, 'base64', informar_error);
   }
 
+  Canvas.definir_fondo = function(ruta, preferencias) {
+    var canvas = Canvas.canvas;
+    canvas.setBackgroundImage(ruta, canvas.renderAll.bind(canvas));
+  }
+
   Canvas.agregar_imagen = function(ruta, preferencias) {
     var canvas = Canvas.canvas;
     canvas.controlsAboveOverlay = true;
@@ -41,15 +75,37 @@ app.factory("Canvas", function() {
       var ratio_vertical = preferencias.alto / size.height;
       var ratio = Math.min(ratio_horizontal, ratio_vertical);
 
-      img.scale(ratio);
+      //img.scale(ratio);
 
       img.perPixelTargetFind = true;
       img.targetFindTolerance = 10;
 
+      // Extrae el nombre del directorio de donde salió la imagen, por
+      // ejemplo si el path es 'partes/cara/1.svg', la variable categoría
+      // va a quedar con el valor 'cara'.
+      //
+      // Esta categoría se guarda en el objeto, para evitar que el avatar
+      // tenga mas de una cara, mas de dos bocas etc...
+      var categoria = ruta.match(/partes\/(\w+)\//)[1];
+
+
+      canvas.forEachObject(function(o, i) {
+        if (o.categoria == categoria) {
+          preferencias.x = o.left;
+          preferencias.y = o.top;
+          canvas.remove(o);
+        }
+      });
+
       img.set({
         left: preferencias.x,
-        top: preferencias.y
+        top: preferencias.y,
+        scaleX: ratio,
+        scaleY: ratio,
+        categoria: categoria,
+        z: preferencias.z
       });
+
 
       // Tinte de color !
       //var filter = new fabric.Image.filters.Tint({
@@ -63,7 +119,11 @@ app.factory("Canvas", function() {
 
 
       Canvas.canvas.add(img);
-      //Canvas.canvas.centerObject(img);
+
+      // ordena todos los objetos por valor Z.
+      canvas.forEachObject(function(o, i) {
+        Canvas.canvas.moveTo(o, -o.z);
+      });
 
     });
   }

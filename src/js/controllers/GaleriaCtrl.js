@@ -10,12 +10,17 @@ app.controller('GaleriaCtrl', function($scope, Canvas) {
   $scope.selecciona_objeto = function(obj, dir) {
     var preferencias = {};
 
+        preferencias.es_fondo = dir.preferencias.es_fondo || false;
         preferencias.x = dir.preferencias.x || 0;
         preferencias.y = dir.preferencias.y || 0;
+        preferencias.z = dir.preferencias.z || 0;
         preferencias.ancho = dir.preferencias.ancho || 50;
         preferencias.alto = dir.preferencias.alto || 50;
 
-    Canvas.agregar_imagen(obj.src, preferencias);
+    if (preferencias.es_fondo)
+      Canvas.definir_fondo(obj.src, preferencias);
+    else
+      Canvas.agregar_imagen(obj.src, preferencias);
   }
 
   /*
@@ -45,10 +50,13 @@ app.controller('GaleriaCtrl', function($scope, Canvas) {
     fs.readdir(ruta_directorio, function(error, data) {
       $scope.data.directorios[indice].objetos = [];
 
+      if (!data)
+        return;
+
       for (var i=0; i<data.length; i++) {
         var ruta = data[i];
 
-        if (/\.svg$/.test(ruta)) {
+        if (/\.svg$/.test(ruta) || /\.jpg$/.test(ruta)) {
           var item = {src: ruta_directorio + '/' + ruta};
           $scope.data.directorios[indice].objetos.push(item);
         }

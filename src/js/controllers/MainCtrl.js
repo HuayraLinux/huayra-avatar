@@ -50,4 +50,8 @@ app.controller('MainCtrl', function($scope, Config, Canvas) {
     });
   }
 
+  $scope.todo = function(funcionalidad) {
+    alert("TODO: sin implementar la funcionalidad: " + funcionalidad);
+  }
+
 });

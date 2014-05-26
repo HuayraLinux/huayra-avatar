@@ -49,17 +49,17 @@
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Archivo <b class="caret"></b></a>
 					<ul class="dropdown-menu">
-						<li><a href="">Abrir</a></li>
-						<li><a href="" ng-click="guargar_png()">Guardar como PNG</a></li>
-						<li><a href="" ng-click="guardar_svg()">Guardar como SVG</a></li>
+						<li><a href="" ng-click="todo('abrir')">Abrir</a></li>
+						<li><a href="" ng-click="todo('guardar png')">Guardar como PNG</a></li>
+						<li><a href="" ng-click="todo('guardar svg')">Guardar como SVG</a></li>
 						<li class="divider"></li>
-						<li><a href="" ng-click="salir()">Salir</a></li>
+						<li><a href="" ng-click="todo('salir')">Salir</a></li>
 					</ul>
 				</li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href='' ng-click='abrir_modo_desarrollador()'>&nbsp;<i class="glyphicon glyphicon-music"></i></a></li>
-				<li><a href='' ng-click='actualizar()'>&nbsp;<i class="glyphicon glyphicon-search"></i></a></li>
+				<li><a href='' ng-click='abrir_modo_desarrollador()'>&nbsp;<i class="glyphicon glyphicon-cog"></i></a></li>
+				<li><a href='' ng-click='actualizar()'>&nbsp;<i class="glyphicon glyphicon-refresh"></i></a></li>
 			</ul>
 		</div>
 	</div>

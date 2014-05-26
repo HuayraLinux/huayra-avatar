@@ -83,3 +83,8 @@ ul, ol {
 .tab-pane {
 	margin-top: 10px;
 }
+
+.navbar-nav > li > .dropdown-menu {
+	margin-top: -10px;
+	box-shadow: rgb(190, 190, 190) 0px 4px 10px;
+}
