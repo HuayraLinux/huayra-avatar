@@ -77,8 +77,8 @@ app.factory("Canvas", function() {
 
       //img.scale(ratio);
 
-      img.perPixelTargetFind = true;
-      img.targetFindTolerance = 10;
+      //img.perPixelTargetFind = true;
+      //img.targetFindTolerance = 10;
 
       // Extrae el nombre del directorio de donde salió la imagen, por
       // ejemplo si el path es 'partes/cara/1.svg', la variable categoría

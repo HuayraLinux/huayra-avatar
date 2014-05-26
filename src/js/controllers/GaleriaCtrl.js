@@ -6,6 +6,10 @@ app.controller('GaleriaCtrl', function($scope, Canvas) {
   $scope.data = {};
   $scope.data.directorios = [];
 
+  $scope.abrir_directorio = function(dir) {
+    var gui = require('nw.gui');
+    gui.Shell.showItemInFolder('./');
+  }
 
   $scope.selecciona_objeto = function(obj, dir) {
     var preferencias = {};
