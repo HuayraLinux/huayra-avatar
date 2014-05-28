@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Caripela
+Comment=Permite crear personajes sencillos
+Exec=/usr/bin/caripela
+Terminal=false
+Type=Application
+Icon=caripela
+Categories=GNOME;GTK;Huayra;Network;
