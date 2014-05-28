@@ -2,3 +2,6 @@
 
 *Caripela* es una aplicación sencilla para realizar avatares y personajes
 en *Huayra GNU/Linux*.
+
+
+![](/images/preview.png)
