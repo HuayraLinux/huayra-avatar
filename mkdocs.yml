@@ -1,0 +1,6 @@
+site_name: Caripela
+pages:
+- [index.md, Principal]
+- [como_funciona.md, '¿Cómo funciona?']
+- [acercade.md, Acerca de...]
+theme: yeti
