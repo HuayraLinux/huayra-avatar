@@ -88,3 +88,8 @@ ul, ol {
 	margin-top: -10px;
 	box-shadow: rgb(190, 190, 190) 0px 4px 10px;
 }
+
+
+.galeria button {
+	background-color: white;
+}
