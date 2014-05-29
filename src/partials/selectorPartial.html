@@ -1,5 +1,6 @@
-1 2 3 4 5 y su scope es: <pre>{{data}}</pre>
-<a href ng-click='saludar()'>saludar</a>
-
-<p>
-<a href='#/editor'>ir al editor</a>
+<div class="galeria">
+      <ul class="clearing-thumbs" data-clearing="" style="">
+        <li><a ng-click='crear_avatar()' href class="th objeto"><img class='resize_fit_center' src='imagenes/agregar.png'></a></li>
+        <li ng-repeat='obj in dir.objetos'><button ng-click='selecciona_objeto(obj, dir)' class="th objeto"><img class='resize_fit_center' ng-src="{{obj.src}}"></button></li>
+      </ul>
+</div>
