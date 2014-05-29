@@ -9,7 +9,7 @@ app.controller('MainCtrl', function($scope, Config) {
 
     fs.watch(path, function() {
       if (location)
-      location.reload();
+        location.reload();
     });
   }
 

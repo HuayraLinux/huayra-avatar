@@ -160,9 +160,11 @@ app.controller('EditorCtrl', function($scope, Canvas) {
   }
 
   $scope.guardar_svg = function() {
-    abrir_dialogo('#guardar_svg', function(ruta) {
-      Canvas.guardar_como_archivo_svg(ruta);
-    });
+    setTimeout(function() {
+      abrir_dialogo('#guardar_svg', function(ruta) {
+        Canvas.guardar_como_archivo_svg(ruta);
+      });
+    }, 1);
   }
 
   $scope.todo = function(funcionalidad) {
