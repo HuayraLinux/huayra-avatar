@@ -1,6 +1,6 @@
 var app = angular.module('app');
 
-app.controller('EditorCtrl', function($scope, Canvas) {
+app.controller('EditorCtrl', function($scope, Canvas, $location) {
 
   $scope.borrar_elemento_seleccionado = function() {
     var canvas = Canvas.canvas;
@@ -173,6 +173,10 @@ app.controller('EditorCtrl', function($scope, Canvas) {
 
   $scope.salir = function() {
     alert("salir");
+  }
+
+  $scope.guardar_y_regresar = function() {
+    $location.url('/selector');
   }
 
 });
