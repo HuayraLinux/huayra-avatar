@@ -152,9 +152,11 @@ app.controller('EditorCtrl', function($scope, Canvas) {
   }
 
   $scope.guargar_png = function() {
-    abrir_dialogo('#guardar_png', function(ruta) {
-      Canvas.guardar_como_archivo_png(ruta);
-    });
+    setTimeout(function() {
+      abrir_dialogo('#guardar_png', function(ruta) {
+        Canvas.guardar_como_archivo_png(ruta);
+      });
+    }, 1);
   }
 
   $scope.guardar_svg = function() {
@@ -165,6 +167,10 @@ app.controller('EditorCtrl', function($scope, Canvas) {
 
   $scope.todo = function(funcionalidad) {
     alert("TODO: sin implementar la funcionalidad: " + funcionalidad);
+  }
+
+  $scope.salir = function() {
+    alert("salir");
   }
 
 });

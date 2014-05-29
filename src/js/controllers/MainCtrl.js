@@ -22,8 +22,5 @@ app.controller('MainCtrl', function($scope, Config) {
     require('nw.gui').Window.get().showDevTools();
   }
 
-  $scope.salir = function() {
-    alert("salir");
-  }
 
 });
