@@ -5,7 +5,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Caripela</a>
+      <a class="navbar-brand" href ng-click="guardar_y_regresar()">Caripela</a>
     </div>
     <div class="navbar-collapse collapse navbar-inverse-collapse">
       <ul class="nav navbar-nav">
@@ -21,8 +21,8 @@
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href='' ng-click='abrir_modo_desarrollador()'>&nbsp;<i class="glyphicon glyphicon-cog"></i></a></li>
-        <li><a href='' ng-click='actualizar()'>&nbsp;<i class="glyphicon glyphicon-refresh"></i></a></li>
+        <li><a href ng-click='abrir_modo_desarrollador()'>&nbsp;<i class="glyphicon glyphicon-cog"></i></a></li>
+        <li><a href ng-click='actualizar()'>&nbsp;<i class="glyphicon glyphicon-refresh"></i></a></li>
       </ul>
     </div>
   </div>
@@ -51,7 +51,7 @@
 
           <ul class="clearing-thumbs" data-clearing="" style="">
             <li ng-repeat='obj in dir.objetos'><button ng-click='selecciona_objeto(obj, dir)' class="th objeto"><img class='resize_fit_center' ng-src="{{obj.src}}"></button></li>
-            <li><a ng-click='abrir_directorio(dir)' href='#' class="th objeto"><img class='resize_fit_center' src='imagenes/agregar.png'></a></li>
+            <li><a ng-click='abrir_directorio(dir)' href class="th objeto"><img class='resize_fit_center' src='imagenes/agregar.png'></a></li>
           </ul>
 
         </tab>
