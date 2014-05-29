@@ -1,6 +1,24 @@
 var app = angular.module('app');
 
-app.controller('GaleriaCtrl', function($scope, Canvas) {
+app.controller('EditorCtrl', function($scope, Canvas) {
+
+  $scope.borrar_elemento_seleccionado = function() {
+    var canvas = Canvas.canvas;
+    var activeObject = canvas.getActiveObject();
+    var activeGroup = canvas.getActiveGroup();
+
+    if (activeGroup) {
+      var objectsInGroup = activeGroup.getObjects();
+      canvas.discardActiveGroup();
+      objectsInGroup.forEach(function(object) {
+        canvas.remove(object);
+      });
+    }
+    else if (activeObject) {
+      canvas.remove(activeObject);
+    }
+  }
+
   var path = 'partes/';
 
   $scope.data = {};
@@ -14,12 +32,12 @@ app.controller('GaleriaCtrl', function($scope, Canvas) {
   $scope.selecciona_objeto = function(obj, dir) {
     var preferencias = {};
 
-        preferencias.es_fondo = dir.preferencias.es_fondo || false;
-        preferencias.x = dir.preferencias.x || 0;
-        preferencias.y = dir.preferencias.y || 0;
-        preferencias.z = dir.preferencias.z || 0;
-        preferencias.ancho = dir.preferencias.ancho || 50;
-        preferencias.alto = dir.preferencias.alto || 50;
+    preferencias.es_fondo = dir.preferencias.es_fondo || false;
+    preferencias.x = dir.preferencias.x || 0;
+    preferencias.y = dir.preferencias.y || 0;
+    preferencias.z = dir.preferencias.z || 0;
+    preferencias.ancho = dir.preferencias.ancho || 50;
+    preferencias.alto = dir.preferencias.alto || 50;
 
     if (preferencias.es_fondo)
       Canvas.definir_fondo(obj.src, preferencias);
@@ -28,9 +46,9 @@ app.controller('GaleriaCtrl', function($scope, Canvas) {
   }
 
   /*
-   * Se invoca cuando se quiere leer un directorio de la galería (un tab
-   * de la aplicación como 'cara', 'nariz' etc...)
-   */
+  * Se invoca cuando se quiere leer un directorio de la galería (un tab
+  * de la aplicación como 'cara', 'nariz' etc...)
+  */
   function actualizar_galeria(ruta_directorio, objeto_directorio) {
     var titulo = objeto_directorio.titulo;
     var indice = -1;
@@ -55,7 +73,7 @@ app.controller('GaleriaCtrl', function($scope, Canvas) {
       $scope.data.directorios[indice].objetos = [];
 
       if (!data)
-        return;
+      return;
 
       for (var i=0; i<data.length; i++) {
         var ruta = data[i];
@@ -81,12 +99,12 @@ app.controller('GaleriaCtrl', function($scope, Canvas) {
   }
 
   /**
-   * Se invoca para leer todos los directorios de la galería y volver
-   * a generar los tabs de la aplicación.
-   *
-   * Este método se llama cada vez que se inicia la aplicación o se
-   * produce un cambio en los directorios de galería.
-   */
+  * Se invoca para leer todos los directorios de la galería y volver
+  * a generar los tabs de la aplicación.
+  *
+  * Este método se llama cada vez que se inicia la aplicación o se
+  * produce un cambio en los directorios de galería.
+  */
   function actualizar_listado_directorios() {
 
     fs.readdir(path, function(error, data) {
@@ -98,7 +116,7 @@ app.controller('GaleriaCtrl', function($scope, Canvas) {
         var objeto_directorio = {titulo: titulo, tiene_preferencias: false, preferencias: {}, active: false, objetos: []}
 
         if (/^\./.test(titulo)) // ignora los directorios y archivos ocultos.
-          continue;
+        continue;
 
         $scope.data.directorios.push(objeto_directorio);
         actualizar_galeria(path + titulo, objeto_directorio);
