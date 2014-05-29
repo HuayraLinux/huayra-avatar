@@ -1,6 +1,6 @@
 var app = angular.module('app');
 
-app.controller('MainCtrl', function($scope, Config, Canvas) {
+app.controller('MainCtrl', function($scope, Config) {
   $scope.data = {};
 
   if (Config.livereload) {
@@ -12,6 +12,7 @@ app.controller('MainCtrl', function($scope, Config, Canvas) {
       location.reload();
     });
   }
+
 
   $scope.actualizar = function() {
     location.reload(true);
@@ -38,7 +39,6 @@ app.controller('MainCtrl', function($scope, Config, Canvas) {
   }
 
   $scope.guargar_png = function() {
-    console.log("asdasd");
     abrir_dialogo('#guardar_png', function(ruta) {
       Canvas.guardar_como_archivo_png(ruta);
     });
@@ -53,5 +53,6 @@ app.controller('MainCtrl', function($scope, Config, Canvas) {
   $scope.todo = function(funcionalidad) {
     alert("TODO: sin implementar la funcionalidad: " + funcionalidad);
   }
+
 
 });
