@@ -12,3 +12,10 @@ app.config(['$routeProvider', function($routeProvider) { $routeProvider.
           }).
           otherwise({redirectTo:'/selector'});
 }]);
+
+/* Quita el número de categoría del título */
+app.filter('categoria', function() {
+  return function(input) {
+    return input.split('-').pop();
+  }
+});

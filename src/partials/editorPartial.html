@@ -43,7 +43,7 @@
 
     <div class="galeria">
       <tabset>
-        <tab ng-repeat="dir in data.directorios" heading="{{dir.titulo}}" active="dir.active">
+        <tab ng-repeat="dir in data.directorios" heading="{{dir.titulo | categoria }}" active="dir.active">
 
           <div ng-show='! dir.tiene_preferencias' data-alert class="alert-box secondary">
             m... el directorio <code>partes/{{dir.titulo}}</code> no tiene un archivo <code>preferencias.json</code> dentro, mejor creá uno.

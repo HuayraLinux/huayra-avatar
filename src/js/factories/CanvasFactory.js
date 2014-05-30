@@ -86,7 +86,7 @@ app.factory("Canvas", function() {
       //
       // Esta categoría se guarda en el objeto, para evitar que el avatar
       // tenga mas de una cara, mas de dos bocas etc...
-      var categoria = ruta.match(/partes\/(\w+)\//)[1];
+      var categoria = ruta.match(/partes\/(.+)\//)[1];
 
 
       canvas.forEachObject(function(o, i) {
