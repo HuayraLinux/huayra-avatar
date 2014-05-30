@@ -5978,8 +5978,9 @@ label {
   margin-top: 6px;
   border-color: #e7e7e7;
   color: #333333;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  /* -webkit-transition: all 0.2s ease-in-out; */
+  /* transition: all 0.2s ease-in-out; */
+  background-color: rgb(247, 247, 247);
 }
 .nav-tabs > li > a:hover,
 .nav-tabs > li > a:focus,
