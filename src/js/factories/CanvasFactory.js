@@ -1,3 +1,4 @@
+var fs = require('fs');
 var app = angular.module('app');
 
 var sel_Rect = undefined;
@@ -31,9 +32,11 @@ fabric.util.object.extend(fabric.Canvas.prototype, {
 
 app.factory("Canvas", function() {
   var Canvas = {}
+  var ruta_mis_archivos = process.env.HOME + '/.caripela/'
 
   Canvas.canvas = new fabric.Canvas('canvas');
   fabric.Object.prototype.transparentCorners = false;
+
 
   function informar_error(error) {
     if (error)
@@ -125,6 +128,33 @@ app.factory("Canvas", function() {
         Canvas.canvas.moveTo(o, -o.z);
       });
 
+    });
+  }
+
+  Canvas.guardar = function(nombre) {
+    var data = Canvas.canvas.toJSON();
+    var filename = ruta_mis_archivos + nombre + '.json';
+    var ruta_png = ruta_mis_archivos + nombre + '.png';
+    Canvas.guardar_como_archivo_png(ruta_png);
+
+    fs.writeFile(filename, JSON.stringify(data, null, 4), function(err) {
+      if (err)
+        alert(err);
+    });
+  }
+
+  Canvas.cargar = function(nombre) {
+    var filename = ruta_mis_archivos + nombre + '.json';
+
+    fs.readFile(filename, 'utf8', function (err, data) {
+      if (err) {
+        alert(err);
+        return;
+      }
+
+      var data = JSON.parse(data);
+      var canvas = Canvas.canvas;
+      canvas.loadFromJSON(data, canvas.renderAll.bind(canvas));
     });
   }
 

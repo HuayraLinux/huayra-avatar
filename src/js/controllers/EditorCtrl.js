@@ -176,7 +176,12 @@ app.controller('EditorCtrl', function($scope, Canvas, $location) {
   }
 
   $scope.guardar_y_regresar = function() {
+    Canvas.guardar('3');
     $location.url('/selector');
+  }
+
+  $scope.abrir = function() {
+    Canvas.cargar('3');
   }
 
 });
