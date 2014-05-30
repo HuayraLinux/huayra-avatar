@@ -3,21 +3,43 @@ var app = angular.module('app');
 
 app.factory("MisArchivos", function() {
   var ruta_mis_archivos = process.env.HOME + '/.caripela/';
-  var MisArchivos = [];
+  var obj = {archivos: [], numero_maximo: 0};
 
-  if (fs.existsSync(ruta_mis_archivos)) {
-    MisArchivos = fs.readdirSync(ruta_mis_archivos);
+  obj.obtener_numero = function() {
+    return obj.numero_maximo + 1;
+  }
 
-    for (i=0; i < MisArchivos.length; ++i) {
-        MisArchivos[i] = ruta_mis_archivos + MisArchivos[i]
+  obj.actualizar = function() {
+
+    if (fs.existsSync(ruta_mis_archivos)) {
+      var listado_archivos = fs.readdirSync(ruta_mis_archivos);
+      obj.archivos = [];
+
+      for (i=0; i < listado_archivos.length; ++i) {
+          nombre_archivo = listado_archivos[i];
+
+          if (/\.json$/.test(nombre_archivo)) {
+            var numero =  parseInt(nombre_archivo, 10);
+
+            obj.archivos.push({
+              nombre: nombre_archivo.replace('.json', ''),
+              numero: numero,
+              ruta_json: ruta_mis_archivos + nombre_archivo,
+              ruta_png: ruta_mis_archivos + nombre_archivo.replace('.json', '.png')
+            });
+
+            if (numero > obj.numero_maximo) {
+              obj.numero_maximo = numero;
+            }
+
+          }
+      }
     }
-
+    else {
+      fs.mkdirSync(ruta_mis_archivos);
+    }
   }
-  else {
-    fs.mkdirSync(ruta_mis_archivos);
-  }
 
-  console.log(MisArchivos)
-
-  return MisArchivos;
+  obj.actualizar();
+  return obj;
 })

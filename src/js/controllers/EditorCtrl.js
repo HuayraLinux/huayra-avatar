@@ -1,6 +1,6 @@
 var app = angular.module('app');
 
-app.controller('EditorCtrl', function($scope, Canvas, $location) {
+app.controller('EditorCtrl', function($scope, Canvas, $location, MisArchivos) {
 
   $scope.borrar_elemento_seleccionado = function() {
     var canvas = Canvas.canvas;
@@ -176,12 +176,16 @@ app.controller('EditorCtrl', function($scope, Canvas, $location) {
   }
 
   $scope.guardar_y_regresar = function() {
-    Canvas.guardar('3');
-    $location.url('/selector');
+    var nombre = MisArchivos.obtener_numero().toString();
+
+    Canvas.guardar(nombre, function() {
+      MisArchivos.actualizar();
+      $location.path('/selector');
+    });
   }
 
   $scope.abrir = function() {
-    Canvas.cargar('3');
+    //Canvas.cargar(MisArchivos.obtener_numero());
   }
 
 });

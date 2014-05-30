@@ -131,15 +131,18 @@ app.factory("Canvas", function() {
     });
   }
 
-  Canvas.guardar = function(nombre) {
+  Canvas.guardar = function(nombre, success) {
     var data = Canvas.canvas.toJSON();
     var filename = ruta_mis_archivos + nombre + '.json';
     var ruta_png = ruta_mis_archivos + nombre + '.png';
+    
     Canvas.guardar_como_archivo_png(ruta_png);
 
     fs.writeFile(filename, JSON.stringify(data, null, 4), function(err) {
       if (err)
         alert(err);
+
+      success.apply(this);
     });
   }
 
