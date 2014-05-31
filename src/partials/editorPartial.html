@@ -15,8 +15,8 @@
             <!-- <li><a href ng-click="todo('abrir')">Abrir</a></li> -->
             <li><a href ng-click="guargar_png()">Guardar como PNG</a></li>
             <li><a href ng-click="guardar_svg()">Guardar como SVG</a></li>
-            <!-- <li class="divider"></li> -->
-            <!-- <li><a href="" ng-click="todo('salir')">Salir</a></li> -->
+            <li class="divider"></li>
+            <li><a href ng-click="salir()">Regresar a la pantalla de selección</a></li>
           </ul>
         </li>
       </ul>
@@ -33,12 +33,12 @@
   <div>
     <div class="avatar">
 
-      <div class='botones'>
-        <button ng-click="guardar_y_regresar()" ng-disabled="data.guardando" class='btn btn-tiny btn-success'><i class="fi-left"></i> Guardar y regresar</button>
-        <button ng-click="borrar_elemento_seleccionado()" class='btn btn-tiny btn-danger' style='float: right;'><i class="fi-x"></i> Borrar elemento</button>
-      </div>
-
       <canvasfabric></canvasfabric>
+
+      <div class='botones'>
+        <button ng-click="guardar_y_regresar()" ng-disabled="data.guardando" class='btn btn-tiny btn-success'><i class="fi-left"></i> Guardar caripela</button>
+        <button ng-click="borrar_elemento_seleccionado()" ng-disabled='! data.hay_elemento_seleccionado' class='btn btn-tiny btn-danger' style='float: right;'><i class="fi-x"></i> Borrar elemento</button>
+      </div>
 
     </div>
 

@@ -3,7 +3,7 @@ var app = angular.module('app');
 app.directive('canvasfabric', ['Canvas', function(Canvas) {
 
   function link(scope, element, attrs) {
-    Canvas.canvas = new fabric.Canvas('canvas');
+    Canvas.actualizar();
   }
 
   return {

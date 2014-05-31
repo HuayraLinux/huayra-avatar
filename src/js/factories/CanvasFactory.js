@@ -34,9 +34,23 @@ app.factory("Canvas", function() {
   var Canvas = {}
   var ruta_mis_archivos = process.env.HOME + '/.caripela/'
 
-  Canvas.canvas = new fabric.Canvas('canvas');
-  fabric.Object.prototype.transparentCorners = false;
 
+  Canvas.actualizar = function() {
+    Canvas.canvas = new fabric.Canvas('canvas');
+    fabric.Object.prototype.transparentCorners = false;
+
+    Canvas.canvas.on("object:selected", function(options) {
+      Canvas.funcion_respuesta.call(this, true);
+    });
+
+    Canvas.canvas.on("selection:cleared", function(options) {
+      Canvas.funcion_respuesta.call(this, false);
+    });
+  }
+
+  Canvas.conectar_eventos = function(funcion_respuesta) {
+    Canvas.funcion_respuesta = funcion_respuesta;
+  }
 
   function informar_error(error) {
     if (error)
@@ -62,7 +76,8 @@ app.factory("Canvas", function() {
       if (err) {
         informar_error.call(this, err);
       } else {
-        success.call(this);
+        if (success)
+          success.call(this);
       }
     });
   }
@@ -141,6 +156,7 @@ app.factory("Canvas", function() {
     var data = Canvas.canvas.toJSON();
     var filename = ruta_mis_archivos + nombre + '.json';
     var ruta_png = ruta_mis_archivos + nombre + '.png';
+    Canvas.deseleccionar_todo();
 
     Canvas.guardar_como_archivo_png(ruta_png, function() {
       fs.writeFile(filename, JSON.stringify(data, null, 4), function(err) {
@@ -150,6 +166,10 @@ app.factory("Canvas", function() {
         success.apply(this);
       });
     });
+  }
+
+  Canvas.deseleccionar_todo = function() {
+    Canvas.canvas.deactivateAll().renderAll();
   }
 
   Canvas.cargar = function(ruta) {

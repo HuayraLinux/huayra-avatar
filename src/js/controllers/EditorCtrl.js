@@ -2,7 +2,6 @@ var app = angular.module('app');
 
 app.controller('EditorCtrl', function($scope, Canvas, $location, MisArchivos) {
 
-
   $scope.borrar_elemento_seleccionado = function() {
     var canvas = Canvas.canvas;
     var activeObject = canvas.getActiveObject();
@@ -25,6 +24,14 @@ app.controller('EditorCtrl', function($scope, Canvas, $location, MisArchivos) {
   $scope.data = {};
   $scope.data.guardando = false;
   $scope.data.directorios = [];
+  $scope.data.hay_elemento_seleccionado = false;
+
+
+  Canvas.conectar_eventos(function(estado) {
+    $scope.data.hay_elemento_seleccionado = estado;
+    $scope.$apply();
+  });
+
 
   $scope.abrir_directorio = function(dir) {
     var gui = require('nw.gui');
@@ -169,14 +176,6 @@ app.controller('EditorCtrl', function($scope, Canvas, $location, MisArchivos) {
     }, 1);
   }
 
-  $scope.todo = function(funcionalidad) {
-    alert("TODO: sin implementar la funcionalidad: " + funcionalidad);
-  }
-
-  $scope.salir = function() {
-    alert("salir");
-  }
-
   $scope.guardar_y_regresar = function() {
     var nombre = MisArchivos.obtener_numero().toString();
     $scope.data.guardando = true;
@@ -189,6 +188,10 @@ app.controller('EditorCtrl', function($scope, Canvas, $location, MisArchivos) {
         $scope.$apply();
       }, 100);
     });
+  }
+
+  $scope.salir = function() {
+    $location.path('/selector');
   }
 
   var ruta = $location.search().ruta;
