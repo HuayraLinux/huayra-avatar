@@ -22,6 +22,7 @@ app.controller('EditorCtrl', function($scope, Canvas, $location, MisArchivos) {
   var path = 'partes/';
 
   $scope.data = {};
+  $scope.data.guardando = false;
   $scope.data.directorios = [];
 
   $scope.abrir_directorio = function(dir) {
@@ -177,10 +178,15 @@ app.controller('EditorCtrl', function($scope, Canvas, $location, MisArchivos) {
 
   $scope.guardar_y_regresar = function() {
     var nombre = MisArchivos.obtener_numero().toString();
+    $scope.data.guardando = true;
 
     Canvas.guardar(nombre, function() {
       MisArchivos.actualizar();
-      $location.path('/selector');
+
+      setTimeout(function() {
+        $location.path('/selector');
+        $scope.$apply();
+      }, 100);
     });
   }
 

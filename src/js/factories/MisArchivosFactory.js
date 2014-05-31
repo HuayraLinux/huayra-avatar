@@ -34,6 +34,12 @@ app.factory("MisArchivos", function() {
 
           }
       }
+
+      // Ordena las caripelas de forma que las mas nuevas aparezcan primero.
+      obj.archivos = _.sortBy(obj.archivos, function(e) {
+        return -e.numero;
+      });
+
     }
     else {
       fs.mkdirSync(ruta_mis_archivos);

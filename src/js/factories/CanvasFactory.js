@@ -54,11 +54,17 @@ app.factory("Canvas", function() {
       fs.writeFile(ruta, data, 'utf-8', informar_error);
   }
 
-  Canvas.guardar_como_archivo_png = function(ruta) {
+  Canvas.guardar_como_archivo_png = function(ruta, success) {
     var data = Canvas.canvas.toDataURL({format: 'png'});
     var base64Data = data.replace(/^data:image\/png;base64,/, "");
 
-    fs.writeFile(ruta, base64Data, 'base64', informar_error);
+    fs.writeFile(ruta, base64Data, 'base64', function(err) {
+      if (err) {
+        informar_error.call(this, err);
+      } else {
+        success.call(this);
+      }
+    });
   }
 
   Canvas.definir_fondo = function(ruta, preferencias) {
@@ -135,14 +141,14 @@ app.factory("Canvas", function() {
     var data = Canvas.canvas.toJSON();
     var filename = ruta_mis_archivos + nombre + '.json';
     var ruta_png = ruta_mis_archivos + nombre + '.png';
-    
-    Canvas.guardar_como_archivo_png(ruta_png);
 
-    fs.writeFile(filename, JSON.stringify(data, null, 4), function(err) {
-      if (err)
-        alert(err);
+    Canvas.guardar_como_archivo_png(ruta_png, function() {
+      fs.writeFile(filename, JSON.stringify(data, null, 4), function(err) {
+        if (err)
+          alert(err);
 
-      success.apply(this);
+        success.apply(this);
+      });
     });
   }
 
