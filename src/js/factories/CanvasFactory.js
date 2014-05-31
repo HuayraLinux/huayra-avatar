@@ -76,27 +76,30 @@ app.factory("Canvas", function() {
       var ratio_vertical = preferencias.alto / size.height;
       var ratio = Math.min(ratio_horizontal, ratio_vertical);
 
-      //img.scale(ratio);
-
-      //img.perPixelTargetFind = true;
-      //img.targetFindTolerance = 10;
-
       // Extrae el nombre del directorio de donde salió la imagen, por
       // ejemplo si el path es 'partes/cara/1.svg', la variable categoría
       // va a quedar con el valor 'cara'.
       //
       // Esta categoría se guarda en el objeto, para evitar que el avatar
       // tenga mas de una cara, mas de dos bocas etc...
+      //
+      // Pero ojo, esto solo aplica si la categoría del objeto no admite
+      // duplicados.
       var categoria = ruta.match(/partes\/(.+)\//)[1];
 
 
-      canvas.forEachObject(function(o, i) {
-        if (o.categoria == categoria) {
-          preferencias.x = o.left;
-          preferencias.y = o.top;
-          canvas.remove(o);
-        }
-      });
+      // Intenta borrar todos los objetos de esta categoria si no
+      // admite duplicados:
+      if (! preferencias.admite_duplicados) {
+        canvas.forEachObject(function(o, i) {
+          if (o.categoria == categoria) {
+            preferencias.x = o.left;
+            preferencias.y = o.top;
+            canvas.remove(o);
+          }
+        });
+      }
+
 
       img.set({
         left: preferencias.x,
@@ -107,19 +110,24 @@ app.factory("Canvas", function() {
         z: preferencias.z
       });
 
-
-      // Tinte de color !
-      //var filter = new fabric.Image.filters.Tint({
-      //	color: '#3513B0',
-        //color: 'rgba(53, 21, 176, 0.5)'
-      //	opacity: 0.5
-      //});
-
-      //img.filters.push(filter);
-      //img.applyFilters(Canvas.canvas.renderAll.bind(Canvas.canvas));
-
-
       Canvas.canvas.add(img);
+
+      // Si el objeto es simétrico, como los ojos, se
+      // encarga de clonar el objeto dos veces.
+      if (preferencias.doble) {
+        var object = fabric.util.object.clone(img);
+        object.set({
+          left: preferencias.x - preferencias.distancia_entre_dobles,
+          top: preferencias.y,
+          scaleX: -ratio,
+          scaleY: ratio,
+          categoria: categoria,
+          z: preferencias.z
+        });
+
+        canvas.add(object);
+      }
+
 
       // ordena todos los objetos por valor Z.
       canvas.forEachObject(function(o, i) {

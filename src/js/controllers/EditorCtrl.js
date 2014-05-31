@@ -47,6 +47,9 @@ app.controller('EditorCtrl', function($scope, Canvas, $location, MisArchivos) {
     preferencias.z = dir.preferencias.z || 0;
     preferencias.ancho = dir.preferencias.ancho || 50;
     preferencias.alto = dir.preferencias.alto || 50;
+    preferencias.doble = dir.preferencias.doble || false;
+    preferencias.admite_duplicados = dir.preferencias.admite_duplicados || false;
+    preferencias.distancia_entre_dobles = dir.preferencias.distancia_entre_dobles || 100;
 
     if (preferencias.es_fondo)
       Canvas.definir_fondo(obj.src, preferencias);
@@ -139,14 +142,6 @@ app.controller('EditorCtrl', function($scope, Canvas, $location, MisArchivos) {
   // galeria.
   actualizar_listado_directorios();
 
-  // Observa cambios en el directorio de galeria, si hay algún
-  // archivo o directorio nuevo vuelve a cargar todos los directorios
-  // y generar la galeria.
-  fs.watch(path, function() {
-    actualizar_listado_directorios();
-  });
-
-
 
   function abrir_dialogo(name, funcion) {
     var chooser = document.querySelector(name);
@@ -194,6 +189,8 @@ app.controller('EditorCtrl', function($scope, Canvas, $location, MisArchivos) {
     $location.path('/selector');
   }
 
+
+  /* Carga el avatar sugerido por la URL: */
   var ruta = $location.search().ruta;
 
   if (ruta) {
