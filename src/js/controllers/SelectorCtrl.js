@@ -6,6 +6,11 @@ app.controller('SelectorCtrl', function($scope, $location, MisArchivos) {
     $location.url('/editor');
   }
 
+  $scope.abrir_avatar = function(obj) {
+    var ruta = obj.ruta_json;
+    $location.path('/editor').search({ruta: ruta});
+  }
+
   $scope.data.mis_archivos = MisArchivos.archivos;
 
 });

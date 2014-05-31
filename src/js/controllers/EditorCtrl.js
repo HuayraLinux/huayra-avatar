@@ -2,6 +2,7 @@ var app = angular.module('app');
 
 app.controller('EditorCtrl', function($scope, Canvas, $location, MisArchivos) {
 
+
   $scope.borrar_elemento_seleccionado = function() {
     var canvas = Canvas.canvas;
     var activeObject = canvas.getActiveObject();
@@ -190,8 +191,10 @@ app.controller('EditorCtrl', function($scope, Canvas, $location, MisArchivos) {
     });
   }
 
-  $scope.abrir = function() {
-    //Canvas.cargar(MisArchivos.obtener_numero());
+  var ruta = $location.search().ruta;
+
+  if (ruta) {
+    Canvas.cargar(ruta);
   }
 
 });

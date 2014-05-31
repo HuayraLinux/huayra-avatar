@@ -152,10 +152,9 @@ app.factory("Canvas", function() {
     });
   }
 
-  Canvas.cargar = function(nombre) {
-    var filename = ruta_mis_archivos + nombre + '.json';
+  Canvas.cargar = function(ruta) {
 
-    fs.readFile(filename, 'utf8', function (err, data) {
+    fs.readFile(ruta, 'utf8', function (err, data) {
       if (err) {
         alert(err);
         return;

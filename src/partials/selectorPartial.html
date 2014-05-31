@@ -2,6 +2,6 @@
 
       <ul class="clearing-thumbs" data-clearing="" style="">
         <li><a ng-click='crear_avatar()' href class="th objeto"><img class='resize_fit_center' src='imagenes/crear_caripela.png'></a></li>
-        <li ng-repeat='obj in data.mis_archivos'><button class="th objeto"><img class='resize_fit_center' ng-src="{{obj.ruta_png}}"></button></li>
+        <li ng-repeat='obj in data.mis_archivos' ng-click='abrir_avatar(obj)'><button class="th objeto"><img class='resize_fit_center' ng-src="{{obj.ruta_png}}"></button></li>
       </ul>
 </div>
