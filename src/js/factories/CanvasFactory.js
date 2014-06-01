@@ -139,6 +139,13 @@ app.factory("Canvas", function() {
 
   Canvas.guardar = function(nombre, success) {
     var data = Canvas.canvas.toJSON();
+
+    for (var i=0; i< data.objects.length; i++) {
+      var objeto_en_canvas = Canvas.canvas.getObjects()[i]
+      data.objects[i].z = objeto_en_canvas.z || 0;
+      data.objects[i].categoria = objeto_en_canvas.categoria || "";
+    }
+
     var filename = ruta_mis_archivos + nombre + '.json';
     var ruta_png = ruta_mis_archivos + nombre + '.png';
     Canvas.deseleccionar_todo();
