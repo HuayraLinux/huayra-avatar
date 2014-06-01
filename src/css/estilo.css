@@ -89,6 +89,9 @@ ul, ol {
 	box-shadow: rgb(190, 190, 190) 0px 4px 10px;
 }
 
+.navbar-brand {
+	cursor: default;
+}
 
 .galeria button {
 	background-color: white;

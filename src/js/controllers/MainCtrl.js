@@ -13,7 +13,6 @@ app.controller('MainCtrl', function($scope, Config) {
     });
   }
 
-
   $scope.actualizar = function() {
     location.reload(true);
   }
