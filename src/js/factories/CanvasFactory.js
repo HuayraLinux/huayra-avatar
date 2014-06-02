@@ -67,7 +67,7 @@ app.factory("Canvas", function() {
     console.log("Pulsando tecla ", key);
 
     switch(key){
-      case 8:
+    case 46:
         event.preventDefault();
         Canvas.borrar_elemento_seleccionado();
         break;
