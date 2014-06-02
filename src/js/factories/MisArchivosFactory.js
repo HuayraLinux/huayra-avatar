@@ -9,6 +9,27 @@ app.factory("MisArchivos", function() {
     return obj.numero_maximo + 1;
   }
 
+  function borrar_archivo(ruta) {
+    fs.exists(ruta, function(exists) {
+
+      if (exists) {
+        fs.unlink(ruta, function(error) {
+          if (error)
+            console.log(error);
+        });
+      }
+    });
+  }
+
+  obj.eliminar = function(obj_a_eliminar) {
+    obj.archivos = _(obj.archivos).reject(function(e) {
+      return (e.ruta_json == obj_a_eliminar.ruta_json);
+    });
+
+    borrar_archivo(obj_a_eliminar.ruta_json);
+    borrar_archivo(obj_a_eliminar.ruta_png);
+  }
+
   obj.actualizar = function() {
 
     if (fs.existsSync(ruta_mis_archivos)) {

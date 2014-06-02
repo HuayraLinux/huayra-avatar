@@ -46,15 +46,18 @@ dl.tabs {
 
 .objeto {
 	width: 120px;
-	height: 120px;
+	height: 133px;
 	float: left;
-	overflow: hidden;
 	padding: 3px;
 	margin: 5px;
 	margin-bottom: 10px;
-	line-height: 115px;
 	text-align: center;
 	border: 1px solid rgb(221, 221, 221);
+}
+
+.objeto button {
+	background: none;
+	border: 0;
 }
 
 .resize_fit_center {
@@ -104,4 +107,12 @@ ul, ol {
 .selector {
 	margin: 7em;
 
+}
+
+div.dropdown {
+	text-align: right;
+}
+
+.dropdown-menu {
+	text-align: center;
 }

@@ -11,6 +11,10 @@ app.controller('SelectorCtrl', function($scope, $location, MisArchivos) {
     $location.path('/editor').search({ruta: ruta});
   }
 
-  $scope.data.mis_archivos = MisArchivos.archivos;
+  $scope.borrar_avatar = function(obj) {
+      MisArchivos.eliminar(obj);
+      $scope.data.mis_archivos = MisArchivos.archivos;
+  }
 
+  $scope.data.mis_archivos = MisArchivos.archivos;
 });
