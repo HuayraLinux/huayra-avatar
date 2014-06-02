@@ -71,11 +71,6 @@ app.factory("Canvas", function() {
 
     fabric.Image.fromURL(ruta, function(img) {
 
-      var size = img.getOriginalSize();
-      var ratio_horizontal = preferencias.ancho / size.width;
-      var ratio_vertical = preferencias.alto / size.height;
-      var ratio = Math.min(ratio_horizontal, ratio_vertical);
-
       // Extrae el nombre del directorio de donde salió la imagen, por
       // ejemplo si el path es 'partes/cara/1.svg', la variable categoría
       // va a quedar con el valor 'cara'.
@@ -92,6 +87,10 @@ app.factory("Canvas", function() {
       // admite duplicados:
       if (! preferencias.admite_duplicados) {
         canvas.forEachObject(function(o, i) {
+
+          // Borra el objeto de la categoría que va a tener el elemento
+          // nuevo, pero además captura la coordenada y el tamaño para
+          // que el nuevo objeto respete esas coordenadas.
           if (o.categoria == categoria) {
             preferencias.x = o.left;
             preferencias.y = o.top;
@@ -100,14 +99,31 @@ app.factory("Canvas", function() {
         });
       }
 
+      if (preferencias.x < 0)
+        preferencias.x = 0;
+
+      if (preferencias.y < 0)
+        preferencias.y = 0;
+
+      if (preferencias.x > 400)
+        preferencias.x = 100;
+
+      if (preferencias.y > 400)
+        preferencias.y = 100;
+
+      var size = img.getOriginalSize();
+      var ratio_horizontal = preferencias.ancho / size.width;
+      var ratio_vertical = preferencias.alto / size.height;
+      var ratio = Math.min(ratio_horizontal, ratio_vertical);
+
 
       img.set({
         left: preferencias.x,
         top: preferencias.y,
+        categoria: categoria,
+        z: preferencias.z,
         scaleX: ratio,
         scaleY: ratio,
-        categoria: categoria,
-        z: preferencias.z
       });
 
       Canvas.canvas.add(img);
