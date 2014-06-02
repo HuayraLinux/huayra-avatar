@@ -45,16 +45,16 @@
     <div class="galeria">
       <tabset>
         <tab ng-repeat="dir in data.directorios" heading="{{dir.titulo | categoria }}" active="dir.active">
+          <div class='contenido-tab'>
+            <div ng-show='! dir.tiene_preferencias' data-alert class="alert-box secondary">
+              m... el directorio <code>partes/{{dir.titulo}}</code> no tiene un archivo <code>preferencias.json</code> dentro, mejor creá uno.
+            </div>
 
-          <div ng-show='! dir.tiene_preferencias' data-alert class="alert-box secondary">
-            m... el directorio <code>partes/{{dir.titulo}}</code> no tiene un archivo <code>preferencias.json</code> dentro, mejor creá uno.
+            <ul class="clearing-thumbs" data-clearing="" style="">
+              <li ng-repeat='obj in dir.objetos'><button ng-click='selecciona_objeto(obj, dir)' class="th objeto"><img class='resize_fit_center' ng-src="{{obj.src}}"></button></li>
+              <li><a ng-click='abrir_directorio(dir)' href class="th objeto"><img class='resize_fit_center' src='imagenes/agregar.png'></a></li>
+            </ul>
           </div>
-
-          <ul class="clearing-thumbs" data-clearing="" style="">
-            <li ng-repeat='obj in dir.objetos'><button ng-click='selecciona_objeto(obj, dir)' class="th objeto"><img class='resize_fit_center' ng-src="{{obj.src}}"></button></li>
-            <li><a ng-click='abrir_directorio(dir)' href class="th objeto"><img class='resize_fit_center' src='imagenes/agregar.png'></a></li>
-          </ul>
-
         </tab>
       </tabset>
 
