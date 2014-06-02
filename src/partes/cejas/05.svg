@@ -9,12 +9,12 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="320.86581"
-   height="49.1576"
+   width="105.46586"
+   height="48.263699"
    id="svg4392"
    version="1.1"
    inkscape:version="0.48.3.1 r9886"
-   sodipodi:docname="04.svg">
+   sodipodi:docname="05.svg">
   <defs
      id="defs4394">
     <inkscape:path-effect
@@ -54,7 +54,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.35"
-     inkscape:cx="-38.866308"
+     inkscape:cx="-254.26627"
      inkscape:cy="98.699012"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -76,7 +76,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -84,21 +84,11 @@
      inkscape:label="Capa 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-388.86631,-581.9036)">
-    <g
-       style="display:inline"
-       id="g4086"
-       transform="translate(-124.91243,-3029.7174)">
-      <path
-         inkscape:connector-curvature="0"
-         id="path6357"
-         d="m 519.70356,3659.8848 c 0,0 14.2202,-32.1758 29.62541,-33.9634 15.4052,-1.7875 48.58495,7.1502 59.25025,7.1502 10.6653,0 10.6653,0 10.6653,0 l -65.17565,-21.4506 c 0,0 -40.29013,3.5752 -40.29013,21.4506 0,17.8755 5.92482,26.8132 5.92482,26.8132 z"
-         style="fill:#aa8800;fill-opacity:1;fill-rule:evenodd;stroke:none" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path6357-4"
-         d="m 828.71973,3660.7786 c 0,0 -14.2202,-32.1759 -29.62541,-33.9634 -15.4052,-1.7876 -48.58495,7.1502 -59.25025,7.1502 -10.66537,0 -10.66537,0 -10.66537,0 l 65.17572,-21.4505 c 0,0 40.29014,3.575 40.29014,21.4505 0,17.8755 -5.92483,26.8132 -5.92483,26.8132 z"
-         style="fill:#aa8800;fill-opacity:1;fill-rule:evenodd;stroke:none" />
-    </g>
+     transform="translate(-604.26627,-582.7975)">
+    <path
+       style="fill:#aa8800;fill-opacity:1;fill-rule:evenodd;stroke:none"
+       d="m 703.8073,631.0612 c 0,0 -14.2202,-32.1759 -29.62541,-33.9634 -15.4052,-1.7876 -48.58495,7.1502 -59.25025,7.1502 -10.66537,0 -10.66537,0 -10.66537,0 l 65.17572,-21.4505 c 0,0 40.29014,3.575 40.29014,21.4505 0,17.8755 -5.92483,26.8132 -5.92483,26.8132 z"
+       id="path6357-4"
+       inkscape:connector-curvature="0" />
   </g>
 </svg>
