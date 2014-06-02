@@ -4,13 +4,34 @@ var app = angular.module('app');
 var sel_Rect = undefined;
 
 
+/*
+ * Previene el bug clásico que no nos permitía seleccionar objetos
+ * que se solapaban.
+ */
+fabric.util.object.extend(fabric.Canvas.prototype, {
+  _searchPossibleTargets: function(e) {
 
+    var target,
+    pointer = this.getPointer(e);
+
+    var i = this._objects.length;
+
+    while(i--) {
+      if (this._checkTarget(e, this._objects[i], pointer)){
+        this.relatedTarget = this._objects[i];
+        target = this._objects[i];
+        break;
+      }
+    }
+
+    return target;
+  }
+});
 
 
 app.factory("Canvas", function() {
   var Canvas = {}
   var ruta_mis_archivos = process.env.HOME + '/.caripela/'
-
 
   Canvas.actualizar = function() {
     Canvas.canvas = new fabric.Canvas('canvas');
@@ -27,6 +48,49 @@ app.factory("Canvas", function() {
 
   Canvas.conectar_eventos = function(funcion_respuesta) {
     Canvas.funcion_respuesta = funcion_respuesta;
+  }
+
+  createListenersKeyboard();
+
+  function createListenersKeyboard() {
+    document.onkeydown = onKeyDownHandler;
+  }
+
+  function onKeyDownHandler(event) {
+    var key;
+
+    if (window.event)
+      key = window.event.keyCode;
+    else
+      key = event.keyCode;
+
+    console.log("Pulsando tecla ", key);
+
+    switch(key){
+      case 8:
+        event.preventDefault();
+        Canvas.borrar_elemento_seleccionado();
+        break;
+
+      default:
+        break;
+    }
+
+  }
+
+  Canvas.borrar_elemento_seleccionado = function() {
+    var canvas = Canvas.canvas;
+
+    var activeObject = canvas.getActiveObject();
+    var activeGroup = canvas.getActiveGroup();
+
+    if (activeGroup) {
+      var objectsInGroup = activeGroup.getObjects();
+      canvas.discardActiveGroup();
+      objectsInGroup.forEach(function(object) {canvas.remove(object);});
+    } else if (activeObject) {
+      canvas.remove(activeObject);
+    }
   }
 
   function informar_error(error) {
