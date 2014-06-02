@@ -29,8 +29,10 @@ app.controller('EditorCtrl', function($scope, Canvas, $location, MisArchivos) {
 
   Canvas.conectar_eventos(function(estado) {
     $scope.data.hay_elemento_seleccionado = estado;
-    if (estado)
+
+    if ($scope.$root.$$phase != '$apply' && $scope.$root.$$phase != '$digest') {
       $scope.$apply();
+    }
   });
 
 

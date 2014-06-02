@@ -2,7 +2,7 @@
     "name": "Caripela",
     "main": "index.html",
     "config": {
-      "livereload": true
+      "livereload": false
     },
     "window": {
         "title": "Caripela",
