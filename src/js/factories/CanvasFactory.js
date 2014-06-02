@@ -64,10 +64,8 @@ app.factory("Canvas", function() {
     else
       key = event.keyCode;
 
-    console.log("Pulsando tecla ", key);
-
-    switch(key){
-    case 46:
+    switch (key) {
+      case 46:
         event.preventDefault();
         Canvas.borrar_elemento_seleccionado();
         break;
@@ -76,6 +74,24 @@ app.factory("Canvas", function() {
         break;
     }
 
+  }
+
+  Canvas.espejar_elemento_seleccionado = function() {
+    var canvas = Canvas.canvas;
+
+    var activeObject = canvas.getActiveObject();
+    var activeGroup = canvas.getActiveGroup();
+
+    if (activeGroup) {
+      var objectsInGroup = activeGroup.getObjects();
+      canvas.discardActiveGroup();
+      objectsInGroup.forEach(function(object) {object.flipX = !object.flipX;});
+    } else if (activeObject) {
+      activeObject.flipX = !activeObject.flipX;
+    }
+
+    //Canvas.canvas.renderAll.bind(Canvas.canvas);
+    Canvas.canvas.renderAll();
   }
 
   Canvas.borrar_elemento_seleccionado = function() {

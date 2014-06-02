@@ -6,6 +6,10 @@ app.controller('EditorCtrl', function($scope, Canvas, $location, MisArchivos) {
     Canvas.borrar_elemento_seleccionado();
   }
 
+  $scope.espejar_elemento_seleccionado = function() {
+    Canvas.espejar_elemento_seleccionado();
+  }
+
   var path = 'partes/';
 
   $scope.data = {};
