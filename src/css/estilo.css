@@ -141,3 +141,8 @@ div.dropdown {
 .navbar-brand-huayra {
 	color: white !important;
 }
+
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+		background-color: rgba(243, 243, 243, 0.32) !important;
+}
