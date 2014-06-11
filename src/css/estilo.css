@@ -120,6 +120,9 @@ div.dropdown {
 
 .navbar-huayra {
 	background-color: #425f9b !important;
+	border-radius: 0px !important;
+	border-left: none !important;
+	border-right: none !important;
 }
 
 .dropdown-menu-huayra {
