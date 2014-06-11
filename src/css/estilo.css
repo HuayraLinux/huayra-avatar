@@ -116,3 +116,25 @@ div.dropdown {
 .dropdown-menu {
 	text-align: center;
 }
+
+
+.navbar-huayra {
+	background-color: #425f9b !important;
+}
+
+.dropdown-menu-huayra {
+	background-color: #425f9b !important;
+}
+
+.navbar-huayra a {
+	color: white !important;
+}
+
+
+.navbar-header-huayra {
+
+}
+
+.navbar-brand-huayra {
+	color: white !important;
+}
