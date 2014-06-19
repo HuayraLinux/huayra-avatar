@@ -126,6 +126,7 @@ app.factory("Canvas", function() {
   }
 
   Canvas.guardar_como_archivo_png = function(ruta, success) {
+    Canvas.deseleccionar_todo();
     var data = Canvas.canvas.toDataURL({format: 'png'});
     var base64Data = data.replace(/^data:image\/png;base64,/, "");
 
