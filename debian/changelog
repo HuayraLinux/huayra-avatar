@@ -1,3 +1,46 @@
+caripela (0.8) unstable; urgency=low
+
+  * Haciendo que la aplicación permita definir el avatar del usuario. 
+
+ -- Hugo Ruscitti <hugoruscitti@gmail.com>  Thu, 19 Jun 2014 17:24:51 +0200
+
+caripela (0.7) unstable; urgency=low
+
+  * Cambiando el nombre de la aplicación a huayra-caripela. 
+
+ -- Hugo Ruscitti <hugoruscitti@gmail.com>  Wed, 11 Jun 2014 17:18:37 +0200
+
+caripela (0.6) unstable; urgency=low
+
+  * Agregando un header a la pantalla principal. 
+  * Agregando muchos objetos de interfaz nuevos.
+
+ -- Hugo Ruscitti <hugoruscitti@gmail.com>  Wed, 11 Jun 2014 17:15:52 +0200
+
+caripela (0.5) unstable; urgency=low
+
+  * Agregando mas figuras de peinados. 
+
+ -- Hugo Ruscitti <hugoruscitti@gmail.com>  Thu, 05 Jun 2014 15:54:06 +0200
+
+caripela (0.4) unstable; urgency=low
+
+  * Agregando posibilidad de invertir objetos.
+
+ -- Hugo Ruscitti <hugoruscitti@gmail.com>  Mon, 02 Jun 2014 21:50:31 +0200
+
+caripela (0.3) unstable; urgency=low
+
+  * Implementando la pantalla de seleccion y varias mejoras.
+
+ -- Hugo Ruscitti <hugoruscitti@gmail.com>  Mon, 02 Jun 2014 16:19:06 +0200
+
+caripela (0.2) unstable; urgency=low
+
+  * Cambiando el icono principal. 
+
+ -- Hugo Ruscitti <hugoruscitti@gmail.com>  Wed, 28 May 2014 19:20:41 +0200
+
 caripela (0.1) unstable; urgency=low
 
   * Creando una versión de prueba inicial.
