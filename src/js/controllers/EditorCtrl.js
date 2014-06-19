@@ -165,6 +165,13 @@ app.controller('EditorCtrl', function($scope, Canvas, $location, MisArchivos) {
     }, 1);
   }
 
+
+  $scope.definir_como_mi_avatar = function() {
+    var ruta_avatar = process.env.HOME + '/.huayra-compartir_avatar';
+    Canvas.guardar_como_archivo_png(ruta_avatar);
+  }
+
+
   $scope.guardar_y_regresar = function() {
     var nombre = MisArchivos.obtener_numero().toString();
     $scope.data.guardando = true;
