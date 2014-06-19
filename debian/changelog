@@ -1,3 +1,9 @@
+caripela (0.9) unstable; urgency=low
+
+  * arreglando el bug de expotación cuando hay objetos seleccionados. 
+
+ -- Hugo Ruscitti <hugoruscitti@gmail.com>  Thu, 19 Jun 2014 17:45:55 +0200
+
 caripela (0.8) unstable; urgency=low
 
   * Haciendo que la aplicación permita definir el avatar del usuario. 
