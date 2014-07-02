@@ -17,5 +17,6 @@
   },
   "homepage": "https://github.com/hugoruscitti/karucha",
   "dependencies": {
+    "grunt-node-webkit-builder": "^0.1.21"
   }
 }
