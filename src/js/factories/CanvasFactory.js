@@ -31,7 +31,8 @@ fabric.util.object.extend(fabric.Canvas.prototype, {
 
 app.factory("Canvas", function() {
   var Canvas = {}
-  var ruta_mis_archivos = process.env.HOME + '/.caripela/'
+  var homedir = (process.platform === 'win32') ? process.env.HOMEPATH : process.env.HOME;
+  var ruta_mis_archivos = homedir + '/.caripela/'
 
   Canvas.actualizar = function() {
     Canvas.canvas = new fabric.Canvas('canvas');

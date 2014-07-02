@@ -2,7 +2,8 @@ var fs = require('fs');
 var app = angular.module('app');
 
 app.factory("MisArchivos", function() {
-  var ruta_mis_archivos = process.env.HOME + '/.caripela/';
+  var homedir = (process.platform === 'win32') ? process.env.HOMEPATH : process.env.HOME;
+  var ruta_mis_archivos = homedir + '/.caripela/';
   var obj = {archivos: [], numero_maximo: 0};
 
   obj.obtener_numero = function() {
