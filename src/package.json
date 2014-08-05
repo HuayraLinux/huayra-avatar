@@ -1,12 +1,12 @@
 {
-    "name": "Caripela",
+    "name": "Huayra-Caripela",
     "version": 0.1,
     "main": "index.html",
     "config": {
       "livereload": false
     },
     "window": {
-        "title": "Hayra Caripela",
+        "title": "Huayra-Caripela",
         "toolbar": false,
         "width": 900,
         "height": 550,
