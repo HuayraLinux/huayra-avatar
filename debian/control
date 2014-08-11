@@ -4,14 +4,20 @@ Priority: extra
 Maintainer: Hugo Ruscitti <hugoruscitti@gmail.com>
 Build-Depends: debhelper (>= 8.0.0)
 Standards-Version: 3.9.3
-Homepage: https://github.com/hugoruscitti/caripela
-#Vcs-Git: git://git.debian.org/collab-maint/huayra-compartir.git
-#Vcs-Browser: http://git.debian.org/?p=collab-maint/huayra-compartir.git;a=summary
+Homepage: https://github.com/HuayraLinux/huayra-caripela
+#Vcs-Git: git@github.com:HuayraLinux/huayra-caripela.git
+#Vcs-Browser: https://github.com/HuayraLinux/huayra-caripela
 
-Package: caripela
+Package: huayra-caripela
 Architecture: all
 Depends: ${shlibs:Depends}, ${misc:Depends}, node-webkit
 Description: Permite crear personajes personalizados.
  Permite crear personajes personalizados para configurar
  tu perfil de usuario.
 
+
+Package: caripela
+Architecture: all
+Depends: ${misc:Depends}, huayra-caripela
+Description: Paquete transitorio para huayra-caripela
+ Paquete transitorio para huayra-caripela

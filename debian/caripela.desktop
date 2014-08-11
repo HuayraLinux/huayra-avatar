@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Huayra Caripela
 Comment=Permite crear personajes sencillos
-Exec=/usr/bin/caripela
+Exec=/usr/bin/huayra-caripela
 Terminal=false
 Type=Application
 Icon=caripela
