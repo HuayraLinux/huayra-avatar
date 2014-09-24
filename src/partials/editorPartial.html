@@ -1,11 +1,14 @@
   <div class="navbar navbar-inverse navbar-huayra">
     <div class="navbar-header navbar-header-huayra">
+
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-inverse-collapse">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
+
       <span class="navbar-brand navbar-brand-huayra"><img src='imagenes/icono.png'> huayra caripela</span>
+
     </div>
     <div class="navbar-collapse collapse navbar-inverse-collapse">
       <ul class="nav navbar-nav">
@@ -37,8 +40,12 @@
 
       <div class='botones'>
         <button ng-click="guardar_y_regresar()" ng-disabled="data.guardando" class='btn btn-tiny btn-success'><i class="fi-left"></i> Guardar caripela</button>
-        <button ng-click="borrar_elemento_seleccionado()" ng-disabled='! data.hay_elemento_seleccionado' class='btn btn-tiny btn-danger' style='float: right; margin-left: 10px'><i class="glyphicon glyphicon-trash" tooltip="Borrar el objeto seleccionado"></i></button>
-        <button ng-click="espejar_elemento_seleccionado()" ng-disabled='! data.hay_elemento_seleccionado' class='btn btn-tiny btn-info' style='float: right;'><i class="glyphicon glyphicon-resize-horizontal" tooltip="Espejar el objeto seleccionado"></i></button>
+
+        <button ng-click="borrar_elemento_seleccionado()" ng-disabled='! data.hay_elemento_seleccionado' class='btn btn-tiny btn-danger btn-editor'><i class="glyphicon glyphicon-trash" tooltip="Borrar el objeto seleccionado"></i></button>
+        <button ng-click="espejar_elemento_seleccionado()" ng-disabled='! data.hay_elemento_seleccionado' class='btn btn-tiny btn-info btn-editor'><i class="glyphicon glyphicon-resize-horizontal" tooltip="Espejar el objeto seleccionado"></i></button>
+
+        <button ng-click="subir_elemento_seleccionado()" ng-disabled='! data.hay_elemento_seleccionado' class='btn btn-tiny btn-warning btn-editor'><i class="glyphicon glyphicon-chevron-up" tooltip="Subir objeto un nivel"></i></button>
+        <button ng-click="bajar_elemento_seleccionado()" ng-disabled='! data.hay_elemento_seleccionado' class='btn btn-tiny btn-warning btn-editor'><i class="glyphicon glyphicon-chevron-down" tooltip="Bajar objeto un nivel"></i></button>
       </div>
 
     </div>

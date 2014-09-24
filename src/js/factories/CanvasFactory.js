@@ -30,9 +30,9 @@ fabric.util.object.extend(fabric.Canvas.prototype, {
 
 
 app.factory("Canvas", function() {
-  var Canvas = {}
+  var Canvas = {};
   var homedir = (process.platform === 'win32') ? process.env.HOMEPATH : process.env.HOME;
-  var ruta_mis_archivos = homedir + '/.caripela/'
+  var ruta_mis_archivos = homedir + '/.caripela/';
 
   Canvas.actualizar = function() {
     Canvas.canvas = new fabric.Canvas('canvas');
@@ -76,6 +76,44 @@ app.factory("Canvas", function() {
     }
 
   }
+
+
+  Canvas.subir_elemento_seleccionado = function() {
+    var canvas = Canvas.canvas;
+
+    var activeObject = canvas.getActiveObject();
+    var activeGroup = canvas.getActiveGroup();
+
+    if (activeGroup) {
+      var objectsInGroup = activeGroup.getObjects();
+      canvas.discardActiveGroup();
+      objectsInGroup.forEach(function(object) {canvas.bringForward(object)});
+    } else if (activeObject) {
+      canvas.bringForward(activeObject);
+    }
+
+    //Canvas.canvas.renderAll.bind(Canvas.canvas);
+    Canvas.canvas.renderAll();
+  };
+
+  Canvas.bajar_elemento_seleccionado = function() {
+    var canvas = Canvas.canvas;
+
+    var activeObject = canvas.getActiveObject();
+    var activeGroup = canvas.getActiveGroup();
+
+    if (activeGroup) {
+      var objectsInGroup = activeGroup.getObjects();
+      canvas.discardActiveGroup();
+      objectsInGroup.forEach(function(object) {canvas.sendBackwards(object)});
+    } else if (activeObject) {
+      canvas.sendBackwards(activeObject);
+    }
+
+    //Canvas.canvas.renderAll.bind(Canvas.canvas);
+    Canvas.canvas.renderAll();
+  };
+
 
   Canvas.espejar_elemento_seleccionado = function() {
     var canvas = Canvas.canvas;
