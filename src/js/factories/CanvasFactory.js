@@ -92,7 +92,6 @@ app.factory("Canvas", function() {
       canvas.bringForward(activeObject);
     }
 
-    //Canvas.canvas.renderAll.bind(Canvas.canvas);
     Canvas.canvas.renderAll();
   };
 
@@ -110,7 +109,6 @@ app.factory("Canvas", function() {
       canvas.sendBackwards(activeObject);
     }
 
-    //Canvas.canvas.renderAll.bind(Canvas.canvas);
     Canvas.canvas.renderAll();
   };
 
@@ -129,7 +127,6 @@ app.factory("Canvas", function() {
       activeObject.flipX = !activeObject.flipX;
     }
 
-    //Canvas.canvas.renderAll.bind(Canvas.canvas);
     Canvas.canvas.renderAll();
   }
 
