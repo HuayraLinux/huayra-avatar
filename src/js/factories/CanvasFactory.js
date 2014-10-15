@@ -33,10 +33,16 @@ app.factory("Canvas", function() {
   var Canvas = {};
   var homedir = (process.platform === 'win32') ? process.env.HOMEPATH : process.env.HOME;
   var ruta_mis_archivos = homedir + '/.caripela/';
+  var pila = [];
+  var rehacer_estado = null;
 
   Canvas.actualizar = function() {
     Canvas.canvas = new fabric.Canvas('canvas');
     fabric.Object.prototype.transparentCorners = false;
+
+    Canvas.canvas.on("object:modified", function (obj) {
+        pila.push( Canvas.canvas.toJSON(['categoria','z']) );
+    });
 
     Canvas.canvas.on("object:selected", function(options) {
       Canvas.funcion_respuesta.call(this, true);
@@ -155,8 +161,45 @@ app.factory("Canvas", function() {
     c.setBackgroundImage(ruta, c.renderAll.bind(c));
   }
 
+  function ruta_a_data(ruta){
+    /*
+      Lee un archivo (idealmente un svg) y obtiene el base64 incrustado
+      para luego devolverlo y poder exportar una `caripela` con las
+      imagenes incrustadas y no la referencia al archivo.
+    */
+    ruta = ruta.replace('file://','');
+    var data = fs.readFileSync(ruta, 'utf8', function (err, img_data) {
+      if (err) {
+        alert(err);
+        return;
+      }
+      var base64Data = img_data.match('xlink:href="(.[^"]*)"');
+      if( base64Data ){
+        base64Data = base64Data[1];
+      }
+      return base64Data;
+    });
+
+    return data;
+  }
+
+
   Canvas.guardar_como_archivo_svg = function(ruta) {
-      var data = Canvas.canvas.toSVG();
+      var data = Canvas.canvas.toSVG({},
+                                     function(svg){
+                                         var img = svg.match('xlink:href="(.[^"]*)"');
+                                         if ( img ){
+                                             var data = ruta_a_data( img[1] );
+                                             var img_data = data.match('xlink:href="(.[^"]*)"');
+                                             if( img_data ){
+                                                 svg = svg.replace(/xlink:href="(.[^"]*)"/, 'xlink:href="'+img_data[1]+'"');
+                                             }
+                                             else{
+                                                 // hacer algo con los SVG.
+                                             }
+                                         }
+                                         return svg;
+                                     });
 
       fs.writeFile(ruta, data, 'utf-8', informar_error);
   }
@@ -197,7 +240,10 @@ app.factory("Canvas", function() {
       //
       // Pero ojo, esto solo aplica si la categoría del objeto no admite
       // duplicados.
-      var categoria = ruta.match(/partes\/(.+)\//)[1];
+      // var categoria = ruta.match(/partes\/(.+)\//)[1];
+      var categoria = ruta.match(/partes\/(.+)\//); //[1];
+      if( categoria ) { categoria = categoria[1] }
+
 
 
       // Intenta borrar todos los objetos de esta categoria si no
@@ -241,9 +287,12 @@ app.factory("Canvas", function() {
         z: preferencias.z,
         scaleX: ratio,
         scaleY: ratio,
+        ruta: ruta,
       });
 
       Canvas.canvas.add(img);
+      pila.push( Canvas.canvas.toJSON(['categoria','z']) );
+
 
       // Si el objeto es simétrico, como los ojos, se
       // encarga de clonar el objeto dos veces.
@@ -298,7 +347,6 @@ app.factory("Canvas", function() {
   }
 
   Canvas.cargar = function(ruta) {
-
     fs.readFile(ruta, 'utf8', function (err, data) {
       if (err) {
         alert(err);
@@ -306,9 +354,34 @@ app.factory("Canvas", function() {
       }
 
       var data = JSON.parse(data);
+      pila.push( data );
       var canvas = Canvas.canvas;
       canvas.loadFromJSON(data, canvas.renderAll.bind(canvas));
     });
+  }
+
+  Canvas.cargar_desde_estado = function(data) {
+    var canvas = Canvas.canvas;
+    canvas.clear();
+    canvas.loadFromJSON(data,
+                        function(){
+                            canvas.renderAll.bind(canvas);
+                            canvas.forEachObject(function(o, i) {
+                                Canvas.canvas.moveTo(o, -o.z);
+                            });
+                        });
+  }
+
+  Canvas.deshacer = function() {
+    pila.pop();
+    rehacer_estado = Canvas.canvas.toJSON(['categoria','z']);
+    pila_length = pila.length <= 0 ? 0 : pila.length-1;
+    data = pila[pila_length];
+    Canvas.cargar_desde_estado(data);
+  }
+
+  Canvas.rehacer = function() {
+    Canvas.cargar_desde_estado(rehacer_estado);
   }
 
   return Canvas;

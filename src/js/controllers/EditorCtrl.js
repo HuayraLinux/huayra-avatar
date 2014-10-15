@@ -18,6 +18,13 @@ app.controller('EditorCtrl', function($scope, Canvas, $location, MisArchivos) {
     Canvas.bajar_elemento_seleccionado();
   }
 
+  $scope.deshacer = function() {
+      Canvas.deshacer();
+  }
+  $scope.rehacer = function() {
+      Canvas.rehacer();
+  }
+
   var path = 'partes/';
 
   $scope.data = {};

@@ -39,13 +39,16 @@
       <canvasfabric></canvasfabric>
 
       <div class='botones'>
-        <button ng-click="guardar_y_regresar()" ng-disabled="data.guardando" class='btn btn-tiny btn-success'><i class="fi-left"></i> Guardar caripela</button>
+        <button ng-click="guardar_y_regresar()" ng-disabled="data.guardando" class='btn btn-tiny btn-success'><i class="fi-left"></i> Guardar </button>
 
         <button ng-click="borrar_elemento_seleccionado()" ng-disabled='! data.hay_elemento_seleccionado' class='btn btn-tiny btn-danger btn-editor'><i class="glyphicon glyphicon-trash" tooltip="Borrar el objeto seleccionado"></i></button>
         <button ng-click="espejar_elemento_seleccionado()" ng-disabled='! data.hay_elemento_seleccionado' class='btn btn-tiny btn-info btn-editor'><i class="glyphicon glyphicon-resize-horizontal" tooltip="Espejar el objeto seleccionado"></i></button>
 
         <button ng-click="subir_elemento_seleccionado()" ng-disabled='! data.hay_elemento_seleccionado' class='btn btn-tiny btn-warning btn-editor'><i class="glyphicon glyphicon-chevron-up" tooltip="Subir objeto un nivel"></i></button>
         <button ng-click="bajar_elemento_seleccionado()" ng-disabled='! data.hay_elemento_seleccionado' class='btn btn-tiny btn-warning btn-editor'><i class="glyphicon glyphicon-chevron-down" tooltip="Bajar objeto un nivel"></i></button>
+
+        <button ng-click="rehacer()" class='btn btn-tiny btn-warning btn-editor'><i class="glyphicon glyphicon-chevron-right" tooltip="Deshacer"></i></button>
+        <button ng-click="deshacer()" class='btn btn-tiny btn-warning btn-editor'><i class="glyphicon glyphicon-chevron-left" tooltip="Deshacer"></i></button>
       </div>
 
     </div>
