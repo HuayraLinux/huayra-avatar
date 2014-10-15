@@ -1,3 +1,9 @@
+caripela (0.13) unstable; urgency=low
+
+  * deshacer y rehacer + base64 al exportar como svg (aquellas caripelas con pngs incrustados) 
+
+ -- Hugo Ruscitti <hugoruscitti@gmail.com>  Wed, 15 Oct 2014 20:23:41 +0200
+
 caripela (0.12) unstable; urgency=low
 
   * Arreglo menor. 
