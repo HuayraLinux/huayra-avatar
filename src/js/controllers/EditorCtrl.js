@@ -182,8 +182,11 @@ app.controller('EditorCtrl', function($scope, Canvas, $location, MisArchivos) {
 
 
   $scope.definir_como_mi_avatar = function() {
-    var ruta_avatar = process.env.HOME + '/.huayra-compartir_avatar';
+    var ruta_avatar = process.env.HOME + '/.face';
+    var ruta_avatar_symlink = process.env.HOME + '/.huayra-compartir_avatar';
+
     Canvas.guardar_como_archivo_png(ruta_avatar);
+    fs.symlinkSync(ruta_avatar, ruta_avatar_symlink, 'file');
   }
 
 
