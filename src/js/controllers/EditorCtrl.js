@@ -47,6 +47,23 @@ app.controller('EditorCtrl', function($scope, Canvas, $location, MisArchivos) {
     gui.Shell.showItemInFolder('./');
   }
 
+  $scope.agregar_nuevo_item = function(dir) {
+    var path = require('path');
+    var gui = require('nw.gui');
+    var partes_path = './src/partes/' + dir.titulo;
+
+    setTimeout(function() {
+        abrir_dialogo('#agregar_nuevo_item', function(origen) {
+            origen = origen.replace('file://','');
+            var partes_path = path.join(path.resolve('./partes/'),
+                                        dir.titulo);
+
+            var destino = path.join(partes_path, path.basename(origen));
+            fs.writeFileSync(destino, fs.readFileSync(origen));
+        });
+    }, 1);
+  }
+
   $scope.selecciona_objeto = function(obj, dir) {
     var preferencias = {};
 

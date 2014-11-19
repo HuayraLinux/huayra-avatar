@@ -63,7 +63,7 @@
 
             <ul class="clearing-thumbs" data-clearing="" style="">
               <li ng-repeat='obj in dir.objetos'><button ng-click='selecciona_objeto(obj, dir)' class="th objeto"><img class='resize_fit_center' ng-src="{{obj.src}}"></button></li>
-              <li><a ng-click='abrir_directorio(dir)' href class="th objeto"><img class='resize_fit_center' src='imagenes/agregar.png'></a></li>
+              <li><a ng-click='agregar_nuevo_item(dir)' href class="th objeto"><img class='resize_fit_center' src='imagenes/agregar.png'></a></li>
             </ul>
           </div>
         </tab>
@@ -76,4 +76,5 @@
 <div class='invisible'>
   <input id="guardar_svg" type="file" nwsaveas="avatar.svg" accept="svg/*.svg"/>
   <input id="guardar_png" type="file" nwsaveas="avatar.png" accept="png/*.png"/>
+  <input id="agregar_nuevo_item" type="file" />
 </div>
