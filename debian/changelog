@@ -7,8 +7,8 @@ caripela (0.15) unstable; urgency=low
   * node-webkit debe ser menor o igual a la version 0.7.5.2 de
     Pampero, de lo contrario no funciona correctamente.
   * Agrego comentario de version maxima en debian/README.Debian
-  * Tambien elimino archivos debian/README.{,source} ya que no
-    eran necesarios
+  * Realice varios cambios esteticos al paquete que ademas 
+    corregian warnings de Lintian.
 
  -- Mauro <mauro@sdf.org>  Thu, 20 Nov 2014 16:21:24 -0300
 
