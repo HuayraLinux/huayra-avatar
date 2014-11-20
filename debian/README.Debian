@@ -1,6 +1,6 @@
 huayra-compartir for Debian
 ---------------------------
 
-<possible notes regarding this package - if none, delete this file>
+Esta aplicacion necesita una version de node-webkit menor a la 0.10.
 
  -- Hugo Ruscitti <hugoruscitti@gmail.com>  Fri, 24 Jan 2014 16:02:10 +0100

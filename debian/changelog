@@ -6,6 +6,9 @@ caripela (0.15) unstable; urgency=low
     symlink para huayra-compartir
   * node-webkit debe ser menor o igual a la version 0.7.5.2 de
     Pampero, de lo contrario no funciona correctamente.
+  * Agrego comentario de version maxima en debian/README.Debian
+  * Tambien elimino archivos debian/README.{,source} ya que no
+    eran necesarios
 
  -- Mauro <mauro@sdf.org>  Thu, 20 Nov 2014 16:21:24 -0300
 
