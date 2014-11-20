@@ -10,7 +10,7 @@ Homepage: https://github.com/HuayraLinux/huayra-caripela
 
 Package: huayra-caripela
 Architecture: all
-Depends: ${shlibs:Depends}, ${misc:Depends}, node-webkit
+Depends: ${shlibs:Depends}, ${misc:Depends}, node-webkit (<= 0.7.5.2)
 Description: Permite crear personajes personalizados.
  Permite crear personajes personalizados para configurar
  tu perfil de usuario.

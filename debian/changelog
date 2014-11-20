@@ -4,6 +4,8 @@ caripela (0.15) unstable; urgency=low
     un nuevo item para utilizar.
   * Definir como avatar ahora guarda la imagen como .face y como un
     symlink para huayra-compartir
+  * node-webkit debe ser menor o igual a la version 0.7.5.2 de
+    Pampero, de lo contrario no funciona correctamente.
 
  -- Mauro <mauro@sdf.org>  Thu, 20 Nov 2014 16:21:24 -0300
 
