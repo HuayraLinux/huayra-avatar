@@ -1,3 +1,18 @@
+caripela (0.15) unstable; urgency=low
+
+  * El boton de agregar en las solapas-partes, te permite agregar
+    un nuevo item para utilizar.
+  * Definir como avatar ahora guarda la imagen como .face y como un
+    symlink para huayra-compartir
+
+ -- Mauro <mauro@sdf.org>  Thu, 20 Nov 2014 16:21:24 -0300
+
+caripela (0.14) pampero-proposed; urgency=low
+
+  * Actualizando paquete para incluir en la proxima release de huayra.
+
+ -- Hugo Ruscitti <hugoruscitti@gmail.com>  Wed, 12 Nov 2014 16:13:19 +0100
+
 caripela (0.13) unstable; urgency=low
 
   * deshacer y rehacer + base64 al exportar como svg (aquellas caripelas con pngs incrustados) 

@@ -163,7 +163,7 @@ app.factory("Canvas", function() {
 
   function ruta_a_data(ruta){
     /*
-      Lee un archivo (idealmente un svg) y obtiene el base64 incrustado
+      Lee un archivo y obtiene el base64 incrustado
       para luego devolverlo y poder exportar una `caripela` con las
       imagenes incrustadas y no la referencia al archivo.
     */
@@ -370,6 +370,7 @@ app.factory("Canvas", function() {
                                 Canvas.canvas.moveTo(o, -o.z);
                             });
                         });
+
   }
 
   Canvas.deshacer = function() {
