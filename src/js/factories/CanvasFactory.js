@@ -1,8 +1,6 @@
 var fs = require('fs');
 var app = angular.module('app');
 
-var sel_Rect = undefined;
-
 
 /*
  * Previene el bug clásico que no nos permitía seleccionar objetos

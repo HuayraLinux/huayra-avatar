@@ -60,6 +60,12 @@ app.controller('EditorCtrl', function($scope, Canvas, $location, MisArchivos) {
 
             var destino = path.join(partes_path, path.basename(origen));
             fs.writeFileSync(destino, fs.readFileSync(origen));
+            actualizar_listado_directorios(function(){
+                $scope.data.directorios
+                    .map(function(solapa){
+                        solapa.active = solapa.titulo == dir.titulo;
+                    });
+            });
         });
     }, 1);
   }
@@ -143,7 +149,7 @@ app.controller('EditorCtrl', function($scope, Canvas, $location, MisArchivos) {
   * Este método se llama cada vez que se inicia la aplicación o se
   * produce un cambio en los directorios de galería.
   */
-  function actualizar_listado_directorios() {
+  function actualizar_listado_directorios(cb) {
 
     fs.readdir(path, function(error, data) {
       $scope.data.directorios = [];
@@ -160,6 +166,7 @@ app.controller('EditorCtrl', function($scope, Canvas, $location, MisArchivos) {
         actualizar_galeria(path + titulo, objeto_directorio);
       }
 
+      if( cb ){ cb.call(this); }
       $scope.$apply();
     });
   }
