@@ -33,6 +33,7 @@ app.factory("Canvas", function() {
   var ruta_mis_archivos = homedir + '/.caripela/';
   var pila = [];
   var rehacer_estado = null;
+  var estado_inicial = null;
 
   Canvas.actualizar = function() {
     Canvas.canvas = new fabric.Canvas('canvas');
@@ -326,18 +327,25 @@ app.factory("Canvas", function() {
       data.objects[i].categoria = objeto_en_canvas.categoria || "";
     }
 
-    var filename = ruta_mis_archivos + nombre + '.json';
-    var ruta_png = ruta_mis_archivos + nombre + '.png';
-    Canvas.deseleccionar_todo();
+    // utilizamos underscore para ver si estos
+    // dos arrays de obj son iguales. si no lo son, guardamos.
+    if( !_.isEqual(data.objects,estado_inicial.objects) ){
+      var filename = ruta_mis_archivos + nombre + '.json';
+      var ruta_png = ruta_mis_archivos + nombre + '.png';
+      Canvas.deseleccionar_todo();
 
-    Canvas.guardar_como_archivo_png(ruta_png, function() {
-      fs.writeFile(filename, JSON.stringify(data, null, 4), function(err) {
-        if (err)
-          alert(err);
+      Canvas.guardar_como_archivo_png(ruta_png, function() {
+        fs.writeFile(filename, JSON.stringify(data, null, 4), function(err) {
+          if (err)
+            alert(err);
 
-        success.apply(this);
+          success.apply(this);
+        });
       });
-    });
+    }
+    else{
+      success.apply(this);
+    }
   }
 
   Canvas.deseleccionar_todo = function() {
@@ -352,8 +360,9 @@ app.factory("Canvas", function() {
       }
 
       var data = JSON.parse(data);
-      pila.push( data );
       var canvas = Canvas.canvas;
+      pila.push( data );
+      estado_inicial = data;
       canvas.loadFromJSON(data, canvas.renderAll.bind(canvas));
     });
   }
@@ -369,6 +378,10 @@ app.factory("Canvas", function() {
                             });
                         });
 
+  }
+
+  Canvas.estado_pila = function() {
+    return pila;
   }
 
   Canvas.deshacer = function() {
