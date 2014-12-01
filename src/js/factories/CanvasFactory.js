@@ -361,7 +361,8 @@ app.factory("Canvas", function() {
 
       var data = JSON.parse(data);
       var canvas = Canvas.canvas;
-      pila.push( data );
+      pila = [data];
+      //pila.push( data );
       estado_inicial = data;
       canvas.loadFromJSON(data, canvas.renderAll.bind(canvas));
     });
