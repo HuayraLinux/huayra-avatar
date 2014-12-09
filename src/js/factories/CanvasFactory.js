@@ -32,6 +32,8 @@ app.factory("Canvas", function() {
   var homedir = (process.platform === 'win32') ? process.env.HOMEPATH : process.env.HOME;
   var ruta_mis_archivos = homedir + '/.caripela/';
   var pila = [];
+  var pila_len = 0;
+  var pila_pos = 0;
   var rehacer_estado = null;
   var estado_inicial = null;
 
@@ -41,6 +43,7 @@ app.factory("Canvas", function() {
 
     Canvas.canvas.on("object:modified", function (obj) {
         pila.push( Canvas.canvas.toJSON(['categoria','z']) );
+        pila_pos = Canvas.estado_pila().length;
     });
 
     Canvas.canvas.on("object:selected", function(options) {
@@ -148,6 +151,9 @@ app.factory("Canvas", function() {
     } else if (activeObject) {
       canvas.remove(activeObject);
     }
+
+    pila.push( Canvas.canvas.toJSON(['categoria','z']) );
+    pila_pos = Canvas.estado_pila().length;
   }
 
   function informar_error(error) {
@@ -158,6 +164,8 @@ app.factory("Canvas", function() {
   Canvas.definir_imagen_de_fondo = function(ruta) {
     var c = Canvas.canvas;
     c.setBackgroundImage(ruta, c.renderAll.bind(c));
+    pila.push( Canvas.canvas.toJSON(['categoria','z']) );
+    pila_pos = Canvas.estado_pila().length;
   }
 
   function ruta_a_data(ruta){
@@ -291,6 +299,7 @@ app.factory("Canvas", function() {
 
       Canvas.canvas.add(img);
       pila.push( Canvas.canvas.toJSON(['categoria','z']) );
+      pila_pos = Canvas.estado_pila().length;
 
 
       // Si el objeto es simétrico, como los ojos, se
@@ -365,6 +374,7 @@ app.factory("Canvas", function() {
       //pila.push( data );
       estado_inicial = data;
       canvas.loadFromJSON(data, canvas.renderAll.bind(canvas));
+      pila_pos = Canvas.estado_pila().length;
     });
   }
 
@@ -386,15 +396,13 @@ app.factory("Canvas", function() {
   }
 
   Canvas.deshacer = function() {
-    pila.pop();
-    rehacer_estado = Canvas.canvas.toJSON(['categoria','z']);
-    pila_length = pila.length <= 0 ? 0 : pila.length-1;
-    data = pila[pila_length];
-    Canvas.cargar_desde_estado(data);
+    pila_pos = pila_pos <= 1 ? 1 : pila_pos-1 ;
+    Canvas.cargar_desde_estado( pila[pila_pos] );
   }
 
   Canvas.rehacer = function() {
-    Canvas.cargar_desde_estado(rehacer_estado);
+    pila_pos = pila_pos >= Canvas.estado_pila().length-1 ? Canvas.estado_pila().length-1 : pila_pos+1 ;
+    Canvas.cargar_desde_estado( pila[pila_pos] );
   }
 
   return Canvas;
