@@ -1,3 +1,9 @@
+caripela (0.16) UNRELEASED; urgency=medium
+
+  * Deshacer y Rehacer se corrigio (por el momento)
+
+ -- Mauro <mauro@sdf.org>  Tue, 09 Dec 2014 16:02:35 -0300
+
 caripela (0.15) unstable; urgency=low
 
   * El boton de agregar en las solapas-partes, te permite agregar
