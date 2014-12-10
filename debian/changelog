@@ -3,6 +3,7 @@ caripela (0.16) UNRELEASED; urgency=medium
   * Deshacer y Rehacer se corrigio (por el momento)
   * Los botones de deshacer y rehacer se activan o desactivan
     segun el estado de la pila.
+  * Agrego Menu nativo a la aplicacion, falta completar.
 
  -- Mauro <mauro@sdf.org>  Tue, 09 Dec 2014 16:02:35 -0300
 
