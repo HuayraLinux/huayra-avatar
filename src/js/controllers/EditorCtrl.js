@@ -195,7 +195,19 @@ app.controller('EditorCtrl', function($scope, Canvas, $location, MisArchivos) {
     chooser.click();
   }
 
+  // $scope.guargar_png = function() {
+  //   setTimeout(function() {
+  //     abrir_dialogo('#guardar_png', function(ruta) {
+  //       Canvas.guardar_como_archivo_png(ruta);
+  //     });
+  //   }, 1);
+  // }
+
   $scope.guargar_png = function() {
+    window.fn_guardar_png();
+  }
+
+  window.fn_guardar_png = function(){
     setTimeout(function() {
       abrir_dialogo('#guardar_png', function(ruta) {
         Canvas.guardar_como_archivo_png(ruta);
@@ -210,7 +222,6 @@ app.controller('EditorCtrl', function($scope, Canvas, $location, MisArchivos) {
       });
     }, 1);
   }
-
 
   $scope.definir_como_mi_avatar = function() {
     var ruta_avatar = process.env.HOME + '/.face';
