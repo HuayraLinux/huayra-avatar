@@ -43,7 +43,7 @@ app.factory("Canvas", function() {
 
     Canvas.canvas.on("object:modified", function (obj) {
         pila.push( Canvas.canvas.toJSON(['categoria','z']) );
-        pila_pos = Canvas.estado_pila().length;
+        pila_pos = Canvas.estado_pila().len;
     });
 
     Canvas.canvas.on("object:selected", function(options) {
@@ -153,7 +153,7 @@ app.factory("Canvas", function() {
     }
 
     pila.push( Canvas.canvas.toJSON(['categoria','z']) );
-    pila_pos = Canvas.estado_pila().length;
+    pila_pos = Canvas.estado_pila().len;
   }
 
   function informar_error(error) {
@@ -165,7 +165,7 @@ app.factory("Canvas", function() {
     var c = Canvas.canvas;
     c.setBackgroundImage(ruta, c.renderAll.bind(c));
     pila.push( Canvas.canvas.toJSON(['categoria','z']) );
-    pila_pos = Canvas.estado_pila().length;
+    pila_pos = Canvas.estado_pila().len;
   }
 
   function ruta_a_data(ruta){
@@ -299,7 +299,7 @@ app.factory("Canvas", function() {
 
       Canvas.canvas.add(img);
       pila.push( Canvas.canvas.toJSON(['categoria','z']) );
-      pila_pos = Canvas.estado_pila().length;
+      pila_pos = Canvas.estado_pila().len;
 
 
       // Si el objeto es simétrico, como los ojos, se
@@ -371,10 +371,9 @@ app.factory("Canvas", function() {
       var data = JSON.parse(data);
       var canvas = Canvas.canvas;
       pila = [data];
-      //pila.push( data );
       estado_inicial = data;
       canvas.loadFromJSON(data, canvas.renderAll.bind(canvas));
-      pila_pos = Canvas.estado_pila().length;
+      pila_pos = Canvas.estado_pila().len;
     });
   }
 
@@ -392,7 +391,7 @@ app.factory("Canvas", function() {
   }
 
   Canvas.estado_pila = function() {
-    return pila;
+    return {len: pila.length, pos: pila_pos};
   }
 
   Canvas.deshacer = function() {
@@ -401,7 +400,7 @@ app.factory("Canvas", function() {
   }
 
   Canvas.rehacer = function() {
-    pila_pos = pila_pos >= Canvas.estado_pila().length-1 ? Canvas.estado_pila().length-1 : pila_pos+1 ;
+    pila_pos = pila_pos >= Canvas.estado_pila().len-1 ? Canvas.estado_pila().len-1 : pila_pos+1 ;
     Canvas.cargar_desde_estado( pila[pila_pos] );
   }
 

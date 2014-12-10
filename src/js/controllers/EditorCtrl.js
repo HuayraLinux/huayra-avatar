@@ -20,9 +20,14 @@ app.controller('EditorCtrl', function($scope, Canvas, $location, MisArchivos) {
 
   $scope.deshacer = function() {
       Canvas.deshacer();
+      $scope.data.puede_deshacer = ! (Canvas.estado_pila().pos == 1);
+      $scope.data.puede_rehacer = ! (Canvas.estado_pila().pos == Canvas.estado_pila().len-1);
   }
+
   $scope.rehacer = function() {
       Canvas.rehacer();
+      $scope.data.puede_deshacer = ! (Canvas.estado_pila().pos == 1);
+      $scope.data.puede_rehacer = ! (Canvas.estado_pila().pos == Canvas.estado_pila().len-1);
   }
 
   var path = 'partes/';
@@ -31,6 +36,8 @@ app.controller('EditorCtrl', function($scope, Canvas, $location, MisArchivos) {
   $scope.data.guardando = false;
   $scope.data.directorios = [];
   $scope.data.hay_elemento_seleccionado = false;
+  $scope.data.puede_deshacer = false;
+  $scope.data.puede_rehacer = false;
 
 
   Canvas.conectar_eventos(function(estado) {
