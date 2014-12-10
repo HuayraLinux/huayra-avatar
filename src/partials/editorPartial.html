@@ -10,7 +10,9 @@
       <span class="navbar-brand navbar-brand-huayra"><img src='imagenes/icono.png'> huayra caripela</span>
 
     </div>
+
     <div class="navbar-collapse collapse navbar-inverse-collapse">
+      <!-- // MENU REEMPLAZADO POR EL NATIVO.
       <ul class="nav navbar-nav">
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Archivo <b class="caret"></b></a>
@@ -23,11 +25,15 @@
           </ul>
         </li>
       </ul>
+      // EO - MENU REEMPLAZADO POR EL NATIVO.
+      -->
+
       <ul class="nav navbar-nav navbar-right">
         <li><a href ng-click='abrir_modo_desarrollador()'>&nbsp;<i class="glyphicon glyphicon-cog"></i></a></li>
         <li><a href ng-click='actualizar()'>&nbsp;<i class="glyphicon glyphicon-refresh"></i></a></li>
       </ul>
     </div>
+
   </div>
 
 
@@ -39,7 +45,8 @@
       <canvasfabric></canvasfabric>
 
       <div class='botones'>
-        <button ng-click="guardar_y_regresar()" ng-disabled="data.guardando" class='btn btn-tiny btn-success'><i class="fi-left"></i> Guardar </button>
+        <button title="Cancelar y regresar" ng-click="salir()" class='btn btn-tiny'><i class="fi-left glyphicon glyphicon-th-large"></i></button>
+        <button title="Guardar" ng-click="guardar_y_regresar()" ng-disabled="data.guardando" class='btn btn-tiny btn-success'><i class="fi-left glyphicon glyphicon-floppy-save"></i> </button>
 
         <button ng-click="borrar_elemento_seleccionado()" ng-disabled='! data.hay_elemento_seleccionado' class='btn btn-tiny btn-danger btn-editor'><i class="glyphicon glyphicon-trash" tooltip="Borrar el objeto seleccionado"></i></button>
         <button ng-click="espejar_elemento_seleccionado()" ng-disabled='! data.hay_elemento_seleccionado' class='btn btn-tiny btn-info btn-editor'><i class="glyphicon glyphicon-resize-horizontal" tooltip="Espejar el objeto seleccionado"></i></button>

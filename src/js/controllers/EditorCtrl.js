@@ -1,6 +1,6 @@
 var app = angular.module('app');
 
-app.controller('EditorCtrl', function($scope, Canvas, $location, MisArchivos) {
+app.controller('EditorCtrl', function($scope, Canvas, $location, Menu, MisArchivos) {
 
   $scope.borrar_elemento_seleccionado = function() {
     Canvas.borrar_elemento_seleccionado();
@@ -39,6 +39,7 @@ app.controller('EditorCtrl', function($scope, Canvas, $location, MisArchivos) {
   $scope.data.puede_deshacer = false;
   $scope.data.puede_rehacer = false;
 
+  Menu.habilitar_items_menu();
 
   Canvas.conectar_eventos(function(estado) {
     $scope.data.hay_elemento_seleccionado = estado;
@@ -216,6 +217,10 @@ app.controller('EditorCtrl', function($scope, Canvas, $location, MisArchivos) {
   }
 
   $scope.guardar_svg = function() {
+    window.fn_guardar_svg();
+  }
+
+  window.fn_guardar_svg = function() {
     setTimeout(function() {
       abrir_dialogo('#guardar_svg', function(ruta) {
         Canvas.guardar_como_archivo_svg(ruta);
@@ -223,16 +228,27 @@ app.controller('EditorCtrl', function($scope, Canvas, $location, MisArchivos) {
     }, 1);
   }
 
+
   $scope.definir_como_mi_avatar = function() {
+    window.fn_definir_como_mi_avatar();
+  }
+
+  window.fn_definir_como_mi_avatar = function(){
     var ruta_avatar = process.env.HOME + '/.face';
     var ruta_avatar_symlink = process.env.HOME + '/.huayra-compartir_avatar';
 
     Canvas.guardar_como_archivo_png(ruta_avatar);
-    fs.symlinkSync(ruta_avatar, ruta_avatar_symlink, 'file');
+    fs.unlink(ruta_avatar_symlink, function(){
+      fs.symlinkSync(ruta_avatar, ruta_avatar_symlink, 'file');
+    });
   }
 
 
   $scope.guardar_y_regresar = function() {
+    window.fn_guardar_y_regresar();
+  }
+
+  window.fn_guardar_y_regresar = function() {
     var nombre = MisArchivos.obtener_numero().toString();
     $scope.data.guardando = true;
 
@@ -247,7 +263,12 @@ app.controller('EditorCtrl', function($scope, Canvas, $location, MisArchivos) {
   }
 
   $scope.salir = function() {
+    window.fn_salir();
+  }
+
+  window.fn_salir = function(){
     $location.path('/selector');
+    Menu.deshabilitar_items_menu();
   }
 
 

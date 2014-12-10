@@ -21,7 +21,10 @@ app.controller('MainCtrl', function($scope, Menu, Config) {
     require('nw.gui').Window.get().showDevTools();
   }
 
-  Menu.agregar_a_ventana(require('nw.gui').Window.get());
+  Menu.agregar_a_ventana(
+      require('nw.gui').Window.get(),
+      function(){ alert('TODO :-)') }
+  );
 
 
 });
