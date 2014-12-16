@@ -1,9 +1,5 @@
 var app = angular.module('app');
 
-var acerca_de = function(){
-
-}
-
 app.controller('MainCtrl', function($scope, Menu, Config) {
   $scope.data = {};
 
@@ -25,18 +21,19 @@ app.controller('MainCtrl', function($scope, Menu, Config) {
     require('nw.gui').Window.get().showDevTools();
   }
 
-  Menu.agregar_a_ventana(
-      require('nw.gui').Window.get(),
-      function(){
-          swal("Here's a message!");
-          swal({
-              title: "Acerca de",
-              text: "Un programa sencillo para hacer avatares.\n\n\n(c) 2014 - Hugo Ruscitti",
-              imageUrl: "imagenes/caripela.png",
-              confirmButtonText: "OK!"
-          });
-      }
-  );
+  if( require('nw.gui').Window.get().menu == undefined ){
+    Menu.agregar_a_ventana(
+        require('nw.gui').Window.get(),
+        function(){
+            swal({
+                title: "Acerca de",
+                text: "Un programa sencillo para hacer avatares.\n\n\n(c) 2014 - Hugo Ruscitti",
+                imageUrl: "imagenes/caripela.png",
+                confirmButtonText: "OK!"
+            });
+        }
+    );
+  }
 
 
 });

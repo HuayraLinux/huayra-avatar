@@ -258,6 +258,7 @@ app.controller('EditorCtrl', function($scope, Canvas, $location, Menu, MisArchiv
       setTimeout(function() {
         $location.path('/selector');
         $scope.$apply();
+        Menu.deshabilitar_items_menu();
       }, 100);
     });
   }
