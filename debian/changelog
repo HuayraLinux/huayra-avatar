@@ -2,6 +2,7 @@ caripela (0.18) unstable; urgency=medium
 
   * Limpieza de codigo
   * Bump dependencia en node-webkit para jessie.
+  * Quitamos paquete `caripela`, ya solo crea `huayra-caripela`.
 
  -- Mauro <mauro@sdf.org>  Tue, 16 Dec 2014 14:22:32 -0300
 

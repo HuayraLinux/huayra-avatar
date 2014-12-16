@@ -16,10 +16,3 @@ Description: Permite crear personajes personalizados
  .
  Es posible exportarlas como SVG o PNG permitiendote
  compartirlas con otras personas.
-
-
-Package: caripela
-Architecture: all
-Depends: ${misc:Depends}, huayra-caripela
-Description: Paquete transitorio para huayra-caripela
- Paquete transitorio para huayra-caripela
