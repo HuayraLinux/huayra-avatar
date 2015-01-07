@@ -1,6 +1,6 @@
-huayra-compartir for Debian
+huayra-caripela for Huayra
 ---------------------------
 
-Esta aplicacion necesita una version de node-webkit menor a la 0.10.
+Un programa sencillo para hacer avatares en Huayra.
 
  -- Hugo Ruscitti <hugoruscitti@gmail.com>  Fri, 24 Jan 2014 16:02:10 +0100
