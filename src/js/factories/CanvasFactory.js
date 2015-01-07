@@ -336,9 +336,7 @@ app.factory("Canvas", function() {
       data.objects[i].categoria = objeto_en_canvas.categoria || "";
     }
 
-    // utilizamos underscore para ver si estos
-    // dos arrays de obj son iguales. si no lo son, guardamos.
-    if( !_.isEqual(data.objects,estado_inicial.objects) ){
+
       var filename = ruta_mis_archivos + nombre + '.json';
       var ruta_png = ruta_mis_archivos + nombre + '.png';
       Canvas.deseleccionar_todo();
@@ -351,10 +349,6 @@ app.factory("Canvas", function() {
           success.apply(this);
         });
       });
-    }
-    else{
-      success.apply(this);
-    }
   }
 
   Canvas.deseleccionar_todo = function() {
