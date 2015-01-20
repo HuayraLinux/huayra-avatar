@@ -20,14 +20,18 @@ app.controller('EditorCtrl', function($scope, Canvas, $location, Menu, MisArchiv
 
   $scope.deshacer = function() {
       Canvas.deshacer();
-      $scope.data.puede_deshacer = ! (Canvas.estado_pila().pos == 1);
-      $scope.data.puede_rehacer = ! (Canvas.estado_pila().pos == Canvas.estado_pila().len-1);
+      $scope.botones_undo();
   }
 
   $scope.rehacer = function() {
       Canvas.rehacer();
-      $scope.data.puede_deshacer = ! (Canvas.estado_pila().pos == 1);
-      $scope.data.puede_rehacer = ! (Canvas.estado_pila().pos == Canvas.estado_pila().len-1);
+      $scope.botones_undo();
+  }
+
+  $scope.botones_undo = function(){
+    $scope.data.puede_deshacer = ! (Canvas.estado_pila().pos <= 1);
+    $scope.data.puede_rehacer = ! (Canvas.estado_pila().pos == Canvas.estado_pila().len-1);
+    //console.log('estado pila', Canvas.estado_pila() );
   }
 
   var path = 'partes/';
@@ -36,13 +40,15 @@ app.controller('EditorCtrl', function($scope, Canvas, $location, Menu, MisArchiv
   $scope.data.guardando = false;
   $scope.data.directorios = [];
   $scope.data.hay_elemento_seleccionado = false;
-  $scope.data.puede_deshacer = false;
+  $scope.data.puede_deshacer = true;
   $scope.data.puede_rehacer = false;
 
   Menu.habilitar_items_menu();
 
   Canvas.conectar_eventos(function(estado) {
     $scope.data.hay_elemento_seleccionado = estado;
+    $scope.data.puede_deshacer = true;
+    $scope.botones_undo();
 
     if ($scope.$root.$$phase != '$apply' && $scope.$root.$$phase != '$digest') {
       $scope.$apply();

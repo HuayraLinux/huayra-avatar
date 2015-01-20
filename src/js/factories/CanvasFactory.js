@@ -370,7 +370,7 @@ app.factory("Canvas", function() {
 
       var data = JSON.parse(data);
       var canvas = Canvas.canvas;
-      pila = [data];
+      pila = [data, data];
       estado_inicial = data;
       canvas.loadFromJSON(data, canvas.renderAll.bind(canvas));
       pila_pos = Canvas.estado_pila().len;
