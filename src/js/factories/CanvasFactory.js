@@ -35,7 +35,7 @@ app.factory("Canvas", function() {
   var pila_len = 0;
   var pila_pos = 0;
   var rehacer_estado = null;
-  var estado_inicial = null;
+  var estado_inicial = {objects:[],background:""};
 
   Canvas.actualizar = function() {
     Canvas.canvas = new fabric.Canvas('canvas');
