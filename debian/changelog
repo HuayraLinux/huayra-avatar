@@ -1,3 +1,10 @@
+caripela (0.19) unstable; urgency=low
+
+  * Reparando el botón de guardar.
+  * Actualizando fabric.
+
+ -- Hugo Ruscitti <hugoruscitti@gmail.com>  Wed, 07 Jan 2015 18:59:19 +0100
+
 caripela (0.18) unstable; urgency=medium
 
   * Limpieza de codigo
