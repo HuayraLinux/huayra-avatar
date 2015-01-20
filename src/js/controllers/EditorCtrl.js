@@ -47,7 +47,6 @@ app.controller('EditorCtrl', function($scope, Canvas, $location, Menu, MisArchiv
 
   Canvas.conectar_eventos(function(estado) {
     $scope.data.hay_elemento_seleccionado = estado;
-    $scope.data.puede_deshacer = true;
     $scope.botones_undo();
 
     if ($scope.$root.$$phase != '$apply' && $scope.$root.$$phase != '$digest') {
@@ -101,6 +100,9 @@ app.controller('EditorCtrl', function($scope, Canvas, $location, Menu, MisArchiv
       Canvas.definir_fondo(obj.src, preferencias);
     else
       Canvas.agregar_imagen(obj.src, preferencias);
+
+
+    $scope.botones_undo();
   }
 
   /*
@@ -281,6 +283,7 @@ app.controller('EditorCtrl', function($scope, Canvas, $location, Menu, MisArchiv
 
   /* Carga el avatar sugerido por la URL: */
   var ruta = $location.search().ruta;
+    Canvas.inicio();
 
   if (ruta) {
     Canvas.cargar(ruta);
