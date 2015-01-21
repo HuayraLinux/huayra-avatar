@@ -35,7 +35,7 @@ app.factory("Canvas", function() {
   var pila_len = 0;
   var pila_pos = 0;
   var rehacer_estado = null;
-  var estado_inicial = {objects:[]};
+  var estado_inicial = {objects:[], background: "", backgroundImage:{}};
 
   Canvas.actualizar = function() {
     Canvas.canvas = new fabric.Canvas('canvas');
@@ -327,6 +327,19 @@ app.factory("Canvas", function() {
     });
   }
 
+  Canvas.guardar_en_disco = function(nombre, data, success){
+    var filename = ruta_mis_archivos + nombre + '.json';
+    var ruta_png = ruta_mis_archivos + nombre + '.png';
+    Canvas.deseleccionar_todo();
+
+    Canvas.guardar_como_archivo_png(ruta_png, function() {
+      fs.writeFile(filename, JSON.stringify(data, null, 4), function(err) {
+        if (err){ alert(err); }
+        success.apply(this);
+      });
+    });
+  }
+
   Canvas.guardar = function(nombre, success) {
     var data = Canvas.canvas.toJSON();
 
@@ -339,18 +352,12 @@ app.factory("Canvas", function() {
     // utilizamos underscore para ver si estos
     // dos arrays de obj son iguales. si no lo son, guardamos.
     if( !_.isEqual(data.objects,estado_inicial.objects) ){
-      var filename = ruta_mis_archivos + nombre + '.json';
-      var ruta_png = ruta_mis_archivos + nombre + '.png';
-      Canvas.deseleccionar_todo();
-
-      Canvas.guardar_como_archivo_png(ruta_png, function() {
-        fs.writeFile(filename, JSON.stringify(data, null, 4), function(err) {
-          if (err)
-            alert(err);
-
-          success.apply(this);
-        });
-      });
+        Canvas.guardar_en_disco(nombre, data, success);
+    }
+    else if( data.hasOwnProperty('backgroundImage') &&
+             !_.isEqual(data.backgroundImage, estado_inicial.backgroundImage)
+           ){
+        Canvas.guardar_en_disco(nombre, data, success);
     }
     else{
       success.apply(this);
