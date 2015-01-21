@@ -1,7 +1,8 @@
 caripela (0.20) unstable; urgency=medium
 
   * Fix en des/rehacer
-  * Fix en estado_inicial que impedia poder guardar
+  * Fix en estado_inicial que impedia poder guardar correctamente
+  * Fix para guardar el fondo cuando solo esto cambiaba.
 
  -- Mauro <mauro@krutt.org>  Tue, 20 Jan 2015 15:04:42 -0300
 
