@@ -19,3 +19,7 @@ app.filter('categoria', function() {
     return input.split('-').pop();
   }
 });
+
+window.ondragstart = function() {
+  return false;
+};
