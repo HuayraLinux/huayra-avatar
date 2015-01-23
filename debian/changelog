@@ -1,3 +1,9 @@
+caripela (0.21) unstable; urgency=low
+
+  * Deshabilitando arrastrar y soltar sobre las imágenes.
+
+ -- Hugo Ruscitti <hugoruscitti@gmail.com>  Fri, 23 Jan 2015 17:09:18 +0100
+
 caripela (0.20) unstable; urgency=medium
 
   * Fix en des/rehacer
