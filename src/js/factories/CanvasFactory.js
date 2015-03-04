@@ -202,14 +202,22 @@ app.factory("Canvas", function() {
                                                  svg = svg.replace(/xlink:href="(.[^"]*)"/, 'xlink:href="'+img_data[1]+'"');
                                              }
                                              else{
-                                                 // hacer algo con los SVG.
+                                                var domParser = new DOMParser(),
+                                                  svgResource = domParser.parseFromString('<html><body>' + data + '</body></html>','text/html').getElementsByTagName('svg')[0];
+                                                  originalSvgImage = domParser.parseFromString('<html><body><svg>' + svg + '</svg></body></html>','text/html').getElementsByTagName('image')[0];
+                                                svg = svg
+                                                  .replace(/xlink:href="(.[^"]*)"/, '')
+                                                  .replace(/\s+x\s*=\s*\"\s*\-?\d+(\.\d+)?\s*\"\s+/, ' ')
+                                                  .replace(/\s+y\s*=\s*\"\s*\-?\d+(\.\d+)?\s*\"\s+/, ' ')
+                                                  .replace('<image', '<g transform="translate(' + (originalSvgImage.getAttribute('x') || 0) + ' ' + (originalSvgImage.getAttribute('y') || 0) + ')"><svg ')
+                                                  .replace('</image>', svgResource.innerHTML + '</svg></g>');
                                              }
                                          }
                                          return svg;
                                      });
 
       fs.writeFile(ruta, data, 'utf-8', informar_error);
-  }
+  };
 
   Canvas.guardar_como_archivo_png = function(ruta, success) {
     Canvas.deseleccionar_todo();
