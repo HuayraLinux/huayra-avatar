@@ -16,14 +16,14 @@ app.service('Menu', function() {
     });
 
     this.item_guardar_como_svg = new gui.MenuItem({
-        label: 'Guardar como SVG...',
+        label: 'Exportar como SVG...',
         click: function() {
             window.fn_guardar_svg();
         }
     });
 
     this.item_guardar_como_png = new gui.MenuItem({
-        label: 'Guardar como PNG...',
+        label: 'Exportar como PNG...',
         click: function() {
             window.fn_guardar_png();
         }
