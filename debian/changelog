@@ -1,3 +1,9 @@
+caripela (0.23) unstable; urgency=medium
+
+  *  Saca el icono del menu internet
+
+ -- Matias De lellis <mati86dl@gmail.com>  Fri, 06 Mar 2015 13:35:26 -0300
+
 caripela (0.22) unstable; urgency=medium
 
   * Ahora exporta bien a SVG (incluye el código de los SVGs contenidos en lugar de una referencia al archivo local

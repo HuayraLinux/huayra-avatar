@@ -6,4 +6,4 @@ Exec=/usr/bin/huayra-caripela
 Terminal=false
 Type=Application
 Icon=caripela
-Categories=GNOME;GTK;Huayra;Network;
+Categories=Graphics;Huayra;
