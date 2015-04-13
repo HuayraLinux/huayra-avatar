@@ -1,38 +1,66 @@
 var app = angular.module('app');
+var Config = {
+  getHomeDirectory: function() {
+    return (process.platform === 'win32' ? process.env.HOMEPATH : process.env.HOME) + '/.caripela/';
+  }
+};
+
+var readDirectories = function(/* arguments */) {
+    'use strict';
+    var fs = require('fs');
+    var Promise = require('bluebird');
+    console.log(arguments);
+    return Promise.all(Array.prototype.map.call(arguments, function(path) {
+        return new Promise(function(fulfill, reject) {
+            fs.readdir(path, function(err, data) {
+                if(err) {
+                  return fulfill([]);
+                }
+                fulfill(data.map(function(aFile) {
+                  return path.replace(/\/$/, '') + '/' + aFile;
+                }));
+            });
+        });
+    })).then(function(arrOfArrays) {
+      return arrOfArrays.reduce(function(total, anArray) {
+        return total.concat(anArray);
+      }, []);
+    });
+};
 
 app.controller('EditorCtrl', function($scope, Canvas, $location, Menu, MisArchivos) {
 
   $scope.borrar_elemento_seleccionado = function() {
     Canvas.borrar_elemento_seleccionado();
-  }
+  };
 
   $scope.espejar_elemento_seleccionado = function() {
     Canvas.espejar_elemento_seleccionado();
-  }
+  };
 
   $scope.subir_elemento_seleccionado = function() {
     Canvas.subir_elemento_seleccionado();
-  }
+  };
 
   $scope.bajar_elemento_seleccionado = function() {
     Canvas.bajar_elemento_seleccionado();
-  }
+  };
 
   $scope.deshacer = function() {
       Canvas.deshacer();
       $scope.botones_undo();
-  }
+  };
 
   $scope.rehacer = function() {
       Canvas.rehacer();
       $scope.botones_undo();
-  }
+  };
 
   $scope.botones_undo = function(){
     $scope.data.puede_deshacer = ! (Canvas.estado_pila().pos <= 1);
     $scope.data.puede_rehacer = ! (Canvas.estado_pila().pos == Canvas.estado_pila().len-1);
     //console.log('estado pila', Canvas.estado_pila() );
-  }
+  };
 
   var path = 'partes/';
 
@@ -58,7 +86,7 @@ app.controller('EditorCtrl', function($scope, Canvas, $location, Menu, MisArchiv
   $scope.abrir_directorio = function(dir) {
     var gui = require('nw.gui');
     gui.Shell.showItemInFolder('./');
-  }
+  };
 
   $scope.agregar_nuevo_item = function(dir) {
     var path = require('path');
@@ -71,7 +99,9 @@ app.controller('EditorCtrl', function($scope, Canvas, $location, Menu, MisArchiv
             var partes_path = path.join(path.resolve('./partes/'),
                                         dir.titulo);
 
+
             var destino = path.join(partes_path, path.basename(origen));
+            consoole.log(destino);
             fs.writeFileSync(destino, fs.readFileSync(origen));
             actualizar_listado_directorios(function(){
                 $scope.data.directorios
@@ -81,7 +111,7 @@ app.controller('EditorCtrl', function($scope, Canvas, $location, Menu, MisArchiv
             });
         });
     }, 1);
-  }
+  };
 
   $scope.selecciona_objeto = function(obj, dir) {
     var preferencias = {};
@@ -103,7 +133,7 @@ app.controller('EditorCtrl', function($scope, Canvas, $location, Menu, MisArchiv
 
 
     $scope.botones_undo();
-  }
+  };
 
   /*
   * Se invoca cuando se quiere leer un directorio de la galería (un tab
@@ -129,7 +159,8 @@ app.controller('EditorCtrl', function($scope, Canvas, $location, Menu, MisArchiv
     // Como caso particular, si se encuentra un archivo llamado configuración
     // "preferencias.json", se lee para que sea el que define las preferencias
     // iniciales para cada objeto de la colección.
-    fs.readdir(ruta_directorio, function(error, data) {
+    readDirectories(ruta_directorio, Config.getHomeDirectory() + ruta_directorio).then(function(data) {
+      console.log(data);
       $scope.data.directorios[indice].objetos = [];
 
       if (!data)
@@ -138,13 +169,14 @@ app.controller('EditorCtrl', function($scope, Canvas, $location, Menu, MisArchiv
       for (var i=0; i<data.length; i++) {
         var ruta = data[i];
 
-        if (/\.svg$/.test(ruta) || /\.jpg$/.test(ruta)) {
-          var item = {src: ruta_directorio + '/' + ruta};
+        if (/\.svg$/.test(ruta) || /\.jpg$/.test(ruta) || /\.png$/.test(ruta)) {
+          var item = {src: ruta};
           $scope.data.directorios[indice].objetos.push(item);
         }
 
-        if (/^preferencias.json$/.test(ruta)) {
-          var preferencias = require("./" + ruta_directorio + "/" + ruta);
+        if (/\/preferencias.json$/.test(ruta)) {
+          console.log(ruta);
+          var preferencias = require((ruta.indexOf('/') == 1 ? '' : './') + ruta);
           $scope.data.directorios[indice].preferencias = preferencias;
           $scope.data.directorios[indice].tiene_preferencias = true;
         }
@@ -173,7 +205,7 @@ app.controller('EditorCtrl', function($scope, Canvas, $location, Menu, MisArchiv
       // Por cada directorio en  "./partes" ...
       for (var i=0; i<data.length; i++) {
         var titulo = data[i];
-        var objeto_directorio = {titulo: titulo, tiene_preferencias: false, preferencias: {}, active: false, objetos: []}
+        var objeto_directorio = {titulo: titulo, tiene_preferencias: false, preferencias: {}, active: false, objetos: []};
 
         if (/^\./.test(titulo)) // ignora los directorios y archivos ocultos.
         continue;
@@ -197,7 +229,7 @@ app.controller('EditorCtrl', function($scope, Canvas, $location, Menu, MisArchiv
 
     function on_click(evt) {
       funcion.call(this, this.value);
-      chooser.removeEventListener("change", on_click)
+      chooser.removeEventListener("change", on_click);
     }
 
     chooser.addEventListener("change", on_click, false);
@@ -214,7 +246,7 @@ app.controller('EditorCtrl', function($scope, Canvas, $location, Menu, MisArchiv
 
   $scope.guargar_png = function() {
     window.fn_guardar_png();
-  }
+  };
 
   window.fn_guardar_png = function(){
     setTimeout(function() {
@@ -222,11 +254,11 @@ app.controller('EditorCtrl', function($scope, Canvas, $location, Menu, MisArchiv
         Canvas.guardar_como_archivo_png(ruta);
       });
     }, 1);
-  }
+  };
 
   $scope.guardar_svg = function() {
     window.fn_guardar_svg();
-  }
+  };
 
   window.fn_guardar_svg = function() {
     setTimeout(function() {
@@ -234,12 +266,12 @@ app.controller('EditorCtrl', function($scope, Canvas, $location, Menu, MisArchiv
         Canvas.guardar_como_archivo_svg(ruta);
       });
     }, 1);
-  }
+  };
 
 
   $scope.definir_como_mi_avatar = function() {
     window.fn_definir_como_mi_avatar();
-  }
+  };
 
   window.fn_definir_como_mi_avatar = function(){
     var ruta_avatar = process.env.HOME + '/.face';
@@ -249,12 +281,12 @@ app.controller('EditorCtrl', function($scope, Canvas, $location, Menu, MisArchiv
     fs.unlink(ruta_avatar_symlink, function(){
       fs.symlinkSync(ruta_avatar, ruta_avatar_symlink, 'file');
     });
-  }
+  };
 
 
   $scope.guardar_y_regresar = function() {
     window.fn_guardar_y_regresar();
-  }
+  };
 
   window.fn_guardar_y_regresar = function() {
     var nombre = MisArchivos.obtener_numero().toString();
@@ -269,16 +301,16 @@ app.controller('EditorCtrl', function($scope, Canvas, $location, Menu, MisArchiv
         Menu.deshabilitar_items_menu();
       }, 100);
     });
-  }
+  };
 
   $scope.salir = function() {
     window.fn_salir();
-  }
+  };
 
   window.fn_salir = function(){
     $location.path('/selector');
     Menu.deshabilitar_items_menu();
-  }
+  };
 
 
   /* Carga el avatar sugerido por la URL: */
