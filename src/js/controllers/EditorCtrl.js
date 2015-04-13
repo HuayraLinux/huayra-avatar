@@ -9,7 +9,6 @@ var readDirectories = function(/* arguments */) {
     'use strict';
     var fs = require('fs');
     var Promise = require('bluebird');
-    console.log(arguments);
     return Promise.all(Array.prototype.map.call(arguments, function(path) {
         return new Promise(function(fulfill, reject) {
             fs.readdir(path, function(err, data) {
@@ -91,26 +90,28 @@ app.controller('EditorCtrl', function($scope, Canvas, $location, Menu, MisArchiv
   $scope.agregar_nuevo_item = function(dir) {
     var path = require('path');
     var gui = require('nw.gui');
-    var partes_path = './src/partes/' + dir.titulo;
+    var partes_path = Config.getHomeDirectory() + 'partes/';
 
-    setTimeout(function() {
-        abrir_dialogo('#agregar_nuevo_item', function(origen) {
-            origen = origen.replace('file://','');
-            var partes_path = path.join(path.resolve('./partes/'),
-                                        dir.titulo);
+    if(!fs.existsSync(partes_path)) {
+      fs.mkdirSync(partes_path);
+    }
+    partes_path = path.join(partes_path, dir.titulo);
+    if(!fs.existsSync(partes_path)) {
+      fs.mkdirSync(partes_path);
+    }
 
+    abrir_dialogo('#agregar_nuevo_item', function(origen) {
+        origen = origen.replace('file://','');
 
-            var destino = path.join(partes_path, path.basename(origen));
-            consoole.log(destino);
-            fs.writeFileSync(destino, fs.readFileSync(origen));
-            actualizar_listado_directorios(function(){
-                $scope.data.directorios
-                    .map(function(solapa){
-                        solapa.active = solapa.titulo == dir.titulo;
-                    });
-            });
+        var destino = path.join(partes_path, path.basename(origen));
+        fs.writeFileSync(destino, fs.readFileSync(origen));
+        actualizar_listado_directorios(function(){
+            $scope.data.directorios
+                .map(function(solapa){
+                    solapa.active = solapa.titulo == dir.titulo;
+                });
         });
-    }, 1);
+    });
   };
 
   $scope.selecciona_objeto = function(obj, dir) {
@@ -160,7 +161,6 @@ app.controller('EditorCtrl', function($scope, Canvas, $location, Menu, MisArchiv
     // "preferencias.json", se lee para que sea el que define las preferencias
     // iniciales para cada objeto de la colección.
     readDirectories(ruta_directorio, Config.getHomeDirectory() + ruta_directorio).then(function(data) {
-      console.log(data);
       $scope.data.directorios[indice].objetos = [];
 
       if (!data)
@@ -175,7 +175,6 @@ app.controller('EditorCtrl', function($scope, Canvas, $location, Menu, MisArchiv
         }
 
         if (/\/preferencias.json$/.test(ruta)) {
-          console.log(ruta);
           var preferencias = require((ruta.indexOf('/') == 1 ? '' : './') + ruta);
           $scope.data.directorios[indice].preferencias = preferencias;
           $scope.data.directorios[indice].tiene_preferencias = true;
