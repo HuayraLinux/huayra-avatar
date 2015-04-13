@@ -1,3 +1,17 @@
+caripela (0.25) unstable; urgency=medium
+
+  * Agregadas dependencias (blubird)
+
+ -- Gonzalo Gluzman <dggluz@gmail.com>  Mon, 13 Apr 2015 16:07:42 -0300
+
+caripela (0.24) unstable; urgency=medium
+
+  * Importa archivos en ~/.caripela/partes/...
+  * Lee la galería de /usr/share/caripela/partes/... y de
+    ~/.caripela/partes/... mergeando el contenido de los directorios
+
+ -- Gonzalo Gluzman <dggluz@gmail.com>  Mon, 13 Apr 2015 15:50:29 -0300
+
 caripela (0.23) unstable; urgency=medium
 
   *  Saca el icono del menu internet
