@@ -18,6 +18,12 @@ instalado en tu sistema y luego ejecutá:
 
     git clone https://github.com/hugoruscitti/caripela.git
     make test_mac
+    
+## Tecnologías utilizadas
+
+* nodewebkit
+* angularjs
+* fabric
 
 ## Binarios listos para ejecutar
 
