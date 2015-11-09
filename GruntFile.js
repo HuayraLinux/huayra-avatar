@@ -1,19 +1,18 @@
 module.exports = function (grunt) {
   grunt.initConfig({
-    nodewebkit: {
+    nwjs: {
                   options: {
-                            build_dir: './webkitbuilds',
-                            mac: true,
-                            win: true,
-                            linux32: true,
-                            linux64: true
+                            platforms: [ 'linux', 'osx', 'win' ],
+                            buildDir: './webkitbuilds',
+                            version: '0.12.2'
                 },  
                 src: [
-                  './src/**/*'
+                  './src/**/*',
+                  './node_modules/bluebird/**/*'
                 ]   
             },  
     }); 
 
-    grunt.loadNpmTasks('grunt-node-webkit-builder');
-    //grunt.registerTask('default', ['grunt-node-webkit-builder']);
-}
+    grunt.loadNpmTasks('grunt-nw-builder');
+    grunt.registerTask('default', ['nwjs']);
+};
