@@ -13,9 +13,9 @@ El diseño de la aplicación y los gráficos fueron realizados por Claudio Andau
 realizada por Hugo Ruscitti.
 
 
-![](/images/malefico.png) así se ve Claudio (por si te lo cruzas por la calle...)
+![malefico](./images/malefico.png) así se ve Claudio (por si te lo cruzas por la calle...)
 
-![](/images/huguito.png) y este es Hugo (ojo con reportarle bugs eh!)
+![huguito](./images/huguito.png) y este es Hugo (ojo con reportarle bugs eh!)
 
 
 ## ¿Querés colaborar?
@@ -39,6 +39,6 @@ y otros: [huayra.conectarigualdad.gob.ar](http://huayra.conectarigualdad.gob.ar/
 
 Así que para celebrarlo te dejamos un saludo muy grande del equipo *Huayra*:
 
-![](/images/team.png)
+![team](./images/team.png)
 
 ¡Gracias!
