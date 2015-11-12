@@ -6,19 +6,14 @@ Un programa sencillo para hacer avatares en huayra.
 
 ## ¿Cómo ejecutarlo?
 
-Actualmente este paquete no está empaquetado, pero si utilizás
-*Huayra Linux* se instala super fácil: abrí un terminal
-y ejecutá estos dos comandos:
-
     git clone https://github.com/HuayraLinux/huayra-caripela.git
-    make test_linux
+    npm install
+    npm start
 
-Si en cambio estás en *mac osx*, asegurate de tener nodewebkit
-instalado en tu sistema y luego ejecutá:
+## Construir binarios para todas las plataformas
 
-    git clone https://github.com/HuayraLinux/huayra-caripela.git
-    make test_mac
-    
+    grunt
+
 ## Tecnologías utilizadas
 
 * nodewebkit

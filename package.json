@@ -4,7 +4,8 @@
   "description": "Un programa sencillo para hacer avatares en huayra",
   "main": "src/js/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nw src"
   },
   "repository": {
     "type": "git",
@@ -17,7 +18,11 @@
   },
   "homepage": "https://github.com/hugoruscitti/karucha",
   "dependencies": {
-    "grunt-node-webkit-builder": "^0.1.21",
-    "bluebird": "*"
+    "bluebird": "*",
+    "nw": "^0.12.3"
+  },
+  "devDependencies": {
+    "grunt-nw-builder": "^2.0.0",
+    "nw-builder": "^2.0.2"
   }
 }
