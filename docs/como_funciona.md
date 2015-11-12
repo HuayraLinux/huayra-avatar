@@ -25,7 +25,7 @@ mientras está funcionando.
 En la esquina superior derecha, debajo de los controles para minimizar, maximizar
 y cerrar la ventana, aparece un ícono:
 
-![](/images/inspector_1.png)
+![inspector](./images/inspector_1.png)
 
 Una vez que se pulsa ese control, aparecen las herramientas de desarrollo, estas
 herramientas son muy familiares para muchos desarrolladores, ya que son las
@@ -33,7 +33,7 @@ mismas que aparecen en el navegador web que
 [usamos casi todas las personas](http://mashable.com/2013/08/14/google-chrome-global-share/)
 (chromium/chrome).
 
-![](/images/inspector_2.png)
+![inspector2](./images/inspector_2.png)
 
 Hay muchas cosas dentro de las herramientas de desarrollo, pero sin duda
 está bueno destacar que a primera vista hay 3 componentes que casi siempre
