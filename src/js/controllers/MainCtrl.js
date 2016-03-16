@@ -1,5 +1,9 @@
 var app = angular.module('app');
 
+window.abrir_modo_desarrollador = function() {
+  require('nw.gui').Window.get().showDevTools();
+};
+
 app.controller('MainCtrl', function($scope, Menu, Config) {
   $scope.data = {};
 
@@ -17,9 +21,7 @@ app.controller('MainCtrl', function($scope, Menu, Config) {
     location.reload(true);
   }
 
-  $scope.abrir_modo_desarrollador = function() {
-    require('nw.gui').Window.get().showDevTools();
-  }
+  $scope.abrir_modo_desarrollador = function(){ abrir_modo_desarrollador() };
 
   if( require('nw.gui').Window.get().menu == undefined ){
     Menu.agregar_a_ventana(

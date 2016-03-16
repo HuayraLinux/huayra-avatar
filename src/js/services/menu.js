@@ -8,6 +8,13 @@ app.service('Menu', function() {
     this.menu_opciones = new gui.Menu();
     this.menu_ayuda = new gui.Menu();
 
+    this.item_nuevo = new gui.MenuItem({
+      label: 'Nuevo...',
+      click: function() {
+        self.funcion_crear_nuevo.call(this);
+      }
+    });
+
     this.item_guardar = new gui.MenuItem({
         label: 'Guardar...',
         click: function() {
@@ -50,6 +57,13 @@ app.service('Menu', function() {
         }
     });
 
+    this.item_modo_desarrollador = new gui.MenuItem({
+        label: 'Abrir modo desarrollador',
+        click: function() {
+            window.abrir_modo_desarrollador();
+        }
+    });
+
     this.deshabilitar_items_menu = function() {
         this.item_guardar.enabled = false;
         this.item_guardar_como_png.enabled = false;
@@ -59,6 +73,8 @@ app.service('Menu', function() {
 
     this.deshabilitar_items_menu();
 
+    this.menu_archivo.append(this.item_nuevo);
+    this.menu_archivo.append(new gui.MenuItem({type: 'separator'}));
     this.menu_archivo.append(this.item_guardar);
     this.menu_archivo.append(this.item_guardar_como_png);
     this.menu_archivo.append(this.item_guardar_como_svg);
@@ -69,6 +85,7 @@ app.service('Menu', function() {
     this.menu_archivo.append(new gui.MenuItem({type: 'separator'}));
 
     this.menu_ayuda.append(this.item_acerca_de);
+    this.menu_ayuda.append(this.item_modo_desarrollador);
 
     this.menubar.append(new gui.MenuItem({
         label: 'Archivo',
@@ -96,4 +113,9 @@ app.service('Menu', function() {
         this.item_guardar_como_svg.enabled = true;
         this.item_avatar.enabled = true;
     }
+
+  this.item_crear_nuevo = function(ventana, funcion_crear_nuevo){
+    ventana.menu = this.menubar;
+    this.funcion_crear_nuevo = funcion_crear_nuevo;
+  }
 });

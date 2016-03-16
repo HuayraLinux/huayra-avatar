@@ -409,6 +409,10 @@ app.factory("Canvas", function() {
       pila = items || [];
   }
 
+  Canvas.limpiar = function() {
+    Canvas.canvas.clear();
+  }
+
   Canvas.estado_pila = function() {
     return {len: pila.length, pos: pila_pos};
   }

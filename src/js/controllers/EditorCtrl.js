@@ -314,7 +314,7 @@ app.controller('EditorCtrl', function($scope, Canvas, $location, Menu, MisArchiv
 
   /* Carga el avatar sugerido por la URL: */
   var ruta = $location.search().ruta;
-    Canvas.inicio();
+  Canvas.inicio();
 
   if (ruta) {
     Canvas.cargar(ruta);
