@@ -1,3 +1,9 @@
+caripela (0.26) unstable; urgency=medium
+
+  * Cambie dependencia de `bluebird` a un paquete
+
+ -- Mauro <mauro@sdf.org>  Thu, 17 Mar 2016 14:48:19 -0300
+
 caripela (0.25) unstable; urgency=medium
 
   * Agregadas dependencias (blubird)
