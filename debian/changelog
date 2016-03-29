@@ -1,3 +1,11 @@
+caripela (0.27) unstable; urgency=medium
+
+  * Ahora define el hint `WM_CLASS`
+  * Agrego dependencia en `huayra-help`
+  * Cambio menor en el menu
+
+ -- Mauro <mauro@sdf.org>  Tue, 29 Mar 2016 17:01:05 -0300
+
 caripela (0.26) unstable; urgency=medium
 
   * Cambie dependencia de `bluebird` a un paquete

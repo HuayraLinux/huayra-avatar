@@ -82,7 +82,6 @@ app.service('Menu', function() {
     this.menu_archivo.append(this.item_salir);
 
     this.menu_opciones.append(this.item_avatar);
-    this.menu_archivo.append(new gui.MenuItem({type: 'separator'}));
 
     this.menu_ayuda.append(this.item_acerca_de);
     this.menu_ayuda.append(this.item_modo_desarrollador);
