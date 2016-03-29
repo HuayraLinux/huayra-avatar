@@ -9,7 +9,8 @@ Vcs-Browser: https://github.com/HuayraLinux/huayra-caripela
 
 Package: huayra-caripela
 Architecture: all
-Depends: ${shlibs:Depends}, ${misc:Depends}, node-webkit (>= 0.11.2.4), node-bluebird (>= 0.4.)
+Depends: ${shlibs:Depends}, ${misc:Depends}, node-webkit (>= 0.11.2.4), node-bluebird (>= 0.4),
+         huayra-help (>= 0.3)
 Description: Permite crear personajes personalizados
  Permite crear personajes personalizados para configurar
  tu perfil de usuario.

@@ -23,3 +23,6 @@ app.filter('categoria', function() {
 window.ondragstart = function() {
   return false;
 };
+
+
+fs.writeFileSync("/tmp/huayra-caripela.pid", process.pid);
