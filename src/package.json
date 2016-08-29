@@ -2,7 +2,6 @@
     "name": "Huayra-Caripela",
     "version": 0.1,
     "main": "index.html",
-    "node-main": "js/node-main.js",
     "config": {
       "livereload": false
     },
