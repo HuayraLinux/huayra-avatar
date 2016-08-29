@@ -7,3 +7,5 @@ Terminal=false
 Type=Application
 Icon=caripela
 Categories=Graphics;Huayra;
+
+StartupWMClass=huayra-caripela

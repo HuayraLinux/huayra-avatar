@@ -25,5 +25,5 @@ window.ondragstart = function() {
 };
 
 /* HACK para setear WM_CLASS */
-require('nwjs-hack').set_wmclass("caripela", true);
+require('nwjs-hack').set_wmclass("huayra-caripela", true);
 fs.writeFileSync("/tmp/huayra-caripela.pid", process.pid);
