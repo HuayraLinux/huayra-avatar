@@ -1,3 +1,9 @@
+caripela (0.28) UNRELEASED; urgency=medium
+
+  * Ahora define el hint `WM_CLASS` lo antes posible
+
+ -- Ignacio Losiggio <iglosiggio@gmail.com>  Fri, 02 Sep 2016 11:42:20 -0300
+
 caripela (0.27) unstable; urgency=medium
 
   * Ahora define el hint `WM_CLASS`
