@@ -1,4 +1,4 @@
-caripela (0.28) UNRELEASED; urgency=medium
+caripela (0.28) unstable; urgency=medium
 
   * Ahora define el hint `WM_CLASS` lo antes posible
 
