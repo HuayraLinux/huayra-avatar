@@ -2,7 +2,7 @@ Source: caripela
 Section: utils
 Priority: extra
 Maintainer: Hugo Ruscitti <hugoruscitti@gmail.com>
-Build-Depends: debhelper (>= 8.0.0)
+Build-Depends: debhelper (>= 8.0.0), npm
 Standards-Version: 3.9.6
 Homepage: https://github.com/HuayraLinux/huayra-caripela
 Vcs-Browser: https://github.com/HuayraLinux/huayra-caripela
