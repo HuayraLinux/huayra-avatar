@@ -1,3 +1,10 @@
+caripela (0.31) unstable; urgency=medium
+
+  [Carolina Hortal]
+  * Correcciones en ojos 8 bits.
+
+ -- Iván Hoffmann <digital.h@gmail.com>  Wed, 02 Nov 2016 12:46:33 -0300
+
 caripela (0.30) unstable; urgency=medium
 
   * Non-maintainer upload.
