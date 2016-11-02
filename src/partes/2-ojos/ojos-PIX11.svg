@@ -9,9 +9,9 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="30.192041mm"
-   height="2.3870893mm"
-   viewBox="0 0 106.97967 8.4581904"
+   width="11.966922mm"
+   height="2.3870895mm"
+   viewBox="0 0 42.402477 8.4581912"
    id="svg8346"
    version="1.1"
    inkscape:version="0.91 r13725"
@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="7.0978872"
-     inkscape:cx="74.576582"
-     inkscape:cy="4.2725161"
+     inkscape:zoom="4.2004417"
+     inkscape:cx="111.81388"
+     inkscape:cy="-28.546234"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -49,15 +49,15 @@
      inkscape:snap-bbox-edge-midpoints="true"
      inkscape:snap-bbox-midpoints="true">
     <sodipodi:guide
-       position="15.053111,-83.18914"
+       position="15.053114,-83.189138"
        orientation="0,1"
        id="guide4791" />
     <sodipodi:guide
-       position="43.828771,8.4581834"
+       position="43.828775,8.4581839"
        orientation="0,1"
        id="guide5346" />
     <sodipodi:guide
-       position="64.699611,2.5761229e-07"
+       position="64.699616,8.8161989e-07"
        orientation="0,1"
        id="guide5348" />
   </sodipodi:namedview>
@@ -85,12 +85,5 @@
        height="8.4581909"
        x="375.41354"
        y="385.38797" />
-    <rect
-       style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.97100002;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="rect7272-9-2-5-5"
-       width="42.791874"
-       height="8.4344177"
-       x="439.60135"
-       y="385.41174" />
   </g>
 </svg>

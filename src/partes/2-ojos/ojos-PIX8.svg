@@ -9,9 +9,9 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="31.403412mm"
-   height="6.4166679mm"
-   viewBox="0 0 111.27193 22.736226"
+   width="12.434484mm"
+   height="6.4448047mm"
+   viewBox="0 0 44.059196 22.835923"
    id="svg8346"
    version="1.1"
    inkscape:version="0.91 r13725"
@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="10.028871"
-     inkscape:cx="57.779616"
-     inkscape:cy="9.2273737"
+     inkscape:zoom="4.1966516"
+     inkscape:cx="82.528565"
+     inkscape:cy="-10.390195"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -43,11 +43,11 @@
      showguides="true"
      inkscape:guide-bbox="true">
     <sodipodi:guide
-       position="19.089189,-72.524804"
+       position="19.089195,-72.425105"
        orientation="0,1"
        id="guide4791" />
     <sodipodi:guide
-       position="62.818634,13.26173"
+       position="62.818646,13.361429"
        orientation="0,1"
        id="guide5198" />
   </sodipodi:namedview>
@@ -82,19 +82,5 @@
        height="15.987442"
        x="384.71661"
        y="388.62274" />
-    <rect
-       style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.97100002;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="rect7274-0-9-7-8"
-       width="17.785517"
-       height="15.841329"
-       x="451.41229"
-       y="388.66916" />
-    <rect
-       style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.97100002;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="rect7272-7-1-7-2"
-       width="44.0592"
-       height="9.5109634"
-       x="438.59021"
-       y="381.80679" />
   </g>
 </svg>
