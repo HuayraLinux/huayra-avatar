@@ -1,3 +1,10 @@
+caripela (0.30) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Se agregan nuevos elementos estetica 8 bits.
+
+ -- Iván Hoffmann <digital.h@gmail.com>  Wed, 02 Nov 2016 10:18:26 -0300
+
 caripela (0.29) unstable; urgency=medium
 
   * Ahora buildea en strider
