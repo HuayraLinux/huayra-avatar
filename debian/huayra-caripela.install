@@ -1,5 +1,6 @@
-node_modules/nwjs-hack/* usr/share/caripela/node_modules/nwjs-hack
-src/* usr/share/caripela/src
-bin/huayra-caripela usr/bin/
+package.json            /usr/share/caripela
+main.js                 /usr/share/caripela
+src/*                   /usr/share/caripela/src
+bin/huayra-caripela     /usr/bin/
 debian/caripela.desktop /usr/share/applications
-debian/caripela.svg /usr/share/icons/hicolor/scalable/apps
+debian/caripela.svg     /usr/share/icons/hicolor/scalable/apps

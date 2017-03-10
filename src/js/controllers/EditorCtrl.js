@@ -8,7 +8,6 @@ var Config = {
 var readDirectories = function(/* arguments */) {
     'use strict';
     var fs = require('fs');
-    var Promise = require('bluebird');
     return Promise.all(Array.prototype.map.call(arguments, function(path) {
         return new Promise(function(fulfill, reject) {
             fs.readdir(path, function(err, data) {
@@ -83,13 +82,12 @@ app.controller('EditorCtrl', function($scope, Canvas, $location, Menu, MisArchiv
 
 
   $scope.abrir_directorio = function(dir) {
-    var gui = require('nw.gui');
-    gui.Shell.showItemInFolder('./');
+    var gui = require('electron');
+    gui.shell.showItemInFolder('./');
   };
 
   $scope.agregar_nuevo_item = function(dir) {
     var path = require('path');
-    var gui = require('nw.gui');
     var partes_path = Config.getHomeDirectory() + 'partes/';
 
     if(!fs.existsSync(partes_path)) {
@@ -100,17 +98,25 @@ app.controller('EditorCtrl', function($scope, Canvas, $location, Menu, MisArchiv
       fs.mkdirSync(partes_path);
     }
 
-    abrir_dialogo('#agregar_nuevo_item', function(origen) {
-        origen = origen.replace('file://','');
-
-        var destino = path.join(partes_path, path.basename(origen));
-        fs.writeFileSync(destino, fs.readFileSync(origen));
-        actualizar_listado_directorios(function(){
-            $scope.data.directorios
-                .map(function(solapa){
-                    solapa.active = solapa.titulo == dir.titulo;
-                });
+    abrir_archivos({
+      filters: [{
+        name: 'Imagen (*.png, *.jpg, *.jpeg, *.bmp, *.svg)',
+        extensions: ['png', 'jpg', 'jpeg', 'bmp', 'svg']
+      }],
+      properties: ['multiSelections', 'openFile']
+    }, function(archivos) {
+      archivos.forEach(function(archivo) {
+        var destino = path.join(partes_path, path.basename(archivo));
+        fs.readFile(archivo, function(error, contenidos) {
+          fs.writeFile(destino, contenidos, function() {
+            actualizar_listado_directorios(function(){
+                $scope.data.directorios.map(function(solapa){
+                  solapa.active = solapa.titulo == dir.titulo;
+              });
+            });
+          });
         });
+      });
     });
   };
 
@@ -169,7 +175,7 @@ app.controller('EditorCtrl', function($scope, Canvas, $location, Menu, MisArchiv
       for (var i=0; i<data.length; i++) {
         var ruta = data[i];
 
-        if (/\.svg$/.test(ruta) || /\.jpg$/.test(ruta) || /\.png$/.test(ruta)) {
+        if (/\.(svg|jpg|jpeg|bmp|png)$/.test(ruta)) {
           var item = {src: ruta};
           $scope.data.directorios[indice].objetos.push(item);
         }
@@ -223,21 +229,21 @@ app.controller('EditorCtrl', function($scope, Canvas, $location, Menu, MisArchiv
   actualizar_listado_directorios();
 
 
-  function abrir_dialogo(name, funcion) {
-    var chooser = document.querySelector(name);
+  function guardar_archivo(opciones, funcion) {
+    var electron = require('electron');
+    electron.remote.dialog.showSaveDialog(opciones, funcion);
+  }
 
-    function on_click(evt) {
-      funcion.call(this, this.value);
-      chooser.removeEventListener("change", on_click);
-    }
-
-    chooser.addEventListener("change", on_click, false);
-    chooser.click();
+  function abrir_archivos(opciones, funcion) {
+    var electron = require('electron');
+    electron.remote.dialog.showOpenDialog(opciones, funcion);
   }
 
   // $scope.guargar_png = function() {
   //   setTimeout(function() {
-  //     abrir_dialogo('#guardar_png', function(ruta) {
+  //     guardar_archivo({
+  //       filters: [{ name: 'Avatar (*.png)', extensions: ['png'] }]
+  //     }, function(ruta) {
   //       Canvas.guardar_como_archivo_png(ruta);
   //     });
   //   }, 1);
@@ -249,7 +255,9 @@ app.controller('EditorCtrl', function($scope, Canvas, $location, Menu, MisArchiv
 
   window.fn_guardar_png = function(){
     setTimeout(function() {
-      abrir_dialogo('#guardar_png', function(ruta) {
+      guardar_archivo({
+        filters: [{ name: 'Avatar (*.png)', extensions: ['png'] }]
+      }, function(ruta) {
         Canvas.guardar_como_archivo_png(ruta);
       });
     }, 1);
@@ -261,7 +269,9 @@ app.controller('EditorCtrl', function($scope, Canvas, $location, Menu, MisArchiv
 
   window.fn_guardar_svg = function() {
     setTimeout(function() {
-      abrir_dialogo('#guardar_svg', function(ruta) {
+      guardar_archivo({
+        filters: [{ name: 'Avatar (*.svg)', extensions: ['svg'] }]
+      }, function(ruta) {
         Canvas.guardar_como_archivo_svg(ruta);
       });
     }, 1);

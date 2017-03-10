@@ -1,7 +1,7 @@
 var app = angular.module('app');
 
 window.abrir_modo_desarrollador = function() {
-  require('nw.gui').Window.get().showDevTools();
+  require('electron').ipcRenderer.send('showDevTools');
 };
 
 app.controller('MainCtrl', function($scope, Menu, Config) {
@@ -23,9 +23,8 @@ app.controller('MainCtrl', function($scope, Menu, Config) {
 
   $scope.abrir_modo_desarrollador = function(){ abrir_modo_desarrollador() };
 
-  if( require('nw.gui').Window.get().menu == undefined ){
+  if( require('electron').remote.Menu.getApplicationMenu() === null ){
     Menu.agregar_a_ventana(
-        require('nw.gui').Window.get(),
         function(){
             swal({
                 title: "Acerca de",

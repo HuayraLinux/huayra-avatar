@@ -22,7 +22,6 @@ app.controller('SelectorCtrl', function($scope, $location, Menu, MisArchivos, Ca
   $scope.data.mis_archivos = MisArchivos.archivos;
 
   Menu.item_crear_nuevo(
-    require('nw.gui').Window.get(),
     function(){
       $scope.crear_avatar();
       $scope.$apply();

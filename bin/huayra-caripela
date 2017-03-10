@@ -1,5 +1,5 @@
 #!/bin/sh
 
 # definir aqui los valores de la aplicacion
-APP_PATH="/usr/share/caripela/src";
-exec nw ${APP_PATH} $@
+APP_PATH="/usr/share/caripela/main.js";
+exec electron ${APP_PATH} $@

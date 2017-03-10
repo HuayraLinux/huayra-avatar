@@ -1,5 +1,5 @@
 var app = angular.module('app');
-var gui = require('nw.gui');
+var gui = require('electron').remote;
 
 app.service('Menu', function() {
     var self = this;
@@ -101,8 +101,8 @@ app.service('Menu', function() {
         submenu: this.menu_ayuda
     }));
 
-    this.agregar_a_ventana = function(ventana, funcion_acerca_de) {
-        ventana.menu = this.menubar;
+    this.agregar_a_ventana = function(funcion_acerca_de) {
+        gui.Menu.setApplicationMenu(this.menubar);
         this.funcion_acerca_de = funcion_acerca_de;
     }
 
@@ -113,8 +113,8 @@ app.service('Menu', function() {
         this.item_avatar.enabled = true;
     }
 
-  this.item_crear_nuevo = function(ventana, funcion_crear_nuevo){
-    ventana.menu = this.menubar;
+  this.item_crear_nuevo = function(funcion_crear_nuevo){
+    gui.Menu.setApplicationMenu(this.menubar);
     this.funcion_crear_nuevo = funcion_crear_nuevo;
   }
 });
