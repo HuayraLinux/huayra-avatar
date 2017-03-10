@@ -10,6 +10,10 @@ const entrypoint     = `file://${dirname}/src/index.html`;
 
 let mainWindow = null;
 
+electron.ipcMain.on('showDevTools', function showDevTools() {
+  mainWindow.webContents.openDevTools();
+});
+
 // Uncomment the lines below to enable Electron's crash reporter
 // For more information, see http://electron.atom.io/docs/api/crash-reporter/
 
