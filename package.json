@@ -18,7 +18,6 @@
   },
   "homepage": "https://github.com/hugoruscitti/karucha",
   "dependencies": {
-    "nwjs-hack": "iglosiggio/nwjs-hack",
     "bluebird": "*",
     "nw": "^0.12.3"
   },

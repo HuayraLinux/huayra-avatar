@@ -89,7 +89,6 @@ app.controller('EditorCtrl', function($scope, Canvas, $location, Menu, MisArchiv
 
   $scope.agregar_nuevo_item = function(dir) {
     var path = require('path');
-    var gui = require('nw.gui');
     var partes_path = Config.getHomeDirectory() + 'partes/';
 
     if(!fs.existsSync(partes_path)) {
