@@ -5,38 +5,67 @@ Un programa sencillo para hacer avatares en huayra.
 - Para ver una demo del proyecto visitá la web: http://huayra-caripela.surge.sh
 - Y para descargar binarios: https://github.com/HuayraLinux/huayra-caripela/releases
 
+
+## Imágenes
+
 ![](images/preview.png)
 
-## ¿Cómo ejecutarlo?
+## ¿Cómo ejecutarlo en modo desarrollo?
 
-    git clone https://github.com/HuayraLinux/huayra-caripela.git
-    npm install
-    npm start
+La aplicación utiliza ember y electron. Así que deberías tener instalado
+ember de forma global con este comando:
+
+```
+npm install -g ember-cli
+```
+
+y luego, clonar y descargar todo el proyecto:
+
+```
+git clone https://github.com/HuayraLinux/huayra-caripela.git
+cd huayra-caripela
+npm install
+```
+
+y por último, para ejecutar la aplicación existen dos modos de ejecución:
+
+```
+# para acceder desde el navegador
+ember s
+```
+
+o bien:
+
+```
+# para ejecutar sobre electron
+make compilar
+make electron
+```
+
+Por cierto, hay más comandos disponibles si ejecutamos el comando `make`
+sin parámetros:
+
+```
+make
+```
 
 ## Construir binarios para todas las plataformas
 
-    grunt
+Para generar los binarios se puede ejecutar el comando:
+
+```
+make compilar
+make binarios
+```
+
+Aunque realmente no es necesario, porque estos binarios se generan
+automáticamente en el sitio de
+[travis](https://travis-ci.org/HuayraLinux/huayra-caripela) cada vez que
+lanzamos una versión nueva de la aplicación.
 
 ## Tecnologías utilizadas
 
-* nodewebkit
-* angularjs
-* fabric
-
-## Binarios listos para ejecutar
-
-Si usas otro sistema operativo, o querés hacer una prueba
-rápida, podés usar algunos de nuestros binarios:
-
-* [Linux 32 bits](https://drive.google.com/uc?id=0B9QBzNt2AHGzZEpMejdhVGNoOUE&export=download)
-* [Linux 64 bits](https://drive.google.com/uc?id=0B9QBzNt2AHGzVXo2WjhZZFNiZ1U&export=download)
-* [Windows](https://drive.google.com/uc?id=0B9QBzNt2AHGzb1RJMTY0Qjdsejg&export=download)
-* [Mac OSX](https://drive.google.com/uc?id=0B9QBzNt2AHGzbkJ4Y1Z4ZldLeVk&export=download)
-
-## Versión online
-
-También hay una versión online de este software en:
-
-* http://dev-losersjuegos.com.ar:9599/
-
-
+* [ember](https://www.emberjs.com/)
+* [electron](https://electron.atom.io/)
+* [fabric](http://fabricjs.com/)
+* html5 y javascript

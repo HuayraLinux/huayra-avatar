@@ -13,6 +13,7 @@
     "type": "git",
     "url": "https://github.com/HuayraLinux/huayra-caripela.git"
   },
+  "main": "main.js",
   "scripts": {
     "build": "ember build",
     "start": "electron main.js",
@@ -48,6 +49,7 @@
   },
   "private": true,
   "dependencies": {
-    "electron": "^1.6.10"
+    "electron": "^1.6.10",
+    "electron-packager": "^8.7.0"
   }
 }
