@@ -1,0 +1,183 @@
+  * Versión 0.32 (mudanza a electron)
+  * Merge pull request #14 from HuayraLinux/electron-migration
+  * Aplicación porteada a electron!
+  * Initial work for the migration
+  * Incremento de version
+  * modificacion de ojos
+  * Incremento de versión
+  * partes a caripelas
+  * Buildea en strider, hay que taguear
+  * Agregado nodejs-legacy a las builddep
+  * Agregado git a las builddep
+  * Agregado npm a las build-depends
+  * Debería reparar strider
+  * Bump version
+  * Cambiada la clase por huayra-caripela
+  * Mejorado el script de inicio
+  * Quitado el node-main
+  * Agregado WM_CLASS (con nwjs-hack)
+  * agrego changelog y cambio menor en el menu
+  * Ahora con la ayuda de huayra-help es posible definir el WM_CLASS de la aplicacion
+  * nueva version de caripela: 0.26
+  * Nuevo desde el menu, agrego un metodo en Canvas para limpiarlo y agrego 'dev tools' desde el submenu Ayuda
+  * Merge pull request #6 from josx/build
+  * Merge pull request #9 from josx/patch-1
+  * Merge pull request #10 from josx/patch-2
+  * Update como_funciona.md
+  * Update acercade.md
+  * Readme: mejoras para pdoer ejecutar y construir binarios
+  * Corrección en Espacios en blancos y tabs
+  * Instalar todas las dependencias necesarias para construir y/o corrrer
+  * Update README.md
+  * Update README.md
+  * Agregada dependencia y changelog
+  * Guardando nuevos elementos en la carpeta ~/.caripela
+  * Leyendo los archivos .png para la galería y leyendo también el directorio ~/.caripela/...
+  * Saca el icono del menu internet
+  * Actualizado el changelog
+  * Cambiados los textos 'guardar como PNG/SVG' a 'exportar como PNG/SVG'
+  * Arreglado error al exportar a SVG (antes rasterizaba los svgs anidados e incluía la ruta al archivo local, ahora le pega sus contenidos)
+  * merge
+  * actualizando changelog
+  * Deshabilitando arrastrar y soltar sobre las imágenes.
+  * 0.20c
+  * guarda fondo correctamente
+  * inicio canvas, botones  y pila
+  * changelog++
+  * corrijo valor inicial de estado_inicial
+  * 0.20
+  * reimplementando codigo
+  * Merge branch 'master' of github.com:HuayraLinux/huayra-caripela
+  * fix en el undo/redo
+  * actualizando changelog.
+  * Reparando el botón guardar y actualizando fabric.
+  * Corrigiendo templates y version de dependencia de node-webkit
+  * quitamos caripela, solo tenemos huayra-caripela para generar
+  * 0.18, leer changelog
+  * acerca de
+  * changelog
+  * Agrego menu
+  * agrego menu
+  * changelog
+  * ahora los botoncitos se activan/desactivan al poder hacer o deshacer
+  * changelog
+  * des/rehacer
+  * cuando abro una caripela nueva, la pila se rinicia
+  * si no tiene cambios que no guarde una nueva
+  * quito una variable fantasmagorica y al copiar una nueva parte se actualiza la solapa con el item ahi mismo
+  * cambios esteticos + lintian warnings
+  * cambios esteticos(?) al paquete
+  * nodewebkit <= 0.7.5.2
+  * cambio changelog y saco un comentario medio fantasmal
+  * deshacer>rehacer
+  * El boton de agregar ahora te pide seleccionar una imagen y la copia al directorio de partes que estemos seleccionando
+  * ahora guarda al avatar como /home/mauro/.face y genera un symlink para mantener compatibilidad con compartir hasta la prox version
+  * actualizando paquete.
+  * Merge branch 'master' of github.com:HuayraLinux/huayra-caripela
+  * deshacer y rehacer + base64 al exportar como svg (aquellas caripelas con pngs incrustados)
+  * actualizando changelog
+  * Actualizanción menor.
+  * actualizando paquete.
+  * Merge branch 'master' of http://github.com/hugoruscitti/caripela
+  * Agregando botones para subir y bajar objetos.
+  * Agregando archivos de proyecto para webstorm
+  * actualizando.
+  * Merge branch 'master' of https://github.com/hugoruscitti/caripela
+  * arreglo menor.
+  * Actualizando el readme para poner la URL de los binarios.
+  * Reparando el bug de inicialización en windows.
+  * Agregando automatización para generar paquetes binarios multiplataforma.
+  * Caras de fruta
+  * actualizando paquete debian.
+  * arreglando el bug de expotación cuando hay objetos seleccionados.
+  * Cambiando el titulo de la ventana
+  * actualizando paquete debian.
+  * Haciendo que la aplicación permita definir el avatar del usuario.
+  * Haciendo que el menú resalte la opción debajo del mouse.
+  * Accesorios, barbas, bigotes...
+  * Quitando bordes blancos en el header.
+  * Agregando un heder a la aplicación.
+  * Cejas fotograficas
+  * Pelo fotografico
+  * Creando botón para espejar las figuras.
+  * Cambiando el código de tecla.
+  * Merge branch 'master' of https://github.com/hugoruscitti/caripela
+  * Implementando borrado con el teclado.
+  * Cejas ahora admite simetria
+  * Monoculos es ahora Ojos
+  * Ojos fotograficos
+  * Evitando que se produzca un error por actualizar dos veces el sope de angularjs.
+  * Arreglos para que los objetos no salgan de la pantalla.
+  * Arreglo menor.
+  * Agregando un menú de contexto a la vista de selección.
+  * Haciendo que se guarde la información de categorías y plano Z al guardar.
+  * Haciendo que el logo de la aplicación no sea clickeable...
+  * Haciendo que funcionen los ojos simétricos y otros arreglos.
+  * Llevando el arreglo de fabric a un archivo diferente.
+  * Mejorando el editor para que solo pueda borrar con figuras seleccionadas.
+  * Haciendo que se puedan abrir avatares haciendo click.
+  * Reparando la funcionalidad de guardar y agregando underscore.
+  * Algunas partes fotograficas hechas por Caro
+  * Implementando guardado de avatares.
+  * ojos single, más algunas bocas
+  * Agrego el archivo
+  * Merge branch 'master' of github.com:hugoruscitti/caripela
+  * Implementación de lectura de caripelas
+  * Implementando guardar y cargar.
+  * Mejorando los tabs quitando animaciones.
+  * Haciendo que los tabs no muestren el número de orden.
+  * Moviendo directorios para que aparezcan las caras y los ojos primero.
+  * Convirtiendo el canvas en una directiva.
+  * Arreglos menores.
+  * Reparando el botón guardar y regresar.
+  * Mejorando la barra de botones.
+  * Comenzando a mover las opciones al menú.
+  * Reparando la función exportar.
+  * Merge branch 'master' of https://github.com/hugoruscitti/caripela
+  * Mejorando la pantalla principal.
+  * Camisetas de argentina, mona sin cara
+  * Cambiando el color de los botones de la grilla.
+  * Borrando los controladores que no se utilizan.
+  * Modularizando las vistas con partials.
+  * Reparando el nombre del proyecto.
+  * Icono de Caripela
+  * haciendo la estructura del paquete debian.
+  * Comenzando a documentar cómo funciona la aplicación.
+  * Creando directorio de documentación.
+  * Actualizando preview.
+  * Agregue set de caras tipo Papa. Corregi alpha en caras de equipo
+  * Barbas y bigotes
+  * Arreglo menor.
+  * Cambiando el nombre del proyecto a Caripela.
+  * Mentones, anteojos y ajustes de Z en algunas partes
+  * Creando un botón "Agregar" y mas fondos.
+  * Implementando valores Z y fondos.
+  * Agregando screenshot.
+  * Arreglos menores.
+  * Reemplazando foundation por bootstrap.
+  * Simplificando app.js.
+  * Refactorizando Factories.
+  * Modularizando.
+  * arreglo menor.
+  * Mejorando la vista de grilla.
+  * Mostrando un mensaje si la galería no tiene preferencias.
+  * Haciendo que no se pueda seleccionar texto.
+  * Arreglando problema de encoding.
+  * arreglo menor.
+  * Implementando preferencias por cada galeria.
+  * Mas partes, incluyendo pelo, narices, caras y ojos
+  * Implementando botones para exportar en formato SVG y PNG
+  * Creando botones para exportar.
+  * Agregando botones de acción para el canvas.
+  * Agregando íconos de acceso a devtools y actualizar.
+  * Arreglos menores.
+  * Configurando el tamaño de la ventana.
+  * Arreglos menores en el layout.
+  * Realizando pruebas generales.
+  * Quitando dependencias sin utilizar.
+  * subiendo bibliotecas.
+  * Actualizando imágenes.
+  * Armando el layout básico y quitando bower.
+  * Arreglo menor.
+  * Creando la estructura general.
+  * Initial commit
