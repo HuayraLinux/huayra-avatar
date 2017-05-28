@@ -2,8 +2,11 @@
 
 Un programa sencillo para hacer avatares en huayra.
 
+[![Build Status](https://travis-ci.org/HuayraLinux/huayra-caripela.svg?branch=master)](https://travis-ci.org/HuayraLinux/huayra-caripela)
+
 - Para ver una demo del proyecto visitá la web: http://huayra-caripela.surge.sh
 - Y para descargar binarios: https://github.com/HuayraLinux/huayra-caripela/releases
+- Test en travis: https://travis-ci.org/HuayraLinux/huayra-caripela/builds
 
 
 ## Imágenes
