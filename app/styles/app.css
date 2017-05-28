@@ -151,3 +151,13 @@ div.dropdown {
     float: right;
     margin-left: 10px;
 }
+
+.version {
+	color: white;
+	opacity: 0.5;
+	vertical-align: middle;
+	line-height: 3.5;
+	text-align: right;
+	margin-right: 1em;
+	height: 50px;
+}
