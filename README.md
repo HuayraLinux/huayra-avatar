@@ -2,6 +2,9 @@
 
 Un programa sencillo para hacer avatares en huayra.
 
+- Para ver una demo del proyecto visitá la web: http://huayra-caripela.surge.sh
+- Y para descargar binarios: https://github.com/HuayraLinux/huayra-caripela/releases
+
 ![](images/preview.png)
 
 ## ¿Cómo ejecutarlo?
