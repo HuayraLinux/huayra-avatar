@@ -9,6 +9,17 @@
 
     {{content-for "head"}}
 
+    <script>
+      window.moduleNode = window.module;
+      window.processNode = window.process;
+      window.requireNode = window.require;
+
+      delete window.module;
+      delete window.process;
+      delete window.require;
+    </script>
+
+
     <link rel="stylesheet" href="{{rootURL}}assets/vendor.css">
     <link rel="stylesheet" href="{{rootURL}}assets/huayra-caripela.css">
 
@@ -19,6 +30,40 @@
 
     <script src="{{rootURL}}assets/vendor.js"></script>
     <script src="{{rootURL}}assets/huayra-caripela.js"></script>
+
+    <script>
+      /* jshint browser: true */
+      ;(function (window) {
+      if (!window.ELECTRON) {
+      return
+      }
+
+      // Restore Electron variables.
+      window.process = window.processNode
+
+      // Redefine a global `require` function that can satisfy both
+      // Node and AMD module systems.
+      const requireAMD = window.require
+      const requireNode = window.requireNode
+
+      if (requireAMD) {
+      window.require = function () {
+        try {
+          return requireAMD.apply(null, arguments)
+        } catch (e) {
+          if (e.toString().includes('Error: Could not find module')) {
+            return requireNode.apply(null, arguments)
+          } else {
+            return console.error(e)
+          }
+        }
+      }
+      } else {
+        window.require = requireNode
+      }
+      })(this)
+
+    </script>
 
     {{content-for "body-footer"}}
   </body>
