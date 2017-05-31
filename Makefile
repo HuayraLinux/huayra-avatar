@@ -1,4 +1,3 @@
-VERSION=0.32.0
 NOMBRE="huayra-caripela"
 NOMBREBIN="huayra-caripela"
 DATE=`date +'%y.%m.%d %H:%M:%S'`
@@ -22,7 +21,7 @@ endef
 
 comandos:
 	@echo ""
-	@echo "${B}Comandos disponibles para ${Y}${NOMBRE}${N} (versión: ${VERSION})"
+	@echo "${B}Comandos disponibles para ${Y}${NOMBRE}${N}"
 	@echo ""
 	@echo "  ${Y}Generales de la aplicación${N}"
 	@echo ""
@@ -95,11 +94,11 @@ ifeq ($(ELIMINAR_MAPS), 1)
 	@rm dist/assets/*.map
 endif
 	$(call log, "Compilando para osx - 64 bits...")
-	@node_modules/.bin/electron-packager . ${NOMBREBIN} --app-version=${VERSION} --platform=darwin --arch=x64  --electron-version=1.6.7 --ignore=tmp --ignore=node_modules --ignore=bower_components --out=binarios
+	@node_modules/.bin/electron-packager . ${NOMBREBIN} --platform=darwin --arch=x64  --electron-version=1.6.7 --ignore=tmp --ignore=node_modules --ignore=bower_components --out=binarios
 	$(call log, "Compilando para windows - 32 bits...")
-	@node_modules/.bin/electron-packager . ${NOMBREBIN} --app-version=${VERSION} --platform=win32  --arch=ia32 --electron-version=1.6.7 --ignore=tmp --ignore=node_modules --ignore=bower_components --out=binarios
+	@node_modules/.bin/electron-packager . ${NOMBREBIN} --platform=win32  --arch=ia32 --electron-version=1.6.7 --ignore=tmp --ignore=node_modules --ignore=bower_components --out=binarios
 	$(call log, "Compilando para windows - 64 bits...")
-	@node_modules/.bin/electron-packager . ${NOMBREBIN} --app-version=${VERSION} --platform=win32  --arch=x64  --electron-version=1.6.7 --ignore=tmp --ignore=node_modules --ignore=bower_components --out=binarios
+	@node_modules/.bin/electron-packager . ${NOMBREBIN} --platform=win32  --arch=x64  --electron-version=1.6.7 --ignore=tmp --ignore=node_modules --ignore=bower_components --out=binarios
 	$(call log, "Comprimiendo ...")
 	@zip -qr binarios/${NOMBREBIN}-osx-64_bits.zip binarios/${NOMBREBIN}-darwin-x64
 	@zip -qr binarios/${NOMBREBIN}-windows-32_bits.zip binarios/${NOMBREBIN}-win32-ia32
