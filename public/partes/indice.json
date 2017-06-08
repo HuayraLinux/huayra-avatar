@@ -1,0 +1,1603 @@
+{
+    "galerias": [
+        "1-cara", 
+        "2-ojos", 
+        "accesorios", 
+        "anteojos", 
+        "barba", 
+        "bigotes", 
+        "boca", 
+        "cejas", 
+        "fondos", 
+        "menton", 
+        "nariz", 
+        "pelo"
+    ], 
+    "data": {
+        "accesorios": [
+            {
+                "nombre": "01", 
+                "rutaCompleta": "public/partes/accesorios/01.svg", 
+                "nombreDeArchivo": "01.svg", 
+                "miniatura": "public/partes/accesorios/miniaturas/01.jpg"
+            }, 
+            {
+                "nombre": "02", 
+                "rutaCompleta": "public/partes/accesorios/02.svg", 
+                "nombreDeArchivo": "02.svg", 
+                "miniatura": "public/partes/accesorios/miniaturas/02.jpg"
+            }, 
+            {
+                "nombre": "03", 
+                "rutaCompleta": "public/partes/accesorios/03.svg", 
+                "nombreDeArchivo": "03.svg", 
+                "miniatura": "public/partes/accesorios/miniaturas/03.jpg"
+            }, 
+            {
+                "nombre": "04", 
+                "rutaCompleta": "public/partes/accesorios/04.svg", 
+                "nombreDeArchivo": "04.svg", 
+                "miniatura": "public/partes/accesorios/miniaturas/04.jpg"
+            }, 
+            {
+                "nombre": "05", 
+                "rutaCompleta": "public/partes/accesorios/05.svg", 
+                "nombreDeArchivo": "05.svg", 
+                "miniatura": "public/partes/accesorios/miniaturas/05.jpg"
+            }, 
+            {
+                "nombre": "06", 
+                "rutaCompleta": "public/partes/accesorios/06.svg", 
+                "nombreDeArchivo": "06.svg", 
+                "miniatura": "public/partes/accesorios/miniaturas/06.jpg"
+            }, 
+            {
+                "nombre": "07", 
+                "rutaCompleta": "public/partes/accesorios/07.svg", 
+                "nombreDeArchivo": "07.svg", 
+                "miniatura": "public/partes/accesorios/miniaturas/07.jpg"
+            }, 
+            {
+                "nombre": "08", 
+                "rutaCompleta": "public/partes/accesorios/08.svg", 
+                "nombreDeArchivo": "08.svg", 
+                "miniatura": "public/partes/accesorios/miniaturas/08.jpg"
+            }, 
+            {
+                "nombre": "09", 
+                "rutaCompleta": "public/partes/accesorios/09.svg", 
+                "nombreDeArchivo": "09.svg", 
+                "miniatura": "public/partes/accesorios/miniaturas/09.jpg"
+            }, 
+            {
+                "nombre": "10", 
+                "rutaCompleta": "public/partes/accesorios/10.svg", 
+                "nombreDeArchivo": "10.svg", 
+                "miniatura": "public/partes/accesorios/miniaturas/10.jpg"
+            }, 
+            {
+                "nombre": "11", 
+                "rutaCompleta": "public/partes/accesorios/11.svg", 
+                "nombreDeArchivo": "11.svg", 
+                "miniatura": "public/partes/accesorios/miniaturas/11.jpg"
+            }, 
+            {
+                "nombre": "12", 
+                "rutaCompleta": "public/partes/accesorios/12.svg", 
+                "nombreDeArchivo": "12.svg", 
+                "miniatura": "public/partes/accesorios/miniaturas/12.jpg"
+            }, 
+            {
+                "nombre": "13", 
+                "rutaCompleta": "public/partes/accesorios/13.svg", 
+                "nombreDeArchivo": "13.svg", 
+                "miniatura": "public/partes/accesorios/miniaturas/13.jpg"
+            }, 
+            {
+                "nombre": "18", 
+                "rutaCompleta": "public/partes/accesorios/18.svg", 
+                "nombreDeArchivo": "18.svg", 
+                "miniatura": "public/partes/accesorios/miniaturas/18.jpg"
+            }, 
+            {
+                "nombre": "19", 
+                "rutaCompleta": "public/partes/accesorios/19.svg", 
+                "nombreDeArchivo": "19.svg", 
+                "miniatura": "public/partes/accesorios/miniaturas/19.jpg"
+            }, 
+            {
+                "nombre": "21", 
+                "rutaCompleta": "public/partes/accesorios/21.svg", 
+                "nombreDeArchivo": "21.svg", 
+                "miniatura": "public/partes/accesorios/miniaturas/21.jpg"
+            }, 
+            {
+                "nombre": "22", 
+                "rutaCompleta": "public/partes/accesorios/22.svg", 
+                "nombreDeArchivo": "22.svg", 
+                "miniatura": "public/partes/accesorios/miniaturas/22.jpg"
+            }, 
+            {
+                "nombre": "25", 
+                "rutaCompleta": "public/partes/accesorios/25.svg", 
+                "nombreDeArchivo": "25.svg", 
+                "miniatura": "public/partes/accesorios/miniaturas/25.jpg"
+            }
+        ], 
+        "1-cara": [
+            {
+                "nombre": "cara-PIX1", 
+                "rutaCompleta": "public/partes/1-cara/cara-PIX1.svg", 
+                "nombreDeArchivo": "cara-PIX1.svg", 
+                "miniatura": "public/partes/1-cara/miniaturas/cara-PIX1.jpg"
+            }, 
+            {
+                "nombre": "cara-PIX2", 
+                "rutaCompleta": "public/partes/1-cara/cara-PIX2.svg", 
+                "nombreDeArchivo": "cara-PIX2.svg", 
+                "miniatura": "public/partes/1-cara/miniaturas/cara-PIX2.jpg"
+            }, 
+            {
+                "nombre": "cara-PIX3", 
+                "rutaCompleta": "public/partes/1-cara/cara-PIX3.svg", 
+                "nombreDeArchivo": "cara-PIX3.svg", 
+                "miniatura": "public/partes/1-cara/miniaturas/cara-PIX3.jpg"
+            }, 
+            {
+                "nombre": "cara-PIX4", 
+                "rutaCompleta": "public/partes/1-cara/cara-PIX4.svg", 
+                "nombreDeArchivo": "cara-PIX4.svg", 
+                "miniatura": "public/partes/1-cara/miniaturas/cara-PIX4.jpg"
+            }, 
+            {
+                "nombre": "cara-PIX5", 
+                "rutaCompleta": "public/partes/1-cara/cara-PIX5.svg", 
+                "nombreDeArchivo": "cara-PIX5.svg", 
+                "miniatura": "public/partes/1-cara/miniaturas/cara-PIX5.jpg"
+            }, 
+            {
+                "nombre": "cara-PIX6", 
+                "rutaCompleta": "public/partes/1-cara/cara-PIX6.svg", 
+                "nombreDeArchivo": "cara-PIX6.svg", 
+                "miniatura": "public/partes/1-cara/miniaturas/cara-PIX6.jpg"
+            }, 
+            {
+                "nombre": "cara", 
+                "rutaCompleta": "public/partes/1-cara/cara.svg", 
+                "nombreDeArchivo": "cara.svg", 
+                "miniatura": "public/partes/1-cara/miniaturas/cara.jpg"
+            }, 
+            {
+                "nombre": "cara_2", 
+                "rutaCompleta": "public/partes/1-cara/cara_2.svg", 
+                "nombreDeArchivo": "cara_2.svg", 
+                "miniatura": "public/partes/1-cara/miniaturas/cara_2.jpg"
+            }, 
+            {
+                "nombre": "cara_3", 
+                "rutaCompleta": "public/partes/1-cara/cara_3.svg", 
+                "nombreDeArchivo": "cara_3.svg", 
+                "miniatura": "public/partes/1-cara/miniaturas/cara_3.jpg"
+            }, 
+            {
+                "nombre": "cara_4", 
+                "rutaCompleta": "public/partes/1-cara/cara_4.svg", 
+                "nombreDeArchivo": "cara_4.svg", 
+                "miniatura": "public/partes/1-cara/miniaturas/cara_4.jpg"
+            }, 
+            {
+                "nombre": "cara_5", 
+                "rutaCompleta": "public/partes/1-cara/cara_5.svg", 
+                "nombreDeArchivo": "cara_5.svg", 
+                "miniatura": "public/partes/1-cara/miniaturas/cara_5.jpg"
+            }, 
+            {
+                "nombre": "cara_6", 
+                "rutaCompleta": "public/partes/1-cara/cara_6.svg", 
+                "nombreDeArchivo": "cara_6.svg", 
+                "miniatura": "public/partes/1-cara/miniaturas/cara_6.jpg"
+            }, 
+            {
+                "nombre": "cara_7", 
+                "rutaCompleta": "public/partes/1-cara/cara_7.svg", 
+                "nombreDeArchivo": "cara_7.svg", 
+                "miniatura": "public/partes/1-cara/miniaturas/cara_7.jpg"
+            }, 
+            {
+                "nombre": "cara_8", 
+                "rutaCompleta": "public/partes/1-cara/cara_8.svg", 
+                "nombreDeArchivo": "cara_8.svg", 
+                "miniatura": "public/partes/1-cara/miniaturas/cara_8.jpg"
+            }, 
+            {
+                "nombre": "cara_9", 
+                "rutaCompleta": "public/partes/1-cara/cara_9.svg", 
+                "nombreDeArchivo": "cara_9.svg", 
+                "miniatura": "public/partes/1-cara/miniaturas/cara_9.jpg"
+            }, 
+            {
+                "nombre": "fruta-01", 
+                "rutaCompleta": "public/partes/1-cara/fruta-01.svg", 
+                "nombreDeArchivo": "fruta-01.svg", 
+                "miniatura": "public/partes/1-cara/miniaturas/fruta-01.jpg"
+            }, 
+            {
+                "nombre": "fruta-02", 
+                "rutaCompleta": "public/partes/1-cara/fruta-02.svg", 
+                "nombreDeArchivo": "fruta-02.svg", 
+                "miniatura": "public/partes/1-cara/miniaturas/fruta-02.jpg"
+            }, 
+            {
+                "nombre": "fruta-03", 
+                "rutaCompleta": "public/partes/1-cara/fruta-03.svg", 
+                "nombreDeArchivo": "fruta-03.svg", 
+                "miniatura": "public/partes/1-cara/miniaturas/fruta-03.jpg"
+            }, 
+            {
+                "nombre": "fruta-04", 
+                "rutaCompleta": "public/partes/1-cara/fruta-04.svg", 
+                "nombreDeArchivo": "fruta-04.svg", 
+                "miniatura": "public/partes/1-cara/miniaturas/fruta-04.jpg"
+            }, 
+            {
+                "nombre": "fruta-05", 
+                "rutaCompleta": "public/partes/1-cara/fruta-05.svg", 
+                "nombreDeArchivo": "fruta-05.svg", 
+                "miniatura": "public/partes/1-cara/miniaturas/fruta-05.jpg"
+            }, 
+            {
+                "nombre": "fruta-06", 
+                "rutaCompleta": "public/partes/1-cara/fruta-06.svg", 
+                "nombreDeArchivo": "fruta-06.svg", 
+                "miniatura": "public/partes/1-cara/miniaturas/fruta-06.jpg"
+            }, 
+            {
+                "nombre": "fruta-07", 
+                "rutaCompleta": "public/partes/1-cara/fruta-07.svg", 
+                "nombreDeArchivo": "fruta-07.svg", 
+                "miniatura": "public/partes/1-cara/miniaturas/fruta-07.jpg"
+            }, 
+            {
+                "nombre": "fruta-08", 
+                "rutaCompleta": "public/partes/1-cara/fruta-08.svg", 
+                "nombreDeArchivo": "fruta-08.svg", 
+                "miniatura": "public/partes/1-cara/miniaturas/fruta-08.jpg"
+            }, 
+            {
+                "nombre": "fruta-09", 
+                "rutaCompleta": "public/partes/1-cara/fruta-09.svg", 
+                "nombreDeArchivo": "fruta-09.svg", 
+                "miniatura": "public/partes/1-cara/miniaturas/fruta-09.jpg"
+            }, 
+            {
+                "nombre": "papa_01", 
+                "rutaCompleta": "public/partes/1-cara/papa_01.svg", 
+                "nombreDeArchivo": "papa_01.svg", 
+                "miniatura": "public/partes/1-cara/miniaturas/papa_01.jpg"
+            }, 
+            {
+                "nombre": "papa_02", 
+                "rutaCompleta": "public/partes/1-cara/papa_02.svg", 
+                "nombreDeArchivo": "papa_02.svg", 
+                "miniatura": "public/partes/1-cara/miniaturas/papa_02.jpg"
+            }, 
+            {
+                "nombre": "papa_03", 
+                "rutaCompleta": "public/partes/1-cara/papa_03.svg", 
+                "nombreDeArchivo": "papa_03.svg", 
+                "miniatura": "public/partes/1-cara/miniaturas/papa_03.jpg"
+            }, 
+            {
+                "nombre": "papa_04", 
+                "rutaCompleta": "public/partes/1-cara/papa_04.svg", 
+                "nombreDeArchivo": "papa_04.svg", 
+                "miniatura": "public/partes/1-cara/miniaturas/papa_04.jpg"
+            }, 
+            {
+                "nombre": "papa_05", 
+                "rutaCompleta": "public/partes/1-cara/papa_05.svg", 
+                "nombreDeArchivo": "papa_05.svg", 
+                "miniatura": "public/partes/1-cara/miniaturas/papa_05.jpg"
+            }
+        ], 
+        "bigotes": [
+            {
+                "nombre": "01", 
+                "rutaCompleta": "public/partes/bigotes/01.svg", 
+                "nombreDeArchivo": "01.svg", 
+                "miniatura": "public/partes/bigotes/miniaturas/01.jpg"
+            }, 
+            {
+                "nombre": "02", 
+                "rutaCompleta": "public/partes/bigotes/02.svg", 
+                "nombreDeArchivo": "02.svg", 
+                "miniatura": "public/partes/bigotes/miniaturas/02.jpg"
+            }, 
+            {
+                "nombre": "03", 
+                "rutaCompleta": "public/partes/bigotes/03.svg", 
+                "nombreDeArchivo": "03.svg", 
+                "miniatura": "public/partes/bigotes/miniaturas/03.jpg"
+            }, 
+            {
+                "nombre": "04", 
+                "rutaCompleta": "public/partes/bigotes/04.svg", 
+                "nombreDeArchivo": "04.svg", 
+                "miniatura": "public/partes/bigotes/miniaturas/04.jpg"
+            }, 
+            {
+                "nombre": "07", 
+                "rutaCompleta": "public/partes/bigotes/07.svg", 
+                "nombreDeArchivo": "07.svg", 
+                "miniatura": "public/partes/bigotes/miniaturas/07.jpg"
+            }, 
+            {
+                "nombre": "08", 
+                "rutaCompleta": "public/partes/bigotes/08.svg", 
+                "nombreDeArchivo": "08.svg", 
+                "miniatura": "public/partes/bigotes/miniaturas/08.jpg"
+            }, 
+            {
+                "nombre": "bigote-PIX1", 
+                "rutaCompleta": "public/partes/bigotes/bigote-PIX1.svg", 
+                "nombreDeArchivo": "bigote-PIX1.svg", 
+                "miniatura": "public/partes/bigotes/miniaturas/bigote-PIX1.jpg"
+            }, 
+            {
+                "nombre": "bigote-PIX2", 
+                "rutaCompleta": "public/partes/bigotes/bigote-PIX2.svg", 
+                "nombreDeArchivo": "bigote-PIX2.svg", 
+                "miniatura": "public/partes/bigotes/miniaturas/bigote-PIX2.jpg"
+            }, 
+            {
+                "nombre": "bigote-PIX3", 
+                "rutaCompleta": "public/partes/bigotes/bigote-PIX3.svg", 
+                "nombreDeArchivo": "bigote-PIX3.svg", 
+                "miniatura": "public/partes/bigotes/miniaturas/bigote-PIX3.jpg"
+            }, 
+            {
+                "nombre": "bigote-PIX4", 
+                "rutaCompleta": "public/partes/bigotes/bigote-PIX4.svg", 
+                "nombreDeArchivo": "bigote-PIX4.svg", 
+                "miniatura": "public/partes/bigotes/miniaturas/bigote-PIX4.jpg"
+            }
+        ], 
+        "barba": [
+            {
+                "nombre": "01", 
+                "rutaCompleta": "public/partes/barba/01.svg", 
+                "nombreDeArchivo": "01.svg", 
+                "miniatura": "public/partes/barba/miniaturas/01.jpg"
+            }, 
+            {
+                "nombre": "02", 
+                "rutaCompleta": "public/partes/barba/02.svg", 
+                "nombreDeArchivo": "02.svg", 
+                "miniatura": "public/partes/barba/miniaturas/02.jpg"
+            }, 
+            {
+                "nombre": "03", 
+                "rutaCompleta": "public/partes/barba/03.svg", 
+                "nombreDeArchivo": "03.svg", 
+                "miniatura": "public/partes/barba/miniaturas/03.jpg"
+            }, 
+            {
+                "nombre": "04", 
+                "rutaCompleta": "public/partes/barba/04.svg", 
+                "nombreDeArchivo": "04.svg", 
+                "miniatura": "public/partes/barba/miniaturas/04.jpg"
+            }, 
+            {
+                "nombre": "05", 
+                "rutaCompleta": "public/partes/barba/05.svg", 
+                "nombreDeArchivo": "05.svg", 
+                "miniatura": "public/partes/barba/miniaturas/05.jpg"
+            }, 
+            {
+                "nombre": "06", 
+                "rutaCompleta": "public/partes/barba/06.svg", 
+                "nombreDeArchivo": "06.svg", 
+                "miniatura": "public/partes/barba/miniaturas/06.jpg"
+            }, 
+            {
+                "nombre": "07", 
+                "rutaCompleta": "public/partes/barba/07.svg", 
+                "nombreDeArchivo": "07.svg", 
+                "miniatura": "public/partes/barba/miniaturas/07.jpg"
+            }, 
+            {
+                "nombre": "08", 
+                "rutaCompleta": "public/partes/barba/08.svg", 
+                "nombreDeArchivo": "08.svg", 
+                "miniatura": "public/partes/barba/miniaturas/08.jpg"
+            }, 
+            {
+                "nombre": "barba-PIX1", 
+                "rutaCompleta": "public/partes/barba/barba-PIX1.svg", 
+                "nombreDeArchivo": "barba-PIX1.svg", 
+                "miniatura": "public/partes/barba/miniaturas/barba-PIX1.jpg"
+            }, 
+            {
+                "nombre": "barba-PIX10", 
+                "rutaCompleta": "public/partes/barba/barba-PIX10.svg", 
+                "nombreDeArchivo": "barba-PIX10.svg", 
+                "miniatura": "public/partes/barba/miniaturas/barba-PIX10.jpg"
+            }, 
+            {
+                "nombre": "barba-PIX2", 
+                "rutaCompleta": "public/partes/barba/barba-PIX2.svg", 
+                "nombreDeArchivo": "barba-PIX2.svg", 
+                "miniatura": "public/partes/barba/miniaturas/barba-PIX2.jpg"
+            }, 
+            {
+                "nombre": "barba-PIX3", 
+                "rutaCompleta": "public/partes/barba/barba-PIX3.svg", 
+                "nombreDeArchivo": "barba-PIX3.svg", 
+                "miniatura": "public/partes/barba/miniaturas/barba-PIX3.jpg"
+            }, 
+            {
+                "nombre": "barba-PIX4", 
+                "rutaCompleta": "public/partes/barba/barba-PIX4.svg", 
+                "nombreDeArchivo": "barba-PIX4.svg", 
+                "miniatura": "public/partes/barba/miniaturas/barba-PIX4.jpg"
+            }, 
+            {
+                "nombre": "barba-PIX5", 
+                "rutaCompleta": "public/partes/barba/barba-PIX5.svg", 
+                "nombreDeArchivo": "barba-PIX5.svg", 
+                "miniatura": "public/partes/barba/miniaturas/barba-PIX5.jpg"
+            }, 
+            {
+                "nombre": "barba-PIX6", 
+                "rutaCompleta": "public/partes/barba/barba-PIX6.svg", 
+                "nombreDeArchivo": "barba-PIX6.svg", 
+                "miniatura": "public/partes/barba/miniaturas/barba-PIX6.jpg"
+            }, 
+            {
+                "nombre": "barba-PIX7", 
+                "rutaCompleta": "public/partes/barba/barba-PIX7.svg", 
+                "nombreDeArchivo": "barba-PIX7.svg", 
+                "miniatura": "public/partes/barba/miniaturas/barba-PIX7.jpg"
+            }, 
+            {
+                "nombre": "barba-PIX8", 
+                "rutaCompleta": "public/partes/barba/barba-PIX8.svg", 
+                "nombreDeArchivo": "barba-PIX8.svg", 
+                "miniatura": "public/partes/barba/miniaturas/barba-PIX8.jpg"
+            }, 
+            {
+                "nombre": "barba-PIX9", 
+                "rutaCompleta": "public/partes/barba/barba-PIX9.svg", 
+                "nombreDeArchivo": "barba-PIX9.svg", 
+                "miniatura": "public/partes/barba/miniaturas/barba-PIX9.jpg"
+            }
+        ], 
+        "2-ojos": [
+            {
+                "nombre": "dormilon", 
+                "rutaCompleta": "public/partes/2-ojos/dormilon.svg", 
+                "nombreDeArchivo": "dormilon.svg", 
+                "miniatura": "public/partes/2-ojos/miniaturas/dormilon.jpg"
+            }, 
+            {
+                "nombre": "emocion", 
+                "rutaCompleta": "public/partes/2-ojos/emocion.svg", 
+                "nombreDeArchivo": "emocion.svg", 
+                "miniatura": "public/partes/2-ojos/miniaturas/emocion.jpg"
+            }, 
+            {
+                "nombre": "enojo", 
+                "rutaCompleta": "public/partes/2-ojos/enojo.svg", 
+                "nombreDeArchivo": "enojo.svg", 
+                "miniatura": "public/partes/2-ojos/miniaturas/enojo.jpg"
+            }, 
+            {
+                "nombre": "espirales", 
+                "rutaCompleta": "public/partes/2-ojos/espirales.svg", 
+                "nombreDeArchivo": "espirales.svg", 
+                "miniatura": "public/partes/2-ojos/miniaturas/espirales.jpg"
+            }, 
+            {
+                "nombre": "lagrimita", 
+                "rutaCompleta": "public/partes/2-ojos/lagrimita.svg", 
+                "nombreDeArchivo": "lagrimita.svg", 
+                "miniatura": "public/partes/2-ojos/miniaturas/lagrimita.jpg"
+            }, 
+            {
+                "nombre": "loquito", 
+                "rutaCompleta": "public/partes/2-ojos/loquito.svg", 
+                "nombreDeArchivo": "loquito.svg", 
+                "miniatura": "public/partes/2-ojos/miniaturas/loquito.jpg"
+            }, 
+            {
+                "nombre": "loquito2", 
+                "rutaCompleta": "public/partes/2-ojos/loquito2.svg", 
+                "nombreDeArchivo": "loquito2.svg", 
+                "miniatura": "public/partes/2-ojos/miniaturas/loquito2.jpg"
+            }, 
+            {
+                "nombre": "neutro", 
+                "rutaCompleta": "public/partes/2-ojos/neutro.svg", 
+                "nombreDeArchivo": "neutro.svg", 
+                "miniatura": "public/partes/2-ojos/miniaturas/neutro.jpg"
+            }, 
+            {
+                "nombre": "ojos-PIX1", 
+                "rutaCompleta": "public/partes/2-ojos/ojos-PIX1.svg", 
+                "nombreDeArchivo": "ojos-PIX1.svg", 
+                "miniatura": "public/partes/2-ojos/miniaturas/ojos-PIX1.jpg"
+            }, 
+            {
+                "nombre": "ojos-PIX10", 
+                "rutaCompleta": "public/partes/2-ojos/ojos-PIX10.svg", 
+                "nombreDeArchivo": "ojos-PIX10.svg", 
+                "miniatura": "public/partes/2-ojos/miniaturas/ojos-PIX10.jpg"
+            }, 
+            {
+                "nombre": "ojos-PIX11", 
+                "rutaCompleta": "public/partes/2-ojos/ojos-PIX11.svg", 
+                "nombreDeArchivo": "ojos-PIX11.svg", 
+                "miniatura": "public/partes/2-ojos/miniaturas/ojos-PIX11.jpg"
+            }, 
+            {
+                "nombre": "ojos-PIX12", 
+                "rutaCompleta": "public/partes/2-ojos/ojos-PIX12.svg", 
+                "nombreDeArchivo": "ojos-PIX12.svg", 
+                "miniatura": "public/partes/2-ojos/miniaturas/ojos-PIX12.jpg"
+            }, 
+            {
+                "nombre": "ojos-PIX2", 
+                "rutaCompleta": "public/partes/2-ojos/ojos-PIX2.svg", 
+                "nombreDeArchivo": "ojos-PIX2.svg", 
+                "miniatura": "public/partes/2-ojos/miniaturas/ojos-PIX2.jpg"
+            }, 
+            {
+                "nombre": "ojos-PIX3", 
+                "rutaCompleta": "public/partes/2-ojos/ojos-PIX3.svg", 
+                "nombreDeArchivo": "ojos-PIX3.svg", 
+                "miniatura": "public/partes/2-ojos/miniaturas/ojos-PIX3.jpg"
+            }, 
+            {
+                "nombre": "ojos-PIX4", 
+                "rutaCompleta": "public/partes/2-ojos/ojos-PIX4.svg", 
+                "nombreDeArchivo": "ojos-PIX4.svg", 
+                "miniatura": "public/partes/2-ojos/miniaturas/ojos-PIX4.jpg"
+            }, 
+            {
+                "nombre": "ojos-PIX5", 
+                "rutaCompleta": "public/partes/2-ojos/ojos-PIX5.svg", 
+                "nombreDeArchivo": "ojos-PIX5.svg", 
+                "miniatura": "public/partes/2-ojos/miniaturas/ojos-PIX5.jpg"
+            }, 
+            {
+                "nombre": "ojos-PIX6", 
+                "rutaCompleta": "public/partes/2-ojos/ojos-PIX6.svg", 
+                "nombreDeArchivo": "ojos-PIX6.svg", 
+                "miniatura": "public/partes/2-ojos/miniaturas/ojos-PIX6.jpg"
+            }, 
+            {
+                "nombre": "ojos-PIX7", 
+                "rutaCompleta": "public/partes/2-ojos/ojos-PIX7.svg", 
+                "nombreDeArchivo": "ojos-PIX7.svg", 
+                "miniatura": "public/partes/2-ojos/miniaturas/ojos-PIX7.jpg"
+            }, 
+            {
+                "nombre": "ojos-PIX8", 
+                "rutaCompleta": "public/partes/2-ojos/ojos-PIX8.svg", 
+                "nombreDeArchivo": "ojos-PIX8.svg", 
+                "miniatura": "public/partes/2-ojos/miniaturas/ojos-PIX8.jpg"
+            }, 
+            {
+                "nombre": "ojos-PIX9", 
+                "rutaCompleta": "public/partes/2-ojos/ojos-PIX9.svg", 
+                "nombreDeArchivo": "ojos-PIX9.svg", 
+                "miniatura": "public/partes/2-ojos/miniaturas/ojos-PIX9.jpg"
+            }, 
+            {
+                "nombre": "ojos_1", 
+                "rutaCompleta": "public/partes/2-ojos/ojos_1.svg", 
+                "nombreDeArchivo": "ojos_1.svg", 
+                "miniatura": "public/partes/2-ojos/miniaturas/ojos_1.jpg"
+            }, 
+            {
+                "nombre": "ojos_10", 
+                "rutaCompleta": "public/partes/2-ojos/ojos_10.svg", 
+                "nombreDeArchivo": "ojos_10.svg", 
+                "miniatura": "public/partes/2-ojos/miniaturas/ojos_10.jpg"
+            }, 
+            {
+                "nombre": "ojos_11", 
+                "rutaCompleta": "public/partes/2-ojos/ojos_11.svg", 
+                "nombreDeArchivo": "ojos_11.svg", 
+                "miniatura": "public/partes/2-ojos/miniaturas/ojos_11.jpg"
+            }, 
+            {
+                "nombre": "ojos_12", 
+                "rutaCompleta": "public/partes/2-ojos/ojos_12.svg", 
+                "nombreDeArchivo": "ojos_12.svg", 
+                "miniatura": "public/partes/2-ojos/miniaturas/ojos_12.jpg"
+            }, 
+            {
+                "nombre": "ojos_13", 
+                "rutaCompleta": "public/partes/2-ojos/ojos_13.svg", 
+                "nombreDeArchivo": "ojos_13.svg", 
+                "miniatura": "public/partes/2-ojos/miniaturas/ojos_13.jpg"
+            }, 
+            {
+                "nombre": "ojos_14", 
+                "rutaCompleta": "public/partes/2-ojos/ojos_14.svg", 
+                "nombreDeArchivo": "ojos_14.svg", 
+                "miniatura": "public/partes/2-ojos/miniaturas/ojos_14.jpg"
+            }, 
+            {
+                "nombre": "ojos_15", 
+                "rutaCompleta": "public/partes/2-ojos/ojos_15.svg", 
+                "nombreDeArchivo": "ojos_15.svg", 
+                "miniatura": "public/partes/2-ojos/miniaturas/ojos_15.jpg"
+            }, 
+            {
+                "nombre": "ojos_16", 
+                "rutaCompleta": "public/partes/2-ojos/ojos_16.svg", 
+                "nombreDeArchivo": "ojos_16.svg", 
+                "miniatura": "public/partes/2-ojos/miniaturas/ojos_16.jpg"
+            }, 
+            {
+                "nombre": "ojos_2", 
+                "rutaCompleta": "public/partes/2-ojos/ojos_2.svg", 
+                "nombreDeArchivo": "ojos_2.svg", 
+                "miniatura": "public/partes/2-ojos/miniaturas/ojos_2.jpg"
+            }, 
+            {
+                "nombre": "ojos_3", 
+                "rutaCompleta": "public/partes/2-ojos/ojos_3.svg", 
+                "nombreDeArchivo": "ojos_3.svg", 
+                "miniatura": "public/partes/2-ojos/miniaturas/ojos_3.jpg"
+            }, 
+            {
+                "nombre": "ojos_4", 
+                "rutaCompleta": "public/partes/2-ojos/ojos_4.svg", 
+                "nombreDeArchivo": "ojos_4.svg", 
+                "miniatura": "public/partes/2-ojos/miniaturas/ojos_4.jpg"
+            }, 
+            {
+                "nombre": "ojos_5", 
+                "rutaCompleta": "public/partes/2-ojos/ojos_5.svg", 
+                "nombreDeArchivo": "ojos_5.svg", 
+                "miniatura": "public/partes/2-ojos/miniaturas/ojos_5.jpg"
+            }, 
+            {
+                "nombre": "ojos_6", 
+                "rutaCompleta": "public/partes/2-ojos/ojos_6.svg", 
+                "nombreDeArchivo": "ojos_6.svg", 
+                "miniatura": "public/partes/2-ojos/miniaturas/ojos_6.jpg"
+            }, 
+            {
+                "nombre": "ojos_7", 
+                "rutaCompleta": "public/partes/2-ojos/ojos_7.svg", 
+                "nombreDeArchivo": "ojos_7.svg", 
+                "miniatura": "public/partes/2-ojos/miniaturas/ojos_7.jpg"
+            }, 
+            {
+                "nombre": "ojos_8", 
+                "rutaCompleta": "public/partes/2-ojos/ojos_8.svg", 
+                "nombreDeArchivo": "ojos_8.svg", 
+                "miniatura": "public/partes/2-ojos/miniaturas/ojos_8.jpg"
+            }, 
+            {
+                "nombre": "ojos_9", 
+                "rutaCompleta": "public/partes/2-ojos/ojos_9.svg", 
+                "nombreDeArchivo": "ojos_9.svg", 
+                "miniatura": "public/partes/2-ojos/miniaturas/ojos_9.jpg"
+            }, 
+            {
+                "nombre": "sorpresa", 
+                "rutaCompleta": "public/partes/2-ojos/sorpresa.svg", 
+                "nombreDeArchivo": "sorpresa.svg", 
+                "miniatura": "public/partes/2-ojos/miniaturas/sorpresa.jpg"
+            }
+        ], 
+        "menton": [
+            {
+                "nombre": "01", 
+                "rutaCompleta": "public/partes/menton/01.svg", 
+                "nombreDeArchivo": "01.svg", 
+                "miniatura": "public/partes/menton/miniaturas/01.jpg"
+            }, 
+            {
+                "nombre": "02", 
+                "rutaCompleta": "public/partes/menton/02.svg", 
+                "nombreDeArchivo": "02.svg", 
+                "miniatura": "public/partes/menton/miniaturas/02.jpg"
+            }, 
+            {
+                "nombre": "03", 
+                "rutaCompleta": "public/partes/menton/03.svg", 
+                "nombreDeArchivo": "03.svg", 
+                "miniatura": "public/partes/menton/miniaturas/03.jpg"
+            }, 
+            {
+                "nombre": "04", 
+                "rutaCompleta": "public/partes/menton/04.svg", 
+                "nombreDeArchivo": "04.svg", 
+                "miniatura": "public/partes/menton/miniaturas/04.jpg"
+            }, 
+            {
+                "nombre": "05", 
+                "rutaCompleta": "public/partes/menton/05.svg", 
+                "nombreDeArchivo": "05.svg", 
+                "miniatura": "public/partes/menton/miniaturas/05.jpg"
+            }, 
+            {
+                "nombre": "06", 
+                "rutaCompleta": "public/partes/menton/06.svg", 
+                "nombreDeArchivo": "06.svg", 
+                "miniatura": "public/partes/menton/miniaturas/06.jpg"
+            }, 
+            {
+                "nombre": "07", 
+                "rutaCompleta": "public/partes/menton/07.svg", 
+                "nombreDeArchivo": "07.svg", 
+                "miniatura": "public/partes/menton/miniaturas/07.jpg"
+            }
+        ], 
+        "boca": [
+            {
+                "nombre": "10a", 
+                "rutaCompleta": "public/partes/boca/10a.png", 
+                "nombreDeArchivo": "10a.png", 
+                "miniatura": "public/partes/boca/miniaturas/10a.jpg"
+            }, 
+            {
+                "nombre": "14a", 
+                "rutaCompleta": "public/partes/boca/14a.png", 
+                "nombreDeArchivo": "14a.png", 
+                "miniatura": "public/partes/boca/miniaturas/14a.jpg"
+            }, 
+            {
+                "nombre": "boca-PIX1", 
+                "rutaCompleta": "public/partes/boca/boca-PIX1.svg", 
+                "nombreDeArchivo": "boca-PIX1.svg", 
+                "miniatura": "public/partes/boca/miniaturas/boca-PIX1.jpg"
+            }, 
+            {
+                "nombre": "boca-PIX10", 
+                "rutaCompleta": "public/partes/boca/boca-PIX10.svg", 
+                "nombreDeArchivo": "boca-PIX10.svg", 
+                "miniatura": "public/partes/boca/miniaturas/boca-PIX10.jpg"
+            }, 
+            {
+                "nombre": "boca-PIX11", 
+                "rutaCompleta": "public/partes/boca/boca-PIX11.png", 
+                "nombreDeArchivo": "boca-PIX11.png", 
+                "miniatura": "public/partes/boca/miniaturas/boca-PIX11.jpg"
+            }, 
+            {
+                "nombre": "boca-PIX11", 
+                "rutaCompleta": "public/partes/boca/boca-PIX11.svg", 
+                "nombreDeArchivo": "boca-PIX11.svg", 
+                "miniatura": "public/partes/boca/miniaturas/boca-PIX11.jpg"
+            }, 
+            {
+                "nombre": "boca-PIX12", 
+                "rutaCompleta": "public/partes/boca/boca-PIX12.svg", 
+                "nombreDeArchivo": "boca-PIX12.svg", 
+                "miniatura": "public/partes/boca/miniaturas/boca-PIX12.jpg"
+            }, 
+            {
+                "nombre": "boca-PIX2", 
+                "rutaCompleta": "public/partes/boca/boca-PIX2.svg", 
+                "nombreDeArchivo": "boca-PIX2.svg", 
+                "miniatura": "public/partes/boca/miniaturas/boca-PIX2.jpg"
+            }, 
+            {
+                "nombre": "boca-PIX3", 
+                "rutaCompleta": "public/partes/boca/boca-PIX3.svg", 
+                "nombreDeArchivo": "boca-PIX3.svg", 
+                "miniatura": "public/partes/boca/miniaturas/boca-PIX3.jpg"
+            }, 
+            {
+                "nombre": "boca-PIX4", 
+                "rutaCompleta": "public/partes/boca/boca-PIX4.svg", 
+                "nombreDeArchivo": "boca-PIX4.svg", 
+                "miniatura": "public/partes/boca/miniaturas/boca-PIX4.jpg"
+            }, 
+            {
+                "nombre": "boca-PIX5", 
+                "rutaCompleta": "public/partes/boca/boca-PIX5.svg", 
+                "nombreDeArchivo": "boca-PIX5.svg", 
+                "miniatura": "public/partes/boca/miniaturas/boca-PIX5.jpg"
+            }, 
+            {
+                "nombre": "boca-PIX6", 
+                "rutaCompleta": "public/partes/boca/boca-PIX6.svg", 
+                "nombreDeArchivo": "boca-PIX6.svg", 
+                "miniatura": "public/partes/boca/miniaturas/boca-PIX6.jpg"
+            }, 
+            {
+                "nombre": "boca-PIX7", 
+                "rutaCompleta": "public/partes/boca/boca-PIX7.svg", 
+                "nombreDeArchivo": "boca-PIX7.svg", 
+                "miniatura": "public/partes/boca/miniaturas/boca-PIX7.jpg"
+            }, 
+            {
+                "nombre": "boca-PIX8", 
+                "rutaCompleta": "public/partes/boca/boca-PIX8.svg", 
+                "nombreDeArchivo": "boca-PIX8.svg", 
+                "miniatura": "public/partes/boca/miniaturas/boca-PIX8.jpg"
+            }, 
+            {
+                "nombre": "boca-PIX9", 
+                "rutaCompleta": "public/partes/boca/boca-PIX9.svg", 
+                "nombreDeArchivo": "boca-PIX9.svg", 
+                "miniatura": "public/partes/boca/miniaturas/boca-PIX9.jpg"
+            }, 
+            {
+                "nombre": "boca_1", 
+                "rutaCompleta": "public/partes/boca/boca_1.svg", 
+                "nombreDeArchivo": "boca_1.svg", 
+                "miniatura": "public/partes/boca/miniaturas/boca_1.jpg"
+            }, 
+            {
+                "nombre": "boca_2", 
+                "rutaCompleta": "public/partes/boca/boca_2.svg", 
+                "nombreDeArchivo": "boca_2.svg", 
+                "miniatura": "public/partes/boca/miniaturas/boca_2.jpg"
+            }, 
+            {
+                "nombre": "boca_3", 
+                "rutaCompleta": "public/partes/boca/boca_3.svg", 
+                "nombreDeArchivo": "boca_3.svg", 
+                "miniatura": "public/partes/boca/miniaturas/boca_3.jpg"
+            }, 
+            {
+                "nombre": "boca_4", 
+                "rutaCompleta": "public/partes/boca/boca_4.svg", 
+                "nombreDeArchivo": "boca_4.svg", 
+                "miniatura": "public/partes/boca/miniaturas/boca_4.jpg"
+            }, 
+            {
+                "nombre": "boca_6", 
+                "rutaCompleta": "public/partes/boca/boca_6.svg", 
+                "nombreDeArchivo": "boca_6.svg", 
+                "miniatura": "public/partes/boca/miniaturas/boca_6.jpg"
+            }, 
+            {
+                "nombre": "boca_7", 
+                "rutaCompleta": "public/partes/boca/boca_7.svg", 
+                "nombreDeArchivo": "boca_7.svg", 
+                "miniatura": "public/partes/boca/miniaturas/boca_7.jpg"
+            }, 
+            {
+                "nombre": "boca_8", 
+                "rutaCompleta": "public/partes/boca/boca_8.svg", 
+                "nombreDeArchivo": "boca_8.svg", 
+                "miniatura": "public/partes/boca/miniaturas/boca_8.jpg"
+            }, 
+            {
+                "nombre": "boca_abierta_enojo", 
+                "rutaCompleta": "public/partes/boca/boca_abierta_enojo.svg", 
+                "nombreDeArchivo": "boca_abierta_enojo.svg", 
+                "miniatura": "public/partes/boca/miniaturas/boca_abierta_enojo.jpg"
+            }, 
+            {
+                "nombre": "boca_abierta_risa", 
+                "rutaCompleta": "public/partes/boca/boca_abierta_risa.svg", 
+                "nombreDeArchivo": "boca_abierta_risa.svg", 
+                "miniatura": "public/partes/boca/miniaturas/boca_abierta_risa.jpg"
+            }, 
+            {
+                "nombre": "boca_cerrada_onda", 
+                "rutaCompleta": "public/partes/boca/boca_cerrada_onda.svg", 
+                "nombreDeArchivo": "boca_cerrada_onda.svg", 
+                "miniatura": "public/partes/boca/miniaturas/boca_cerrada_onda.jpg"
+            }, 
+            {
+                "nombre": "boca_cerrada_risa", 
+                "rutaCompleta": "public/partes/boca/boca_cerrada_risa.svg", 
+                "nombreDeArchivo": "boca_cerrada_risa.svg", 
+                "miniatura": "public/partes/boca/miniaturas/boca_cerrada_risa.jpg"
+            }, 
+            {
+                "nombre": "boca_cerrada_sonrisa", 
+                "rutaCompleta": "public/partes/boca/boca_cerrada_sonrisa.svg", 
+                "nombreDeArchivo": "boca_cerrada_sonrisa.svg", 
+                "miniatura": "public/partes/boca/miniaturas/boca_cerrada_sonrisa.jpg"
+            }, 
+            {
+                "nombre": "boca_enojo_dientes", 
+                "rutaCompleta": "public/partes/boca/boca_enojo_dientes.svg", 
+                "nombreDeArchivo": "boca_enojo_dientes.svg", 
+                "miniatura": "public/partes/boca/miniaturas/boca_enojo_dientes.jpg"
+            }, 
+            {
+                "nombre": "boca_hambre", 
+                "rutaCompleta": "public/partes/boca/boca_hambre.svg", 
+                "nombreDeArchivo": "boca_hambre.svg", 
+                "miniatura": "public/partes/boca/miniaturas/boca_hambre.jpg"
+            }, 
+            {
+                "nombre": "boca_img_01", 
+                "rutaCompleta": "public/partes/boca/boca_img_01.svg", 
+                "nombreDeArchivo": "boca_img_01.svg", 
+                "miniatura": "public/partes/boca/miniaturas/boca_img_01.jpg"
+            }, 
+            {
+                "nombre": "boca_img_02", 
+                "rutaCompleta": "public/partes/boca/boca_img_02.svg", 
+                "nombreDeArchivo": "boca_img_02.svg", 
+                "miniatura": "public/partes/boca/miniaturas/boca_img_02.jpg"
+            }, 
+            {
+                "nombre": "boca_img_03", 
+                "rutaCompleta": "public/partes/boca/boca_img_03.svg", 
+                "nombreDeArchivo": "boca_img_03.svg", 
+                "miniatura": "public/partes/boca/miniaturas/boca_img_03.jpg"
+            }, 
+            {
+                "nombre": "boca_img_04", 
+                "rutaCompleta": "public/partes/boca/boca_img_04.svg", 
+                "nombreDeArchivo": "boca_img_04.svg", 
+                "miniatura": "public/partes/boca/miniaturas/boca_img_04.jpg"
+            }, 
+            {
+                "nombre": "boca_img_05", 
+                "rutaCompleta": "public/partes/boca/boca_img_05.svg", 
+                "nombreDeArchivo": "boca_img_05.svg", 
+                "miniatura": "public/partes/boca/miniaturas/boca_img_05.jpg"
+            }, 
+            {
+                "nombre": "boca_img_06", 
+                "rutaCompleta": "public/partes/boca/boca_img_06.svg", 
+                "nombreDeArchivo": "boca_img_06.svg", 
+                "miniatura": "public/partes/boca/miniaturas/boca_img_06.jpg"
+            }, 
+            {
+                "nombre": "boca_img_07", 
+                "rutaCompleta": "public/partes/boca/boca_img_07.svg", 
+                "nombreDeArchivo": "boca_img_07.svg", 
+                "miniatura": "public/partes/boca/miniaturas/boca_img_07.jpg"
+            }, 
+            {
+                "nombre": "boca_img_08", 
+                "rutaCompleta": "public/partes/boca/boca_img_08.svg", 
+                "nombreDeArchivo": "boca_img_08.svg", 
+                "miniatura": "public/partes/boca/miniaturas/boca_img_08.jpg"
+            }, 
+            {
+                "nombre": "boca_img_09", 
+                "rutaCompleta": "public/partes/boca/boca_img_09.svg", 
+                "nombreDeArchivo": "boca_img_09.svg", 
+                "miniatura": "public/partes/boca/miniaturas/boca_img_09.jpg"
+            }, 
+            {
+                "nombre": "boca_img_10", 
+                "rutaCompleta": "public/partes/boca/boca_img_10.svg", 
+                "nombreDeArchivo": "boca_img_10.svg", 
+                "miniatura": "public/partes/boca/miniaturas/boca_img_10.jpg"
+            }, 
+            {
+                "nombre": "boca_img_11", 
+                "rutaCompleta": "public/partes/boca/boca_img_11.svg", 
+                "nombreDeArchivo": "boca_img_11.svg", 
+                "miniatura": "public/partes/boca/miniaturas/boca_img_11.jpg"
+            }, 
+            {
+                "nombre": "boca_risa_dientes", 
+                "rutaCompleta": "public/partes/boca/boca_risa_dientes.svg", 
+                "nombreDeArchivo": "boca_risa_dientes.svg", 
+                "miniatura": "public/partes/boca/miniaturas/boca_risa_dientes.jpg"
+            }
+        ], 
+        "nariz": [
+            {
+                "nombre": "nariz-PIX1", 
+                "rutaCompleta": "public/partes/nariz/nariz-PIX1.svg", 
+                "nombreDeArchivo": "nariz-PIX1.svg", 
+                "miniatura": "public/partes/nariz/miniaturas/nariz-PIX1.jpg"
+            }, 
+            {
+                "nombre": "nariz-PIX2", 
+                "rutaCompleta": "public/partes/nariz/nariz-PIX2.svg", 
+                "nombreDeArchivo": "nariz-PIX2.svg", 
+                "miniatura": "public/partes/nariz/miniaturas/nariz-PIX2.jpg"
+            }, 
+            {
+                "nombre": "nariz-PIX3", 
+                "rutaCompleta": "public/partes/nariz/nariz-PIX3.svg", 
+                "nombreDeArchivo": "nariz-PIX3.svg", 
+                "miniatura": "public/partes/nariz/miniaturas/nariz-PIX3.jpg"
+            }, 
+            {
+                "nombre": "nariz-PIX4", 
+                "rutaCompleta": "public/partes/nariz/nariz-PIX4.svg", 
+                "nombreDeArchivo": "nariz-PIX4.svg", 
+                "miniatura": "public/partes/nariz/miniaturas/nariz-PIX4.jpg"
+            }, 
+            {
+                "nombre": "nariz-PIX5", 
+                "rutaCompleta": "public/partes/nariz/nariz-PIX5.svg", 
+                "nombreDeArchivo": "nariz-PIX5.svg", 
+                "miniatura": "public/partes/nariz/miniaturas/nariz-PIX5.jpg"
+            }, 
+            {
+                "nombre": "nariz_1", 
+                "rutaCompleta": "public/partes/nariz/nariz_1.svg", 
+                "nombreDeArchivo": "nariz_1.svg", 
+                "miniatura": "public/partes/nariz/miniaturas/nariz_1.jpg"
+            }, 
+            {
+                "nombre": "nariz_10", 
+                "rutaCompleta": "public/partes/nariz/nariz_10.svg", 
+                "nombreDeArchivo": "nariz_10.svg", 
+                "miniatura": "public/partes/nariz/miniaturas/nariz_10.jpg"
+            }, 
+            {
+                "nombre": "nariz_11", 
+                "rutaCompleta": "public/partes/nariz/nariz_11.svg", 
+                "nombreDeArchivo": "nariz_11.svg", 
+                "miniatura": "public/partes/nariz/miniaturas/nariz_11.jpg"
+            }, 
+            {
+                "nombre": "nariz_12", 
+                "rutaCompleta": "public/partes/nariz/nariz_12.svg", 
+                "nombreDeArchivo": "nariz_12.svg", 
+                "miniatura": "public/partes/nariz/miniaturas/nariz_12.jpg"
+            }, 
+            {
+                "nombre": "nariz_13", 
+                "rutaCompleta": "public/partes/nariz/nariz_13.svg", 
+                "nombreDeArchivo": "nariz_13.svg", 
+                "miniatura": "public/partes/nariz/miniaturas/nariz_13.jpg"
+            }, 
+            {
+                "nombre": "nariz_14", 
+                "rutaCompleta": "public/partes/nariz/nariz_14.svg", 
+                "nombreDeArchivo": "nariz_14.svg", 
+                "miniatura": "public/partes/nariz/miniaturas/nariz_14.jpg"
+            }, 
+            {
+                "nombre": "nariz_2", 
+                "rutaCompleta": "public/partes/nariz/nariz_2.svg", 
+                "nombreDeArchivo": "nariz_2.svg", 
+                "miniatura": "public/partes/nariz/miniaturas/nariz_2.jpg"
+            }, 
+            {
+                "nombre": "nariz_3", 
+                "rutaCompleta": "public/partes/nariz/nariz_3.svg", 
+                "nombreDeArchivo": "nariz_3.svg", 
+                "miniatura": "public/partes/nariz/miniaturas/nariz_3.jpg"
+            }, 
+            {
+                "nombre": "nariz_4", 
+                "rutaCompleta": "public/partes/nariz/nariz_4.svg", 
+                "nombreDeArchivo": "nariz_4.svg", 
+                "miniatura": "public/partes/nariz/miniaturas/nariz_4.jpg"
+            }, 
+            {
+                "nombre": "nariz_5", 
+                "rutaCompleta": "public/partes/nariz/nariz_5.svg", 
+                "nombreDeArchivo": "nariz_5.svg", 
+                "miniatura": "public/partes/nariz/miniaturas/nariz_5.jpg"
+            }, 
+            {
+                "nombre": "nariz_6", 
+                "rutaCompleta": "public/partes/nariz/nariz_6.svg", 
+                "nombreDeArchivo": "nariz_6.svg", 
+                "miniatura": "public/partes/nariz/miniaturas/nariz_6.jpg"
+            }, 
+            {
+                "nombre": "nariz_7", 
+                "rutaCompleta": "public/partes/nariz/nariz_7.svg", 
+                "nombreDeArchivo": "nariz_7.svg", 
+                "miniatura": "public/partes/nariz/miniaturas/nariz_7.jpg"
+            }, 
+            {
+                "nombre": "nariz_8", 
+                "rutaCompleta": "public/partes/nariz/nariz_8.svg", 
+                "nombreDeArchivo": "nariz_8.svg", 
+                "miniatura": "public/partes/nariz/miniaturas/nariz_8.jpg"
+            }, 
+            {
+                "nombre": "nariz_9", 
+                "rutaCompleta": "public/partes/nariz/nariz_9.svg", 
+                "nombreDeArchivo": "nariz_9.svg", 
+                "miniatura": "public/partes/nariz/miniaturas/nariz_9.jpg"
+            }
+        ], 
+        "pelo": [
+            {
+                "nombre": "13", 
+                "rutaCompleta": "public/partes/pelo/13.svg", 
+                "nombreDeArchivo": "13.svg", 
+                "miniatura": "public/partes/pelo/miniaturas/13.jpg"
+            }, 
+            {
+                "nombre": "14", 
+                "rutaCompleta": "public/partes/pelo/14.svg", 
+                "nombreDeArchivo": "14.svg", 
+                "miniatura": "public/partes/pelo/miniaturas/14.jpg"
+            }, 
+            {
+                "nombre": "15", 
+                "rutaCompleta": "public/partes/pelo/15.svg", 
+                "nombreDeArchivo": "15.svg", 
+                "miniatura": "public/partes/pelo/miniaturas/15.jpg"
+            }, 
+            {
+                "nombre": "16", 
+                "rutaCompleta": "public/partes/pelo/16.svg", 
+                "nombreDeArchivo": "16.svg", 
+                "miniatura": "public/partes/pelo/miniaturas/16.jpg"
+            }, 
+            {
+                "nombre": "17", 
+                "rutaCompleta": "public/partes/pelo/17.svg", 
+                "nombreDeArchivo": "17.svg", 
+                "miniatura": "public/partes/pelo/miniaturas/17.jpg"
+            }, 
+            {
+                "nombre": "18", 
+                "rutaCompleta": "public/partes/pelo/18.svg", 
+                "nombreDeArchivo": "18.svg", 
+                "miniatura": "public/partes/pelo/miniaturas/18.jpg"
+            }, 
+            {
+                "nombre": "19", 
+                "rutaCompleta": "public/partes/pelo/19.svg", 
+                "nombreDeArchivo": "19.svg", 
+                "miniatura": "public/partes/pelo/miniaturas/19.jpg"
+            }, 
+            {
+                "nombre": "20", 
+                "rutaCompleta": "public/partes/pelo/20.svg", 
+                "nombreDeArchivo": "20.svg", 
+                "miniatura": "public/partes/pelo/miniaturas/20.jpg"
+            }, 
+            {
+                "nombre": "21", 
+                "rutaCompleta": "public/partes/pelo/21.svg", 
+                "nombreDeArchivo": "21.svg", 
+                "miniatura": "public/partes/pelo/miniaturas/21.jpg"
+            }, 
+            {
+                "nombre": "22", 
+                "rutaCompleta": "public/partes/pelo/22.svg", 
+                "nombreDeArchivo": "22.svg", 
+                "miniatura": "public/partes/pelo/miniaturas/22.jpg"
+            }, 
+            {
+                "nombre": "23", 
+                "rutaCompleta": "public/partes/pelo/23.svg", 
+                "nombreDeArchivo": "23.svg", 
+                "miniatura": "public/partes/pelo/miniaturas/23.jpg"
+            }, 
+            {
+                "nombre": "24", 
+                "rutaCompleta": "public/partes/pelo/24.svg", 
+                "nombreDeArchivo": "24.svg", 
+                "miniatura": "public/partes/pelo/miniaturas/24.jpg"
+            }, 
+            {
+                "nombre": "25", 
+                "rutaCompleta": "public/partes/pelo/25.svg", 
+                "nombreDeArchivo": "25.svg", 
+                "miniatura": "public/partes/pelo/miniaturas/25.jpg"
+            }, 
+            {
+                "nombre": "26", 
+                "rutaCompleta": "public/partes/pelo/26.svg", 
+                "nombreDeArchivo": "26.svg", 
+                "miniatura": "public/partes/pelo/miniaturas/26.jpg"
+            }, 
+            {
+                "nombre": "pelo-PIX1", 
+                "rutaCompleta": "public/partes/pelo/pelo-PIX1.svg", 
+                "nombreDeArchivo": "pelo-PIX1.svg", 
+                "miniatura": "public/partes/pelo/miniaturas/pelo-PIX1.jpg"
+            }, 
+            {
+                "nombre": "pelo-PIX2", 
+                "rutaCompleta": "public/partes/pelo/pelo-PIX2.svg", 
+                "nombreDeArchivo": "pelo-PIX2.svg", 
+                "miniatura": "public/partes/pelo/miniaturas/pelo-PIX2.jpg"
+            }, 
+            {
+                "nombre": "pelo-PIX3", 
+                "rutaCompleta": "public/partes/pelo/pelo-PIX3.svg", 
+                "nombreDeArchivo": "pelo-PIX3.svg", 
+                "miniatura": "public/partes/pelo/miniaturas/pelo-PIX3.jpg"
+            }, 
+            {
+                "nombre": "pelo-PIX4", 
+                "rutaCompleta": "public/partes/pelo/pelo-PIX4.svg", 
+                "nombreDeArchivo": "pelo-PIX4.svg", 
+                "miniatura": "public/partes/pelo/miniaturas/pelo-PIX4.jpg"
+            }, 
+            {
+                "nombre": "pelo-PIX5", 
+                "rutaCompleta": "public/partes/pelo/pelo-PIX5.svg", 
+                "nombreDeArchivo": "pelo-PIX5.svg", 
+                "miniatura": "public/partes/pelo/miniaturas/pelo-PIX5.jpg"
+            }, 
+            {
+                "nombre": "pelo-PIX6", 
+                "rutaCompleta": "public/partes/pelo/pelo-PIX6.png", 
+                "nombreDeArchivo": "pelo-PIX6.png", 
+                "miniatura": "public/partes/pelo/miniaturas/pelo-PIX6.jpg"
+            }, 
+            {
+                "nombre": "pelo-PIX7", 
+                "rutaCompleta": "public/partes/pelo/pelo-PIX7.svg", 
+                "nombreDeArchivo": "pelo-PIX7.svg", 
+                "miniatura": "public/partes/pelo/miniaturas/pelo-PIX7.jpg"
+            }, 
+            {
+                "nombre": "pelo-PIX8", 
+                "rutaCompleta": "public/partes/pelo/pelo-PIX8.svg", 
+                "nombreDeArchivo": "pelo-PIX8.svg", 
+                "miniatura": "public/partes/pelo/miniaturas/pelo-PIX8.jpg"
+            }, 
+            {
+                "nombre": "pelo_1", 
+                "rutaCompleta": "public/partes/pelo/pelo_1.svg", 
+                "nombreDeArchivo": "pelo_1.svg", 
+                "miniatura": "public/partes/pelo/miniaturas/pelo_1.jpg"
+            }, 
+            {
+                "nombre": "pelo_10", 
+                "rutaCompleta": "public/partes/pelo/pelo_10.svg", 
+                "nombreDeArchivo": "pelo_10.svg", 
+                "miniatura": "public/partes/pelo/miniaturas/pelo_10.jpg"
+            }, 
+            {
+                "nombre": "pelo_11", 
+                "rutaCompleta": "public/partes/pelo/pelo_11.svg", 
+                "nombreDeArchivo": "pelo_11.svg", 
+                "miniatura": "public/partes/pelo/miniaturas/pelo_11.jpg"
+            }, 
+            {
+                "nombre": "pelo_12", 
+                "rutaCompleta": "public/partes/pelo/pelo_12.svg", 
+                "nombreDeArchivo": "pelo_12.svg", 
+                "miniatura": "public/partes/pelo/miniaturas/pelo_12.jpg"
+            }, 
+            {
+                "nombre": "pelo_2", 
+                "rutaCompleta": "public/partes/pelo/pelo_2.svg", 
+                "nombreDeArchivo": "pelo_2.svg", 
+                "miniatura": "public/partes/pelo/miniaturas/pelo_2.jpg"
+            }, 
+            {
+                "nombre": "pelo_3", 
+                "rutaCompleta": "public/partes/pelo/pelo_3.svg", 
+                "nombreDeArchivo": "pelo_3.svg", 
+                "miniatura": "public/partes/pelo/miniaturas/pelo_3.jpg"
+            }, 
+            {
+                "nombre": "pelo_4", 
+                "rutaCompleta": "public/partes/pelo/pelo_4.svg", 
+                "nombreDeArchivo": "pelo_4.svg", 
+                "miniatura": "public/partes/pelo/miniaturas/pelo_4.jpg"
+            }, 
+            {
+                "nombre": "pelo_5", 
+                "rutaCompleta": "public/partes/pelo/pelo_5.svg", 
+                "nombreDeArchivo": "pelo_5.svg", 
+                "miniatura": "public/partes/pelo/miniaturas/pelo_5.jpg"
+            }, 
+            {
+                "nombre": "pelo_6", 
+                "rutaCompleta": "public/partes/pelo/pelo_6.svg", 
+                "nombreDeArchivo": "pelo_6.svg", 
+                "miniatura": "public/partes/pelo/miniaturas/pelo_6.jpg"
+            }, 
+            {
+                "nombre": "pelo_7", 
+                "rutaCompleta": "public/partes/pelo/pelo_7.svg", 
+                "nombreDeArchivo": "pelo_7.svg", 
+                "miniatura": "public/partes/pelo/miniaturas/pelo_7.jpg"
+            }, 
+            {
+                "nombre": "pelo_8", 
+                "rutaCompleta": "public/partes/pelo/pelo_8.svg", 
+                "nombreDeArchivo": "pelo_8.svg", 
+                "miniatura": "public/partes/pelo/miniaturas/pelo_8.jpg"
+            }, 
+            {
+                "nombre": "pelo_9", 
+                "rutaCompleta": "public/partes/pelo/pelo_9.svg", 
+                "nombreDeArchivo": "pelo_9.svg", 
+                "miniatura": "public/partes/pelo/miniaturas/pelo_9.jpg"
+            }
+        ], 
+        "fondos": [
+            {
+                "nombre": "blanco", 
+                "rutaCompleta": "public/partes/fondos/blanco.jpg", 
+                "nombreDeArchivo": "blanco.jpg", 
+                "miniatura": "public/partes/fondos/miniaturas/blanco.jpg"
+            }, 
+            {
+                "nombre": "colores", 
+                "rutaCompleta": "public/partes/fondos/colores.jpg", 
+                "nombreDeArchivo": "colores.jpg", 
+                "miniatura": "public/partes/fondos/miniaturas/colores.jpg"
+            }, 
+            {
+                "nombre": "doctora", 
+                "rutaCompleta": "public/partes/fondos/doctora.png", 
+                "nombreDeArchivo": "doctora.png", 
+                "miniatura": "public/partes/fondos/miniaturas/doctora.jpg"
+            }, 
+            {
+                "nombre": "fisico", 
+                "rutaCompleta": "public/partes/fondos/fisico.png", 
+                "nombreDeArchivo": "fisico.png", 
+                "miniatura": "public/partes/fondos/miniaturas/fisico.jpg"
+            }, 
+            {
+                "nombre": "mendoza", 
+                "rutaCompleta": "public/partes/fondos/mendoza.jpg", 
+                "nombreDeArchivo": "mendoza.jpg", 
+                "miniatura": "public/partes/fondos/miniaturas/mendoza.jpg"
+            }, 
+            {
+                "nombre": "misiones", 
+                "rutaCompleta": "public/partes/fondos/misiones.jpg", 
+                "nombreDeArchivo": "misiones.jpg", 
+                "miniatura": "public/partes/fondos/miniaturas/misiones.jpg"
+            }, 
+            {
+                "nombre": "mona", 
+                "rutaCompleta": "public/partes/fondos/mona.jpg", 
+                "nombreDeArchivo": "mona.jpg", 
+                "miniatura": "public/partes/fondos/miniaturas/mona.jpg"
+            }, 
+            {
+                "nombre": "mujer maravilla", 
+                "rutaCompleta": "public/partes/fondos/mujer maravilla.png", 
+                "nombreDeArchivo": "mujer maravilla.png", 
+                "miniatura": "public/partes/fondos/miniaturas/mujer maravilla.jpg"
+            }, 
+            {
+                "nombre": "payaso", 
+                "rutaCompleta": "public/partes/fondos/payaso.png", 
+                "nombreDeArchivo": "payaso.png", 
+                "miniatura": "public/partes/fondos/miniaturas/payaso.jpg"
+            }, 
+            {
+                "nombre": "power-rangers", 
+                "rutaCompleta": "public/partes/fondos/power-rangers.png", 
+                "nombreDeArchivo": "power-rangers.png", 
+                "miniatura": "public/partes/fondos/miniaturas/power-rangers.jpg"
+            }, 
+            {
+                "nombre": "princesa", 
+                "rutaCompleta": "public/partes/fondos/princesa.png", 
+                "nombreDeArchivo": "princesa.png", 
+                "miniatura": "public/partes/fondos/miniaturas/princesa.jpg"
+            }, 
+            {
+                "nombre": "seleccion", 
+                "rutaCompleta": "public/partes/fondos/seleccion.jpg", 
+                "nombreDeArchivo": "seleccion.jpg", 
+                "miniatura": "public/partes/fondos/miniaturas/seleccion.jpg"
+            }, 
+            {
+                "nombre": "seleccion2", 
+                "rutaCompleta": "public/partes/fondos/seleccion2.jpg", 
+                "nombreDeArchivo": "seleccion2.jpg", 
+                "miniatura": "public/partes/fondos/miniaturas/seleccion2.jpg"
+            }, 
+            {
+                "nombre": "torso1", 
+                "rutaCompleta": "public/partes/fondos/torso1.png", 
+                "nombreDeArchivo": "torso1.png", 
+                "miniatura": "public/partes/fondos/miniaturas/torso1.jpg"
+            }, 
+            {
+                "nombre": "torso2", 
+                "rutaCompleta": "public/partes/fondos/torso2.png", 
+                "nombreDeArchivo": "torso2.png", 
+                "miniatura": "public/partes/fondos/miniaturas/torso2.jpg"
+            }, 
+            {
+                "nombre": "traje", 
+                "rutaCompleta": "public/partes/fondos/traje.png", 
+                "nombreDeArchivo": "traje.png", 
+                "miniatura": "public/partes/fondos/miniaturas/traje.jpg"
+            }
+        ], 
+        "cejas": [
+            {
+                "nombre": "01", 
+                "rutaCompleta": "public/partes/cejas/01.svg", 
+                "nombreDeArchivo": "01.svg", 
+                "miniatura": "public/partes/cejas/miniaturas/01.jpg"
+            }, 
+            {
+                "nombre": "02", 
+                "rutaCompleta": "public/partes/cejas/02.svg", 
+                "nombreDeArchivo": "02.svg", 
+                "miniatura": "public/partes/cejas/miniaturas/02.jpg"
+            }, 
+            {
+                "nombre": "03", 
+                "rutaCompleta": "public/partes/cejas/03.svg", 
+                "nombreDeArchivo": "03.svg", 
+                "miniatura": "public/partes/cejas/miniaturas/03.jpg"
+            }, 
+            {
+                "nombre": "04", 
+                "rutaCompleta": "public/partes/cejas/04.svg", 
+                "nombreDeArchivo": "04.svg", 
+                "miniatura": "public/partes/cejas/miniaturas/04.jpg"
+            }, 
+            {
+                "nombre": "05", 
+                "rutaCompleta": "public/partes/cejas/05.svg", 
+                "nombreDeArchivo": "05.svg", 
+                "miniatura": "public/partes/cejas/miniaturas/05.jpg"
+            }, 
+            {
+                "nombre": "06", 
+                "rutaCompleta": "public/partes/cejas/06.svg", 
+                "nombreDeArchivo": "06.svg", 
+                "miniatura": "public/partes/cejas/miniaturas/06.jpg"
+            }, 
+            {
+                "nombre": "07", 
+                "rutaCompleta": "public/partes/cejas/07.svg", 
+                "nombreDeArchivo": "07.svg", 
+                "miniatura": "public/partes/cejas/miniaturas/07.jpg"
+            }, 
+            {
+                "nombre": "08", 
+                "rutaCompleta": "public/partes/cejas/08.svg", 
+                "nombreDeArchivo": "08.svg", 
+                "miniatura": "public/partes/cejas/miniaturas/08.jpg"
+            }, 
+            {
+                "nombre": "09", 
+                "rutaCompleta": "public/partes/cejas/09.svg", 
+                "nombreDeArchivo": "09.svg", 
+                "miniatura": "public/partes/cejas/miniaturas/09.jpg"
+            }, 
+            {
+                "nombre": "10", 
+                "rutaCompleta": "public/partes/cejas/10.svg", 
+                "nombreDeArchivo": "10.svg", 
+                "miniatura": "public/partes/cejas/miniaturas/10.jpg"
+            }, 
+            {
+                "nombre": "11", 
+                "rutaCompleta": "public/partes/cejas/11.svg", 
+                "nombreDeArchivo": "11.svg", 
+                "miniatura": "public/partes/cejas/miniaturas/11.jpg"
+            }, 
+            {
+                "nombre": "12", 
+                "rutaCompleta": "public/partes/cejas/12.svg", 
+                "nombreDeArchivo": "12.svg", 
+                "miniatura": "public/partes/cejas/miniaturas/12.jpg"
+            }, 
+            {
+                "nombre": "13", 
+                "rutaCompleta": "public/partes/cejas/13.svg", 
+                "nombreDeArchivo": "13.svg", 
+                "miniatura": "public/partes/cejas/miniaturas/13.jpg"
+            }, 
+            {
+                "nombre": "14", 
+                "rutaCompleta": "public/partes/cejas/14.svg", 
+                "nombreDeArchivo": "14.svg", 
+                "miniatura": "public/partes/cejas/miniaturas/14.jpg"
+            }, 
+            {
+                "nombre": "15", 
+                "rutaCompleta": "public/partes/cejas/15.svg", 
+                "nombreDeArchivo": "15.svg", 
+                "miniatura": "public/partes/cejas/miniaturas/15.jpg"
+            }, 
+            {
+                "nombre": "16", 
+                "rutaCompleta": "public/partes/cejas/16.svg", 
+                "nombreDeArchivo": "16.svg", 
+                "miniatura": "public/partes/cejas/miniaturas/16.jpg"
+            }, 
+            {
+                "nombre": "17", 
+                "rutaCompleta": "public/partes/cejas/17.svg", 
+                "nombreDeArchivo": "17.svg", 
+                "miniatura": "public/partes/cejas/miniaturas/17.jpg"
+            }, 
+            {
+                "nombre": "18", 
+                "rutaCompleta": "public/partes/cejas/18.svg", 
+                "nombreDeArchivo": "18.svg", 
+                "miniatura": "public/partes/cejas/miniaturas/18.jpg"
+            }
+        ], 
+        "anteojos": [
+            {
+                "nombre": "01", 
+                "rutaCompleta": "public/partes/anteojos/01.svg", 
+                "nombreDeArchivo": "01.svg", 
+                "miniatura": "public/partes/anteojos/miniaturas/01.jpg"
+            }, 
+            {
+                "nombre": "02", 
+                "rutaCompleta": "public/partes/anteojos/02.svg", 
+                "nombreDeArchivo": "02.svg", 
+                "miniatura": "public/partes/anteojos/miniaturas/02.jpg"
+            }, 
+            {
+                "nombre": "03", 
+                "rutaCompleta": "public/partes/anteojos/03.svg", 
+                "nombreDeArchivo": "03.svg", 
+                "miniatura": "public/partes/anteojos/miniaturas/03.jpg"
+            }, 
+            {
+                "nombre": "04", 
+                "rutaCompleta": "public/partes/anteojos/04.svg", 
+                "nombreDeArchivo": "04.svg", 
+                "miniatura": "public/partes/anteojos/miniaturas/04.jpg"
+            }, 
+            {
+                "nombre": "05", 
+                "rutaCompleta": "public/partes/anteojos/05.svg", 
+                "nombreDeArchivo": "05.svg", 
+                "miniatura": "public/partes/anteojos/miniaturas/05.jpg"
+            }, 
+            {
+                "nombre": "14", 
+                "rutaCompleta": "public/partes/anteojos/14.svg", 
+                "nombreDeArchivo": "14.svg", 
+                "miniatura": "public/partes/anteojos/miniaturas/14.jpg"
+            }, 
+            {
+                "nombre": "15", 
+                "rutaCompleta": "public/partes/anteojos/15.svg", 
+                "nombreDeArchivo": "15.svg", 
+                "miniatura": "public/partes/anteojos/miniaturas/15.jpg"
+            }, 
+            {
+                "nombre": "16", 
+                "rutaCompleta": "public/partes/anteojos/16.svg", 
+                "nombreDeArchivo": "16.svg", 
+                "miniatura": "public/partes/anteojos/miniaturas/16.jpg"
+            }, 
+            {
+                "nombre": "17", 
+                "rutaCompleta": "public/partes/anteojos/17.svg", 
+                "nombreDeArchivo": "17.svg", 
+                "miniatura": "public/partes/anteojos/miniaturas/17.jpg"
+            }, 
+            {
+                "nombre": "20", 
+                "rutaCompleta": "public/partes/anteojos/20.svg", 
+                "nombreDeArchivo": "20.svg", 
+                "miniatura": "public/partes/anteojos/miniaturas/20.jpg"
+            }, 
+            {
+                "nombre": "23", 
+                "rutaCompleta": "public/partes/anteojos/23.svg", 
+                "nombreDeArchivo": "23.svg", 
+                "miniatura": "public/partes/anteojos/miniaturas/23.jpg"
+            }, 
+            {
+                "nombre": "accesorios-PIX1", 
+                "rutaCompleta": "public/partes/anteojos/accesorios-PIX1.svg", 
+                "nombreDeArchivo": "accesorios-PIX1.svg", 
+                "miniatura": "public/partes/anteojos/miniaturas/accesorios-PIX1.jpg"
+            }, 
+            {
+                "nombre": "accesorios-PIX2", 
+                "rutaCompleta": "public/partes/anteojos/accesorios-PIX2.svg", 
+                "nombreDeArchivo": "accesorios-PIX2.svg", 
+                "miniatura": "public/partes/anteojos/miniaturas/accesorios-PIX2.jpg"
+            }
+        ]
+    }, 
+    "cantidadDeGalerias": 12
+}

@@ -26,6 +26,7 @@ comandos:
 	@echo "  ${Y}Generales de la aplicación${N}"
 	@echo ""
 	@echo "    ${G}iniciar${N}              Instala dependencias."
+	@echo "    ${G}generar_miniaturas${N}   Generar miniaturas."
 	@echo "    ${G}compilar${N}             Compila la aplicación."
 	@echo "    ${G}compilar_live${N}        Compila la aplicación en modo continuo."
 	@echo "    ${G}electron${N}             Ejecuta la aplicación en electron (sin compilar)."
@@ -49,6 +50,7 @@ iniciar:
 
 compilar:
 	$(call log, "Iniciando compilación.")
+	make generar_miniaturas
 	@ember build --environment develop
 
 compilar_live:
@@ -81,6 +83,9 @@ changelog:
 test:
 	$(call log, "Ejecutando test...")
 	@ember test
+
+generar_miniaturas:
+	python scripts/generar_indices.py
 
 binarios:
 	$(call task, "Comenzando a generar binarios.")

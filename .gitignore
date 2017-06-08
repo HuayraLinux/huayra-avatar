@@ -17,4 +17,6 @@ npm-debug.log*
 testem.log
 /binarios
 
+.DS_Store
+
 electron-out/
