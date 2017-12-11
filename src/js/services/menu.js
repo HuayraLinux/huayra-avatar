@@ -39,7 +39,7 @@ app.service('Menu', function() {
     this.item_salir = new gui.MenuItem({
         label: 'Salir',
         click: function() {
-            gui.App.closeAllWindows();
+            gui.getCurrentWindow().close();
         }
     });
 

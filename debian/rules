@@ -22,6 +22,3 @@ export DH_OPTIONS
 
 override_dh_shlibdeps:
 	@echo "..."
-
-override_dh_auto_configure:
-	npm install --production

@@ -2,7 +2,7 @@
   "name": "caripela",
   "version": "0.32",
   "description": "Un programa sencillo para hacer avatares en huayra",
-  "main": "src/js/app.js",
+  "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron main.js"

@@ -24,5 +24,4 @@ window.ondragstart = function() {
   return false;
 };
 
-process.chdir('src/');
-fs.writeFileSync("/tmp/huayra-caripela.pid", process.pid);
+process.chdir(__dirname || 'src/');

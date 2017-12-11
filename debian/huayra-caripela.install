@@ -1,6 +1,6 @@
 package.json            /usr/share/caripela
 main.js                 /usr/share/caripela
-src/*                   /usr/share/caripela/src
-bin/huayra-caripela     /usr/bin/
+src                     /usr/share/caripela
+bin/huayra-caripela     /usr/bin
 debian/caripela.desktop /usr/share/applications
 debian/caripela.svg     /usr/share/icons/hicolor/scalable/apps

@@ -10,13 +10,9 @@ Un programa sencillo para hacer avatares en huayra.
     npm install
     npm start
 
-## Construir binarios para todas las plataformas
-
-    grunt
-
 ## Tecnologías utilizadas
 
-* nodewebkit
+* electron
 * angularjs
 * fabric
 
@@ -29,11 +25,3 @@ rápida, podés usar algunos de nuestros binarios:
 * [Linux 64 bits](https://drive.google.com/uc?id=0B9QBzNt2AHGzVXo2WjhZZFNiZ1U&export=download)
 * [Windows](https://drive.google.com/uc?id=0B9QBzNt2AHGzb1RJMTY0Qjdsejg&export=download)
 * [Mac OSX](https://drive.google.com/uc?id=0B9QBzNt2AHGzbkJ4Y1Z4ZldLeVk&export=download)
-
-## Versión online
-
-También hay una versión online de este software en:
-
-* http://dev-losersjuegos.com.ar:9599/
-
-
