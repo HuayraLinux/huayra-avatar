@@ -55,6 +55,14 @@ dl.tabs {
 	border: 1px solid rgb(221, 221, 221);
 }
 
+.objeto .borrar {
+	display: block;
+	width: 37px;
+	position: relative;
+	bottom: 35px;
+	left: 70px;
+}
+
 .objeto button {
 	background: none;
 	border: 0;
@@ -63,6 +71,7 @@ dl.tabs {
 .resize_fit_center {
 	max-width: 100% !important;
 	max-height: 100% !important;
+	height: 100%;
 	vertical-align: middle;
 }
 

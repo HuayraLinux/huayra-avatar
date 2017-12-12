@@ -100,11 +100,12 @@ app.controller('EditorCtrl', function($scope, Canvas, $location, Menu, MisArchiv
 
     abrir_archivos({
       filters: [{
-        name: 'Imagen (*.png, *.jpg, *.jpeg, *.bmp, *.svg)',
+        name: 'Imágenes (*.png, *.jpg, *.jpeg, *.bmp, *.svg)',
         extensions: ['png', 'jpg', 'jpeg', 'bmp', 'svg']
       }],
       properties: ['multiSelections', 'openFile']
     }, function(archivos) {
+      if(archivos)
       archivos.forEach(function(archivo) {
         var destino = path.join(partes_path, path.basename(archivo));
         fs.readFile(archivo, function(error, contenidos) {
@@ -119,6 +120,10 @@ app.controller('EditorCtrl', function($scope, Canvas, $location, Menu, MisArchiv
       });
     });
   };
+
+  $scope.borrar_item = function(item) {
+    fs.unlink(item.src, actualizar_listado_directorios);
+  }
 
   $scope.selecciona_objeto = function(obj, dir) {
     var preferencias = {};

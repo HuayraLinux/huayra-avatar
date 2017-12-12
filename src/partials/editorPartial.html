@@ -69,7 +69,12 @@
             </div>
 
             <ul class="clearing-thumbs" data-clearing="" style="">
-              <li ng-repeat='obj in dir.objetos'><button ng-click='selecciona_objeto(obj, dir)' class="th objeto"><img class='resize_fit_center' ng-src="{{obj.src}}"></button></li>
+              <li ng-repeat='obj in dir.objetos' class="th objeto">
+                <img ng-click='selecciona_objeto(obj, dir)' class='resize_fit_center' ng-src="{{obj.src}}">
+                <div ng-click="borrar_item(obj)" class='btn btn-tiny btn-danger borrar'>
+                  <i class="glyphicon glyphicon-trash" tooltip="Quitar"></i>
+                </div>
+              </li>
               <li><a ng-click='agregar_nuevo_item(dir)' href class="th objeto"><img class='resize_fit_center' src='imagenes/agregar.png'></a></li>
             </ul>
           </div>
