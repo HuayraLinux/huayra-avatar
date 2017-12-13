@@ -83,8 +83,22 @@ dl.tabs {
 	padding-right: 10px;
 }
 
+/* Botones de partes */
+
 .nav-tabs > li {
 	cursor: pointer;
+}
+
+.nav-tabs > li > a {
+	border-color: #d4d4d4 !important;
+	background-color: rgb(230, 230, 230) !important;
+	width: 80px;
+	margin-right: -1px !important;
+}
+
+.nav-tabs > li.active > a {
+	background-color: rgb(250, 250, 250) !important;
+	border-bottom-color: transparent !important;
 }
 
 ul, ol {
@@ -159,4 +173,20 @@ div.dropdown {
 .btn-editor {
     float: right;
     margin-left: 10px;
+}
+
+div.textos-meme {
+	padding: 10px;
+	margin: auto;
+	text-align: right;
+}
+
+.textos-meme input {
+	text-align: right;
+	width: 70%;
+}
+
+.nav > li > a {
+	text-align: center;
+	padding: 10px 10px;
 }
