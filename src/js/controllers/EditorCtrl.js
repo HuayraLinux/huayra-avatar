@@ -181,7 +181,11 @@ app.controller('EditorCtrl', function($scope, Canvas, $location, Menu, MisArchiv
         var ruta = data[i];
 
         if (/\.(svg|jpg|jpeg|bmp|png)$/.test(ruta)) {
-          var item = {src: ruta};
+          let item = {src: ruta};
+	  fs.access(ruta, fs.constants.W_OK, function(err) {
+            item.borrable = !err;
+            $scope.$apply();
+          });
           $scope.data.directorios[indice].objetos.push(item);
         }
 

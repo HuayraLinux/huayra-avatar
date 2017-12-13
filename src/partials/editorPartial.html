@@ -75,7 +75,7 @@
             <ul class="clearing-thumbs" data-clearing="" style="">
               <li ng-repeat='obj in dir.objetos' class="th objeto">
                 <img ng-click='selecciona_objeto(obj, dir)' class='resize_fit_center' ng-src="{{obj.src}}">
-                <div ng-click="borrar_item(obj)" class='btn btn-tiny btn-danger borrar'>
+                <div ng-if="obj.borrable" ng-click="borrar_item(obj)" class='btn btn-tiny btn-danger borrar'>
                   <i class="glyphicon glyphicon-trash" tooltip="Quitar"></i>
                 </div>
               </li>
