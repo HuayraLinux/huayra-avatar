@@ -1,3 +1,11 @@
+caripela (0.34) unstable; urgency=medium
+
+  * Ahora se pueden borrar las fotos agregadas desde la misma aplicación!
+  * BUGFIX: Cargar fotos con extensiones en mayúsculas (ej: JPG)
+  * WIP: Texto en las fotos (como para hacer image macros)
+
+ -- Ignacio Losiggio <iglosiggio@gmail.com>  Fri, 15 Dec 2017 11:23:48 -0300
+
 caripela (0.33) unstable; urgency=medium
 
   * Varios bugfixes que quedaron de la mudanza a electron
