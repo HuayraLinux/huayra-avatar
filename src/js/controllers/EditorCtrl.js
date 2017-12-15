@@ -180,7 +180,7 @@ app.controller('EditorCtrl', function($scope, Canvas, $location, Menu, MisArchiv
       for (var i=0; i<data.length; i++) {
         var ruta = data[i];
 
-        if (/\.(svg|jpg|jpeg|bmp|png)$/.test(ruta)) {
+        if (/\.(svg|jpg|jpeg|bmp|png)$/i.test(ruta)) {
           let item = {src: ruta};
 	  fs.access(ruta, fs.constants.W_OK, function(err) {
             item.borrable = !err;
