@@ -36,11 +36,20 @@ app.factory("Canvas", function() {
   var pila_pos = 0;
   var rehacer_estado = null;
   var estado_inicial = {objects:[], background: "", backgroundImage:{}};
+  
+  var texto_superior = new fabric.IText('TEXTO SUPERIOR', {left: 10, top: 0, fill: 'white', fontFamily: 'Impact', stroke: 'black',
+  strokeWidth: 2, fontSize:60});
+  var texto_inferior = new fabric.IText('TEXTO INFERIOR', {left:10, top:330, fill: 'white', fontFamily: 'Impact', stroke: 'black',
+  strokeWidth: 2, fontSize:60});
+  
 
   Canvas.actualizar = function() {
     Canvas.canvas = new fabric.Canvas('canvas');
     fabric.Object.prototype.transparentCorners = false;
-
+	
+	Canvas.canvas.add(texto_superior);
+	Canvas.canvas.add(texto_inferior);
+    
     Canvas.canvas.on("object:modified", function (obj) {
         pila.push( Canvas.canvas.toJSON(['categoria','z']) );
         pila_pos = Canvas.estado_pila().len;
