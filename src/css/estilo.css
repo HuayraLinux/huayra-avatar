@@ -47,6 +47,7 @@ dl.tabs {
 .objeto {
 	width: 120px;
 	height: 133px;
+	position: relative;
 	float: left;
 	padding: 3px;
 	margin: 5px;
@@ -58,9 +59,9 @@ dl.tabs {
 .objeto .borrar {
 	display: block;
 	width: 37px;
-	position: relative;
-	bottom: 35px;
-	left: 70px;
+	position: absolute;
+	bottom: 5px;
+	left: 76px;
 }
 
 .objeto button {
@@ -71,8 +72,6 @@ dl.tabs {
 .resize_fit_center {
 	max-width: 100% !important;
 	max-height: 100% !important;
-	height: 100%;
-	vertical-align: middle;
 }
 
 .invisible {
