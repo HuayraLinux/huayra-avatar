@@ -121,8 +121,14 @@ app.controller('EditorCtrl', function($scope, Canvas, $location, Menu, MisArchiv
     });
   };
 
-  $scope.borrar_item = function(item) {
-    fs.unlink(item.src, actualizar_listado_directorios);
+  $scope.borrar_item = function(item, dir) {
+    fs.unlink(item.src, function() {
+      actualizar_listado_directorios(function() {
+        $scope.data.directorios.map(function(solapa) {
+          solapa.active = solapa.titulo == dir.titulo;
+        });
+      });
+    });
   }
 
   $scope.selecciona_objeto = function(obj, dir) {
