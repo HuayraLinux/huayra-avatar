@@ -1,3 +1,13 @@
+caripela (0.35) unstable; urgency=medium
+
+  * Textos de memes! (image macros)
+  * Reparado el bug que cambiaba la pestaña al borrar una imagen
+  * Reparada la alineación de los botones de borrado y las imágenes en el
+    menú de entrada
+  * Nuevos fondos
+
+ -- Ignacio Losiggio <iglosiggio@gmail.com>  Thu, 04 Jan 2018 16:55:31 -0300
+
 caripela (0.34) unstable; urgency=medium
 
   * Ahora se pueden borrar las fotos agregadas desde la misma aplicación!
