@@ -339,4 +339,8 @@ app.controller('EditorCtrl', function($scope, Canvas, $location, Menu, MisArchiv
     Canvas.cargar(ruta);
   }
 
+  $scope.actualizar_texto_superior = Canvas.set_texto_superior.bind(Canvas);
+  $scope.actualizar_texto_inferior = Canvas.set_texto_inferior.bind(Canvas);
+  $scope.texto_superior = '';
+  $scope.texto_inferior = '';
 });

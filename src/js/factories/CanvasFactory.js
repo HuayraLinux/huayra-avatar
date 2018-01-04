@@ -28,6 +28,8 @@ fabric.util.object.extend(fabric.Canvas.prototype, {
 
 
 app.factory("Canvas", function() {
+  fabric.Object.prototype.transparentCorners = false;
+
   var Canvas = {};
   var homedir = (process.platform === 'win32') ? process.env.HOMEPATH : process.env.HOME;
   var ruta_mis_archivos = homedir + '/.caripela/';
@@ -36,20 +38,10 @@ app.factory("Canvas", function() {
   var pila_pos = 0;
   var rehacer_estado = null;
   var estado_inicial = {objects:[], background: "", backgroundImage:{}};
-  
-  var texto_superior = new fabric.IText('TEXTO SUPERIOR', {left: 10, top: 0, fill: 'white', fontFamily: 'Impact', stroke: 'black',
-  strokeWidth: 2, fontSize:60});
-  var texto_inferior = new fabric.IText('TEXTO INFERIOR', {left:10, top:330, fill: 'white', fontFamily: 'Impact', stroke: 'black',
-  strokeWidth: 2, fontSize:60});
-  
 
   Canvas.actualizar = function() {
     Canvas.canvas = new fabric.Canvas('canvas');
-    fabric.Object.prototype.transparentCorners = false;
-	
-	Canvas.canvas.add(texto_superior);
-	Canvas.canvas.add(texto_inferior);
-    
+
     Canvas.canvas.on("object:modified", function (obj) {
         pila.push( Canvas.canvas.toJSON(['categoria','z']) );
         pila_pos = Canvas.estado_pila().len;
@@ -62,6 +54,53 @@ app.factory("Canvas", function() {
     Canvas.canvas.on("selection:cleared", function(options) {
       Canvas.funcion_respuesta.call(this, false);
     });
+
+    Canvas.texto_superior = new fabric.Text('', {
+      fill: 'white',
+      fontFamily: 'Impact',
+      stroke: 'black',
+      strokeWidth: 2,
+      fontSize:60,
+      textAlign: 'center'
+    });
+
+    Canvas.texto_inferior = new fabric.Text('', {
+      fill: 'white',
+      fontFamily: 'Impact',
+      stroke: 'black',
+      strokeWidth: 2,
+      fontSize: 60,
+      textAlign: 'center',
+      originY: 'bottom'
+    });
+  }
+
+  Canvas.set_texto_superior = function(superior) {
+    const {texto_superior, canvas} = Canvas;
+    if(!canvas.contains(texto_superior)) {
+      canvas.add(texto_superior);
+    }
+    texto_superior.setText(superior)
+                  .setAngle(0)
+                  .setLeft(20)
+                  .setTop(0)
+                  .scaleToWidth(360);
+    if(texto_superior.scaleX > 2) texto_superior.scale(2);
+    texto_superior.centerH();
+  }
+
+  Canvas.set_texto_inferior = function(inferior) {
+    const {texto_inferior, canvas} = Canvas;
+    if(!canvas.contains(texto_inferior)) {
+      canvas.add(texto_inferior);
+    }
+    texto_inferior.setText(inferior)
+                         .setAngle(0)
+                         .setLeft(20)
+                         .setTop(400)
+                         .scaleToWidth(360);
+    if(texto_inferior.scaleX > 2) texto_inferior.scale(2);
+    texto_inferior.centerH();
   }
 
   Canvas.conectar_eventos = function(funcion_respuesta) {
@@ -93,7 +132,6 @@ app.factory("Canvas", function() {
     }
 
   }
-
 
   Canvas.subir_elemento_seleccionado = function() {
     var canvas = Canvas.canvas;

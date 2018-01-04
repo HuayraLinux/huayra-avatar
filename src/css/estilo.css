@@ -156,11 +156,6 @@ div.dropdown {
 	color: white !important;
 }
 
-
-.navbar-header-huayra {
-
-}
-
 .navbar-brand-huayra {
 	color: white !important;
 }
@@ -182,7 +177,7 @@ div.textos-meme {
 }
 
 .textos-meme input {
-	text-align: right;
+	text-align: left;
 	width: 70%;
 }
 

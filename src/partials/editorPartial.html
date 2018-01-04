@@ -57,10 +57,10 @@
         <button ng-click="rehacer()" ng-disabled='! data.puede_rehacer' class='btn btn-tiny btn-warning btn-editor'><i class="glyphicon glyphicon-chevron-right" tooltip="Rehacer"></i></button>
         <button ng-click="deshacer()" ng-disabled='! data.puede_deshacer' class='btn btn-tiny btn-warning btn-editor'><i class="glyphicon glyphicon-chevron-left" tooltip="Deshacer"></i></button>
       </div>
-<!--	<div class="textos-meme">
-		Texto Cabecera: <input type="text" name="txt_superior"><br><br>
-		Texto Pie: <input type="text" name="txt_inferior"><br>
-	</div> -->
+	<div class="textos-meme">
+		Texto Cabecera: <input type="text" ng-model="texto_superior" ng-change="actualizar_texto_superior(texto_superior)"><br><br>
+		Texto Pie: <input type="text" ng-model="texto_inferior" ng-change="actualizar_texto_inferior(texto_inferior)"><br>
+	</div>
 
     </div>
 
