@@ -45,19 +45,11 @@ app.controller('EditorCtrl', function($scope, Canvas, $location, Menu, MisArchiv
   };
 
   $scope.deshacer = function() {
-      Canvas.deshacer();
-      $scope.botones_undo();
+    Canvas.deshacer();
   };
 
   $scope.rehacer = function() {
-      Canvas.rehacer();
-      $scope.botones_undo();
-  };
-
-  $scope.botones_undo = function(){
-    $scope.data.puede_deshacer = ! (Canvas.estado_pila().pos <= 1);
-    $scope.data.puede_rehacer = ! (Canvas.estado_pila().pos == Canvas.estado_pila().len-1);
-    //console.log('estado pila', Canvas.estado_pila() );
+    Canvas.rehacer();
   };
 
   var path = 'partes/';
@@ -66,16 +58,15 @@ app.controller('EditorCtrl', function($scope, Canvas, $location, Menu, MisArchiv
   $scope.data.guardando = false;
   $scope.data.directorios = [];
   $scope.data.hay_elemento_seleccionado = false;
-  $scope.data.puede_deshacer = true;
+  $scope.data.puede_deshacer = false;
   $scope.data.puede_rehacer = false;
 
   Menu.habilitar_items_menu();
 
   Canvas.conectar_eventos(function(estado) {
     $scope.data.hay_elemento_seleccionado = estado;
-    $scope.botones_undo();
 
-    if ($scope.$root.$$phase != '$apply' && $scope.$root.$$phase != '$digest') {
+    if ($scope.$root && $scope.$root.$$phase != '$apply' && $scope.$root.$$phase != '$digest') {
       $scope.$apply();
     }
   });
@@ -148,9 +139,6 @@ app.controller('EditorCtrl', function($scope, Canvas, $location, Menu, MisArchiv
       Canvas.definir_fondo(obj.src, preferencias);
     else
       Canvas.agregar_imagen(obj.src, preferencias);
-
-
-    $scope.botones_undo();
   };
 
   /*
@@ -339,7 +327,6 @@ app.controller('EditorCtrl', function($scope, Canvas, $location, Menu, MisArchiv
 
   /* Carga el avatar sugerido por la URL: */
   var ruta = $location.search().ruta;
-  Canvas.inicio();
 
   if (ruta) {
     Canvas.cargar(ruta);
@@ -349,4 +336,18 @@ app.controller('EditorCtrl', function($scope, Canvas, $location, Menu, MisArchiv
   $scope.actualizar_texto_inferior = Canvas.set_texto_inferior.bind(Canvas);
   $scope.texto_superior = '';
   $scope.texto_inferior = '';
+
+  Canvas.textLoad = function() {
+    $scope.$apply(function() {
+      $scope.texto_superior = Canvas.texto_superior.text;
+      $scope.texto_inferior = Canvas.texto_inferior.text;
+    });
+  };
+
+  Canvas.newHistory = function() {
+    $scope.$apply(function() {
+      $scope.data.puede_deshacer = !!Canvas.historial().anterior;
+      $scope.data.puede_rehacer = !!Canvas.historial().siguiente;
+    });
+  };
 });

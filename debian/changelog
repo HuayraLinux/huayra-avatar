@@ -1,3 +1,14 @@
+caripela (0.36) unstable; urgency=medium
+
+  * Los textos ahora se cargan en la interfaz correctamente
+  * Reescrito todo el sistema de hacer/deshacer/rehacer
+  * Guardar las caripelas no desordena los elementos de ellas
+  * Nuevos anteojos!
+  * Ahora se pueden deshacer acciones como espejar un elemento, escribir texto
+    o pasarlo más adelante de otro!
+
+ -- Ignacio Losiggio <iglosiggio@gmail.com>  Fri, 05 Jan 2018 15:03:25 -0300
+
 caripela (0.35) unstable; urgency=medium
 
   * Textos de memes! (image macros)

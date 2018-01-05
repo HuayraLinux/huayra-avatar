@@ -33,19 +33,34 @@ app.factory("Canvas", function() {
   var Canvas = {};
   var homedir = (process.platform === 'win32') ? process.env.HOMEPATH : process.env.HOME;
   var ruta_mis_archivos = homedir + '/.caripela/';
-  var pila = [];
-  var pila_len = 0;
-  var pila_pos = 0;
-  var rehacer_estado = null;
-  var estado_inicial = {objects:[], background: "", backgroundImage:{}};
+
+  /* La implementación del historial de accciones es una lista doblemente enlazada simple
+   * la api expuesta consta de los siguientes elementos
+   *   hacer():    agrega el estado actual como un nuevo paso
+   *   deshacer(): transforma el estado actual en el anterior
+   *   rehacer():  transforma el estado actual en el siguiente
+   */
+  var estado_actual = {
+    siguiente: null,
+    anterior: null,
+    estado: {objects:[], background: "", backgroundImage:{}}
+  };
+
+  Canvas.hacer = function() {
+    estado_actual = {
+      siguiente: null,
+      anterior: estado_actual,
+      estado: Canvas.canvas.toJSON(['categoria'])
+    };
+    estado_actual.anterior.siguiente = estado_actual;
+
+    if(Canvas.newHistory) setTimeout(Canvas.newHistory);
+  }
 
   Canvas.actualizar = function() {
     Canvas.canvas = new fabric.Canvas('canvas');
 
-    Canvas.canvas.on("object:modified", function (obj) {
-        pila.push( Canvas.canvas.toJSON(['categoria','z']) );
-        pila_pos = Canvas.estado_pila().len;
-    });
+    Canvas.canvas.on("object:modified", Canvas.hacer);
 
     Canvas.canvas.on("object:selected", function(options) {
       Canvas.funcion_respuesta.call(this, true);
@@ -56,6 +71,7 @@ app.factory("Canvas", function() {
     });
 
     Canvas.texto_superior = new fabric.Text('', {
+      categoria: 'texto-superior',
       fill: 'white',
       fontFamily: 'Impact',
       stroke: 'black',
@@ -65,6 +81,7 @@ app.factory("Canvas", function() {
     });
 
     Canvas.texto_inferior = new fabric.Text('', {
+      categoria: 'texto-inferior',
       fill: 'white',
       fontFamily: 'Impact',
       stroke: 'black',
@@ -73,6 +90,12 @@ app.factory("Canvas", function() {
       textAlign: 'center',
       originY: 'bottom'
     });
+
+    estado_actual = {
+      siguiente: null,
+      anterior: null,
+      estado: {objects:[], background: "", backgroundImage:{}}
+    };
   }
 
   Canvas.set_texto_superior = function(superior) {
@@ -87,6 +110,9 @@ app.factory("Canvas", function() {
                   .scaleToWidth(360);
     if(texto_superior.scaleX > 2) texto_superior.scale(2);
     texto_superior.centerH();
+
+    Canvas.hacer();
+    Canvas.funcion_respuesta.call(this, !!canvas.getActiveObject());
   }
 
   Canvas.set_texto_inferior = function(inferior) {
@@ -101,6 +127,9 @@ app.factory("Canvas", function() {
                          .scaleToWidth(360);
     if(texto_inferior.scaleX > 2) texto_inferior.scale(2);
     texto_inferior.centerH();
+
+    Canvas.hacer();
+    Canvas.funcion_respuesta.call(this, !!canvas.getActiveObject());
   }
 
   Canvas.conectar_eventos = function(funcion_respuesta) {
@@ -147,6 +176,7 @@ app.factory("Canvas", function() {
       canvas.bringForward(activeObject);
     }
 
+    Canvas.hacer();
     Canvas.canvas.renderAll();
   };
 
@@ -164,6 +194,7 @@ app.factory("Canvas", function() {
       canvas.sendBackwards(activeObject);
     }
 
+    Canvas.hacer();
     Canvas.canvas.renderAll();
   };
 
@@ -182,6 +213,7 @@ app.factory("Canvas", function() {
       activeObject.flipX = !activeObject.flipX;
     }
 
+    Canvas.hacer();
     Canvas.canvas.renderAll();
   }
 
@@ -199,8 +231,7 @@ app.factory("Canvas", function() {
       canvas.remove(activeObject);
     }
 
-    pila.push( Canvas.canvas.toJSON(['categoria','z']) );
-    pila_pos = Canvas.estado_pila().len;
+    Canvas.hacer();
   }
 
   function informar_error(error) {
@@ -211,8 +242,7 @@ app.factory("Canvas", function() {
   Canvas.definir_imagen_de_fondo = function(ruta) {
     var c = Canvas.canvas;
     c.setBackgroundImage(ruta, c.renderAll.bind(c));
-    pila.push( Canvas.canvas.toJSON(['categoria','z']) );
-    pila_pos = Canvas.estado_pila().len;
+    Canvas.hacer();
   }
 
   function ruta_a_data(ruta){
@@ -286,7 +316,7 @@ app.factory("Canvas", function() {
     canvas.setBackgroundImage(ruta, canvas.renderAll.bind(canvas));
   }
 
-  Canvas.agregar_imagen = function(ruta, preferencias) {
+  Canvas.agregar_imagen = function(ruta, preferencias, cb) {
     var canvas = Canvas.canvas;
     canvas.controlsAboveOverlay = true;
     var group = [];
@@ -353,9 +383,7 @@ app.factory("Canvas", function() {
       });
 
       Canvas.canvas.add(img);
-      pila.push( Canvas.canvas.toJSON(['categoria','z']) );
-      pila_pos = Canvas.estado_pila().len;
-
+      Canvas.canvas.moveTo(img, -img.z);
 
       // Si el objeto es simétrico, como los ojos, se
       // encarga de clonar el objeto dos veces.
@@ -371,14 +399,11 @@ app.factory("Canvas", function() {
         });
 
         canvas.add(object);
+        canvas.moveTo(object, -object.z);
       }
 
-
-      // ordena todos los objetos por valor Z.
-      canvas.forEachObject(function(o, i) {
-        Canvas.canvas.moveTo(o, -o.z);
-      });
-
+      Canvas.hacer();
+      if(cb) cb(Canvas);
     });
   }
 
@@ -396,31 +421,30 @@ app.factory("Canvas", function() {
   }
 
   Canvas.guardar = function(nombre, success) {
-    var data = Canvas.canvas.toJSON();
-
-    for (var i=0; i< data.objects.length; i++) {
-      var objeto_en_canvas = Canvas.canvas.getObjects()[i]
-      data.objects[i].z = objeto_en_canvas.z || 0;
-      data.objects[i].categoria = objeto_en_canvas.categoria || "";
-    }
-
-    // utilizamos underscore para ver si estos
-    // dos arrays de obj son iguales. si no lo son, guardamos.
-    if( !_.isEqual(data.objects,estado_inicial.objects) ){
-        Canvas.guardar_en_disco(nombre, data, success);
-    }
-    else if( data.hasOwnProperty('backgroundImage') &&
-             !_.isEqual(data.backgroundImage, estado_inicial.backgroundImage)
-           ){
-        Canvas.guardar_en_disco(nombre, data, success);
-    }
-    else{
+    var data = Canvas.canvas.toJSON(['categoria']);
+    if(estado_actual.anterior)
+      Canvas.guardar_en_disco(nombre, data, success);
+    else
       success.apply(this);
-    }
   }
 
   Canvas.deseleccionar_todo = function() {
     Canvas.canvas.deactivateAll().renderAll();
+  }
+
+
+  function cargar_textos_desde_canvas() {
+    var textos = Canvas.canvas.getObjects('text');
+
+    Canvas.texto_superior = textos.find(function(o) {
+      return o.categoria === 'texto-superior';
+    }) || Canvas.texto_superior;
+
+    Canvas.texto_inferior = textos.find(function(o) {
+      return o.categoria === 'texto-inferior';
+    }) || Canvas.texto_inferior;
+
+    if(Canvas.textLoad) Canvas.textLoad(Canvas);
   }
 
   Canvas.cargar = function(ruta) {
@@ -432,46 +456,45 @@ app.factory("Canvas", function() {
 
       var data = JSON.parse(data);
       var canvas = Canvas.canvas;
-      pila = [data, data];
-      estado_inicial = data;
-      canvas.loadFromJSON(data, canvas.renderAll.bind(canvas));
-      pila_pos = Canvas.estado_pila().len;
+      estado_actual = {
+        siguiente: null,
+        anterior: null,
+        estado: data
+      };
+      canvas.loadFromJSON(data, function() {
+        Canvas.funcion_respuesta(false);
+        cargar_textos_desde_canvas()
+      });
     });
   }
 
-  Canvas.cargar_desde_estado = function(data) {
+  Canvas.cargar_desde_estado = function(data, then) {
     var canvas = Canvas.canvas;
     canvas.clear();
-    canvas.loadFromJSON(data,
-                        function(){
-                            canvas.renderAll.bind(canvas);
-                            canvas.forEachObject(function(o, i) {
-                                Canvas.canvas.moveTo(o, -o.z);
-                            });
-                        });
-
-  }
-
-  Canvas.inicio = function(items) {
-      pila = items || [];
+    canvas.loadFromJSON(data, function() {
+      cargar_textos_desde_canvas();
+      if(then) then();
+    });
   }
 
   Canvas.limpiar = function() {
     Canvas.canvas.clear();
   }
 
-  Canvas.estado_pila = function() {
-    return {len: pila.length, pos: pila_pos};
+  Canvas.historial = function() {
+    return estado_actual;
   }
 
-  Canvas.deshacer = function() {
-    pila_pos = pila_pos <= 1 ? 1 : pila_pos-1 ;
-    Canvas.cargar_desde_estado( pila[pila_pos] );
+  Canvas.deshacer = function(then) {
+    if(!estado_actual.anterior) return;
+    estado_actual = estado_actual.anterior;
+    Canvas.cargar_desde_estado(estado_actual.estado, Canvas.newHistory);
   }
 
-  Canvas.rehacer = function() {
-    pila_pos = pila_pos >= Canvas.estado_pila().len-1 ? Canvas.estado_pila().len-1 : pila_pos+1 ;
-    Canvas.cargar_desde_estado( pila[pila_pos] );
+  Canvas.rehacer = function(then) {
+    if(!estado_actual.siguiente) return;
+    estado_actual = estado_actual.siguiente;
+    Canvas.cargar_desde_estado(estado_actual.estado, Canvas.newHistory);
   }
 
   return Canvas;
