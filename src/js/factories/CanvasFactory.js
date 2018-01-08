@@ -463,7 +463,8 @@ app.factory("Canvas", function() {
       };
       canvas.loadFromJSON(data, function() {
         Canvas.funcion_respuesta(false);
-        cargar_textos_desde_canvas()
+        cargar_textos_desde_canvas();
+        Canvas.canvas.renderAll();
       });
     });
   }
@@ -473,6 +474,7 @@ app.factory("Canvas", function() {
     canvas.clear();
     canvas.loadFromJSON(data, function() {
       cargar_textos_desde_canvas();
+      Canvas.canvas.renderAll();
       if(then) then();
     });
   }
