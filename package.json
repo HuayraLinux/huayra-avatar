@@ -1,6 +1,6 @@
 {
   "name": "caripela",
-  "version": "0.32",
+  "version": "0.32.0",
   "description": "Un programa sencillo para hacer avatares en huayra",
   "main": "main.js",
   "scripts": {
