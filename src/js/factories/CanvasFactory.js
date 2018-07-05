@@ -216,6 +216,24 @@ app.factory("Canvas", function() {
     Canvas.hacer();
     Canvas.canvas.renderAll();
   }
+  
+  Canvas.fuente_elemento_seleccionado = function() {
+    var canvas = Canvas.canvas;
+
+    var activeObject = canvas.getActiveObject();
+    var activeGroup = canvas.getActiveGroup();
+
+    if (activeGroup) {
+      var objectsInGroup = activeGroup.getObjects();
+      canvas.discardActiveGroup();
+      objectsInGroup.forEach(function(object) {object.flipX = !object.flipX;});
+    } else if (activeObject) {
+      activeObject.flipX = !activeObject.flipX;
+    }
+
+    Canvas.hacer();
+    Canvas.canvas.renderAll();
+  }
 
   Canvas.borrar_elemento_seleccionado = function() {
     var canvas = Canvas.canvas;
