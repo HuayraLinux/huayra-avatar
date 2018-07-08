@@ -170,12 +170,14 @@ div.dropdown {
 }
 
 div.textos-meme {
+	font-family: Anton;
 	padding: 10px;
 	margin: auto;
 	text-align: right;
 }
 
 .textos-meme input {
+	font-family: Anton;
 	text-align: left;
 	width: 70%;
 }

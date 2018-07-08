@@ -73,7 +73,8 @@ app.factory("Canvas", function() {
     Canvas.texto_superior = new fabric.Text('', {
       categoria: 'texto-superior',
       fill: 'white',
-      fontFamily: 'Impact',
+      font: 'Anton',
+
       stroke: 'black',
       strokeWidth: 2,
       fontSize:60,
@@ -83,7 +84,7 @@ app.factory("Canvas", function() {
     Canvas.texto_inferior = new fabric.Text('', {
       categoria: 'texto-inferior',
       fill: 'white',
-      fontFamily: 'Impact',
+      fontFamily: 'Anton-Regular',
       stroke: 'black',
       strokeWidth: 2,
       fontSize: 60,
@@ -226,9 +227,9 @@ app.factory("Canvas", function() {
     if (activeGroup) {
       var objectsInGroup = activeGroup.getObjects();
       canvas.discardActiveGroup();
-      objectsInGroup.forEach(function(object) {object.flipX = !object.flipX;});
+      objectsInGroup.forEach(function(object) {canvas.fontFamily(object);});
     } else if (activeObject) {
-      activeObject.flipX = !activeObject.flipX;
+      canvas.fontFamily(object);
     }
 
     Canvas.hacer();
