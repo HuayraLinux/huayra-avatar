@@ -6,8 +6,6 @@
 	user-select: none;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Anton');
-
 div.avatar {
 	width: 400px;
 	position: absolute;
@@ -186,3 +184,9 @@ div.textos-meme {
 	text-align: center;
 	padding: 10px 10px;
 }
+
+@font-face {
+    font-family: 'Anton', sans-serif;
+    src: url('https://fonts.googleapis.com/css?family=Anton');
+}
+

@@ -1,0 +1,24 @@
+{
+  "name": "caripela",
+  "version": "0.32.0",
+  "description": "Un programa sencillo para hacer avatares en huayra",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HuayraLinux/huayra-caripela.git"
+  },
+  "author": "Hugo Ruscitti",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/hugoruscitti/karucha/issues"
+  },
+  "homepage": "https://github.com/HuayraLinux/huayra-caripela",
+  "devDependencies": {
+    "electron": "^1.4.0"
+  },
+  "Anton": "https://fonts.googleapis.com/css?family=Anton"
+}
