@@ -19,5 +19,6 @@
   "homepage": "https://github.com/HuayraLinux/huayra-caripela",
   "devDependencies": {
     "electron": "^1.4.0"
-  }
+  },
+  "Anton": "https://fonts.googleapis.com/css?family=Anton"
 }

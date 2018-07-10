@@ -73,7 +73,7 @@ app.factory("Canvas", function() {
     Canvas.texto_superior = new fabric.Text('', {
       categoria: 'texto-superior',
       fill: 'white',
-      fontFamily: 'Anton',
+      fontFamily: 'Courier',
       stroke: 'black',
       strokeWidth: 2,
       fontSize:60,
@@ -83,7 +83,7 @@ app.factory("Canvas", function() {
     Canvas.texto_inferior = new fabric.Text('', {
       categoria: 'texto-inferior',
       fill: 'white',
-      fontFamily: 'Source Sans Pro',
+      fontFamily: 'Anton',
       stroke: 'black',
       strokeWidth: 2,
       fontSize: 60,
@@ -97,6 +97,21 @@ app.factory("Canvas", function() {
       estado: {objects:[], background: "", backgroundImage:{}}
     };
   }
+
+
+  function loadAndUse(font) {
+  var myfont = new FontFaceObserver(font)
+  myfont.load()
+    .then(function() {
+      // when font is loaded, use it.
+      canvas.getActiveObject().set("fontFamily", font);
+      canvas.requestRenderAll();
+    }).catch(function(e) {
+      console.log(e)
+      alert('font loading failed ' + font);
+    });
+}
+
   
   Canvas.set_texto_superior = function(superior) {
     const {texto_superior, canvas} = Canvas;

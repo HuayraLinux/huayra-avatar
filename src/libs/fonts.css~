@@ -23,14 +23,8 @@
   src: local('Source Sans Pro Italic'), local('SourceSansPro-It'), url(M2Jd71oPJhLKp0zdtTvoM_bce-VcyLJMRR1FC9qWbU8.woff) format('woff');
 }
 
-@font-face {
-  font-family: 'Anton';
-  font-style: normal;
-  font-weight: 400;
-src: local('Anton'), url(http://themes.googleusercontent.com/static/fonts/anton/v3/5t8vP9Hx2udzw372glmOxA.ttf) format('truetype');
-
 /* anton-regular - latin */
-/*@font-face {
+@font-face {
   font-family: 'Anton';
   font-style: normal;
   font-weight: 400;

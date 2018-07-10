@@ -31,6 +31,10 @@ app.controller('EditorCtrl', function($scope, Canvas, $location, Menu, MisArchiv
   $scope.borrar_elemento_seleccionado = function() {
     Canvas.borrar_elemento_seleccionado();
   };
+  
+  $scope.fuente_elemento_seleccionado = function() {
+    Canvas.fuente_elemento_seleccionado();
+  };
 
   $scope.espejar_elemento_seleccionado = function() {
     Canvas.espejar_elemento_seleccionado();
