@@ -33,7 +33,10 @@ app.on('ready', function onReady() {
         width: 911,
         height: 610,
         minWidth: 911,
-        minHeight: 610
+        minHeight: 610,
+        webPreferences: {
+            nodeIntegration: true
+        }
     });
 
     delete mainWindow.module;

@@ -1,15 +1,15 @@
 Source: caripela
 Section: utils
 Priority: extra
-Maintainer: Ignacio Losiggio <iglosiggio@dc.uba.ar>
-Build-Depends: debhelper (>= 8.0.0), 
+Maintainer: Fernando Toledo <ragnarok@docksud.com.ar>
+Build-Depends: debhelper (>= 9.0.0),
 Standards-Version: 3.9.6
 Homepage: https://github.com/HuayraLinux/huayra-caripela
 Vcs-Browser: https://github.com/HuayraLinux/huayra-caripela
 
 Package: huayra-caripela
 Architecture: all
-Depends: ${shlibs:Depends}, ${misc:Depends}, electron (>= 1.4.0.1),
+Depends: ${shlibs:Depends}, ${misc:Depends}, electron (>= 5),
 Recommends: huayra-help (>= 0.3)
 Description: Permite crear personajes personalizados
  Permite crear personajes personalizados para configurar
