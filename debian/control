@@ -3,7 +3,7 @@ Section: utils
 Priority: extra
 Maintainer: Fernando Toledo <ragnarok@docksud.com.ar>
 Build-Depends: debhelper (>= 9.0.0),
-Standards-Version: 3.9.6
+Standards-Version: 3.9.8
 Homepage: https://github.com/HuayraLinux/huayra-caripela
 Vcs-Browser: https://github.com/HuayraLinux/huayra-caripela
 

@@ -119,7 +119,7 @@ caripela (0.22) unstable; urgency=medium
   * Ahora exporta bien a SVG (incluye el código de los SVGs contenidos en lugar de una referencia al archivo local
   * Cambiados un par de textos.
 
- -- gonza <gonza@huayra>  Thu, 05 Mar 2015 09:34:26 -0300
+ -- gonza <dggluz@gmail.com>  Thu, 05 Mar 2015 09:34:26 -0300
 
 caripela (0.21) unstable; urgency=low
 
