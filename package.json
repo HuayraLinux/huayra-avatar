@@ -18,6 +18,6 @@
   },
   "homepage": "https://github.com/HuayraLinux/huayra-caripela",
   "devDependencies": {
-    "electron": "^1.4.0"
+    "electron": "^9.1.0"
   }
 }
