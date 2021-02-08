@@ -1,3 +1,9 @@
+caripela (0.39) unstable; urgency=medium
+
+  * cambio de dependencia a electron-legacy
+
+ -- Fernando Toledo <ragnarok@docksud.com.ar>  Mon, 08 Feb 2021 15:29:52 -0300
+
 caripela (0.38) unstable; urgency=medium
 
   * Fix para electron 5.x

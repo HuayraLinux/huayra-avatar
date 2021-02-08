@@ -2,4 +2,4 @@
 
 # definir aqui los valores de la aplicacion
 APP_PATH="/usr/share/caripela/main.js";
-exec electron ${APP_PATH} $@
+exec electron5 ${APP_PATH} $@
