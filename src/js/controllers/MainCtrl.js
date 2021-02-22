@@ -22,19 +22,4 @@ app.controller('MainCtrl', function($scope, Menu, Config) {
   }
 
   $scope.abrir_modo_desarrollador = function(){ abrir_modo_desarrollador() };
-
-  if( require('electron').remote.Menu.getApplicationMenu() === null ){
-    Menu.agregar_a_ventana(
-        function(){
-            swal({
-                title: "Acerca de",
-                text: "Un programa sencillo para hacer avatares.\n\n\n(c) 2014 - Hugo Ruscitti",
-                imageUrl: "imagenes/huayra-avatar.png",
-                confirmButtonText: "OK!"
-            });
-        }
-    );
-  }
-
-
 });
