@@ -1,12 +1,12 @@
 {
-    "name": "Huayra-Caripela",
+    "name": "Huayra-Avatar",
     "version": 0.1,
     "main": "index.html",
     "config": {
       "livereload": false
     },
     "window": {
-        "title": "Huayra-Caripela",
+        "title": "Huayra-Avatar",
         "toolbar": false,
         "width": 900,
         "height": 550,

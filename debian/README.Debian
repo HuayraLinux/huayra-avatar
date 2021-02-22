@@ -1,6 +1,7 @@
-huayra-caripela for Huayra
+huayra-avatar for Huayra
 ---------------------------
 
 Un programa sencillo para hacer avatares en Huayra.
+Este paquete es un fork de huayra-caripela
 
  -- Hugo Ruscitti <hugoruscitti@gmail.com>  Fri, 24 Jan 2014 16:02:10 +0100

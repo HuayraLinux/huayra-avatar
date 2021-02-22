@@ -3,7 +3,7 @@ var app = angular.module('app');
 
 app.factory("MisArchivos", function() {
   var homedir = (process.platform === 'win32') ? process.env.HOMEPATH : process.env.HOME;
-  var ruta_mis_archivos = homedir + '/.caripela/';
+  var ruta_mis_archivos = homedir + '/.huayra-avatar/';
   var obj = {archivos: [], numero_maximo: 0};
 
   obj.obtener_numero = function() {
@@ -57,7 +57,7 @@ app.factory("MisArchivos", function() {
           }
       }
 
-      // Ordena las caripelas de forma que las mas nuevas aparezcan primero.
+      // Ordena los avatares de forma que las mas nuevas aparezcan primero.
       obj.archivos = _.sortBy(obj.archivos, function(e) {
         return -e.numero;
       });

@@ -32,7 +32,7 @@ app.factory("Canvas", function() {
 
   var Canvas = {};
   var homedir = (process.platform === 'win32') ? process.env.HOMEPATH : process.env.HOME;
-  var ruta_mis_archivos = homedir + '/.caripela/';
+  var ruta_mis_archivos = homedir + '/.huayra-avatar/';
 
   /* La implementación del historial de accciones es una lista doblemente enlazada simple
    * la api expuesta consta de los siguientes elementos
@@ -248,7 +248,7 @@ app.factory("Canvas", function() {
   function ruta_a_data(ruta){
     /*
       Lee un archivo y obtiene el base64 incrustado
-      para luego devolverlo y poder exportar una `caripela` con las
+      para luego devolverlo y poder exportar un `avatar` con las
       imagenes incrustadas y no la referencia al archivo.
     */
     ruta = ruta.replace('file://','');

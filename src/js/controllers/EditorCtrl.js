@@ -1,7 +1,7 @@
 var app = angular.module('app');
 var Config = {
   getHomeDirectory: function() {
-    return (process.platform === 'win32' ? process.env.HOMEPATH : process.env.HOME) + '/.caripela/';
+    return (process.platform === 'win32' ? process.env.HOMEPATH : process.env.HOME) + '/.huayra-avatar/';
   }
 };
 

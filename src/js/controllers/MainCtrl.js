@@ -29,7 +29,7 @@ app.controller('MainCtrl', function($scope, Menu, Config) {
             swal({
                 title: "Acerca de",
                 text: "Un programa sencillo para hacer avatares.\n\n\n(c) 2014 - Hugo Ruscitti",
-                imageUrl: "imagenes/caripela.png",
+                imageUrl: "imagenes/huayra-avatar.png",
                 confirmButtonText: "OK!"
             });
         }

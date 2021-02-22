@@ -1,4 +1,4 @@
-# Caripela
+# Huayra-Avatar
 
 Un programa sencillo para hacer avatares en huayra.
 
@@ -11,7 +11,7 @@ ACTUALIZACION:
 
 ## ¿Cómo ejecutarlo?
 
-    git clone https://github.com/HuayraLinux/huayra-caripela.git
+    git clone https://github.com/HuayraLinux/huayra-avatar.git
     npm install
     npm start
 

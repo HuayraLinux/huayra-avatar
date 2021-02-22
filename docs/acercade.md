@@ -1,6 +1,6 @@
 # Acerca de ...
 
-Caripela es una proyecto comunitario que iniciamos en conectar igualdad, en
+Huayra-Avatar es una proyecto comunitario que iniciamos en conectar igualdad, en
 el equipo de desarrollo de *Huayra Gnu/Linux*.
 
 El objetivo de la aplicación es brindar a los chicos una forma
@@ -21,7 +21,7 @@ realizada por Hugo Ruscitti.
 ## ¿Querés colaborar?
 
 Este proyecto es Software Libre y colaborativo, si querés participar
-del desarrollo te esperamos con los brazos abiertos. Vas a encontrar el [código del proyecto aquí](https://github.com/hugoruscitti/caripela).
+del desarrollo te esperamos con los brazos abiertos. Vas a encontrar el [código del proyecto aquí](https://github.com/huayralinux/huayra-avatar).
 
 La aplicación se realizó buscando que sea sencilla de modificar, incluso es
 bastante simple *hackear* en vivo, hacerle mejoras y re-adaptarla para
@@ -31,7 +31,7 @@ los detalles.
 ## ¿Dónde hay más información?
 
 En nuestro sitio web hay muchas mas información sobre este proyecto
-y otros: [huayra.conectarigualdad.gob.ar](http://huayra.conectarigualdad.gob.ar/)
+y otros: [huayra.educar.gob.ar](http://huayra.educar.gob.ar/)
 
 ## ¡Gracias por venir!
 

@@ -1,19 +1,23 @@
-Source: caripela
+Source: huayra-avatar
 Section: utils
 Priority: extra
 Maintainer: Fernando Toledo <ragnarok@docksud.com.ar>
 Build-Depends: debhelper (>= 9.0.0),
 Standards-Version: 3.9.8
-Homepage: https://github.com/HuayraLinux/huayra-caripela
-Vcs-Browser: https://github.com/HuayraLinux/huayra-caripela
+Homepage: https://github.com/HuayraLinux/huayra-avatar
+Vcs-Browser: https://github.com/HuayraLinux/huayra-avatar
 
-Package: huayra-caripela
+Package: huayra-avatar
 Architecture: all
-Depends: ${shlibs:Depends}, ${misc:Depends}, electron-legacy (>= 5),
+Depends: ${shlibs:Depends}, ${misc:Depends}, electron-legacy (>= 5)
 Recommends: huayra-help (>= 0.3)
+Conflicts: huayra-caripela (<= 0.39)
+Replaces: huayra-caripela (<= 0.39)
 Description: Permite crear personajes personalizados
  Permite crear personajes personalizados para configurar
  tu perfil de usuario.
  .
  Es posible exportarlas como SVG o PNG permitiendote
  compartirlas con otras personas.
+ . 
+ Este paquete anteriormente se llamaba huayra-caripela

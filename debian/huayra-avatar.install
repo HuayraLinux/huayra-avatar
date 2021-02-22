@@ -1,0 +1,6 @@
+package.json                        /usr/share/huayra-avatar
+main.js                             /usr/share/huayra-avatar
+src 		                        /usr/share/huayra-avatar
+bin/huayra-avatar    		        /usr/bin
+debian/huayra-avatar.desktop        /usr/share/applications
+debian/huayra-avatar.svg            /usr/share/icons/hicolor/scalable/apps

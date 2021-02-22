@@ -1,10 +1,10 @@
-# ¿Cómo funciona Caripela?
+# ¿Cómo funciona Huayra-Avatar?
 
-*Caripela* está desarrollado utilizando una tecnología llamada *HTML5*.
+*Huayra-Avatar* está desarrollado utilizando una tecnología llamada *HTML5*.
 Posiblemente te suene familiar, *HTML5* es un conjunto de tecnologías
 que se utilizan generalmente para hacer aplicaciones *webs*.
 
-Además, *caripela* es Software Libre, no solo se puede modificar y re-distribuir, sino
+Además, *Huayra-Avatar* es Software Libre, no solo se puede modificar y re-distribuir, sino
 que además lo escribimos pensando en una estructura fácil de modificar y
 que te permita poner en práctica muchas ideas.
 
@@ -14,11 +14,11 @@ puede ser un poquito intimidante al principio...
 
 ## Ok, ¿Cómo empezar?
 
-Pensamos que una forma significativa de aprender sobre *caripela* y
+Pensamos que una forma significativa de aprender sobre *Huayra-Avatar* y
 cómo se puede modificar, es familiarizarse un poco con sus herramientas
 de desarrollo.
 
-Tal vez sea nuevo para vos, o no; pero de todas formas lo describo: *caripela*
+Tal vez sea nuevo para vos, o no; pero de todas formas lo describo: *Huayra-Avatar*
 incluye una herramienta de desarrollo, que te permite ver y modificar el programa
 mientras está funcionando.
 
@@ -56,7 +56,7 @@ que se realizan en el inspector son temporales, no van a quedar grabados.
 
 ## Componentes
 
-Una parte importante del funcionamiento de *Caripela* son sus componentes: en
+Una parte importante del funcionamiento de *Huayra-Avatar* son sus componentes: en
 medio del desarrollo buscamos re-utilizar piezas de software que hicieran
 una sola cosa, pero la hicieran bien. Así que usamos muchos componentes
 diferentes, los vinculamos y escribimos código para que todo eso ocurra.

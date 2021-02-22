@@ -1,11 +1,10 @@
 [Desktop Entry]
 Version=1.0
-Name=Huayra Caripela
+Name=Huayra Avatar
 Comment=Permite crear personajes sencillos
-Exec=/usr/bin/huayra-caripela
+Exec=/usr/bin/huayra-avatar
 Terminal=false
 Type=Application
-Icon=caripela
+Icon=huayra-avatar
 Categories=Graphics;Huayra;
-
-StartupWMClass=huayra-caripela
+StartupWMClass=huayra-avatar
