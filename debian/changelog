@@ -1,3 +1,9 @@
+huayra-avatar (1.1) unstable; urgency=medium
+
+  * fix path del launcher =|
+
+ -- Fernando Toledo <ragnarok@docksud.com.ar>  Mon, 22 Feb 2021 19:12:32 -0300
+
 huayra-avatar (1.0) unstable; urgency=medium
 
   * Renombre del paquete de huarya-caripela a huayra-avatar

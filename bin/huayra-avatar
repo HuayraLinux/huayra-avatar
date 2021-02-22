@@ -1,5 +1,5 @@
 #!/bin/sh
 
 # definir aqui los valores de la aplicacion
-APP_PATH="/usr/share/huayra/avatar/main.js";
+APP_PATH="/usr/share/huayra-avatar/main.js";
 exec electron5 ${APP_PATH} $@
