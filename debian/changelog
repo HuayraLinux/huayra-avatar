@@ -1,3 +1,9 @@
+huayra-avatar (1.3) unstable; urgency=medium
+
+  * fix de commillas en la version!
+
+ -- Fernando Toledo <ragnarok@docksud.com.ar>  Tue, 23 Feb 2021 13:43:59 -0300
+
 huayra-avatar (1.2) unstable; urgency=medium
 
   * fix path menu about (merge #21)
