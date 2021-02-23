@@ -1,3 +1,9 @@
+huayra-avatar (1.2) unstable; urgency=medium
+
+  * fix path menu about (merge #21)
+
+ -- Fernando Toledo <ragnarok@docksud.com.ar>  Mon, 22 Feb 2021 21:09:24 -0300
+
 huayra-avatar (1.1) unstable; urgency=medium
 
   * fix path del launcher =|
